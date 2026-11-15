@@ -1,5 +1,5 @@
 /* Offline cache (network-first so updates show immediately). Bump VERSION after editing. */
-const VERSION='pa-v5';
+const VERSION='pa-v6';
 const FILES=['./','./index.html','./manifest.webmanifest','./icons/logo-192.png','./icons/logo-512.png','./icons/apple-touch-icon.png','./lib/pdf.min.mjs','./lib/pdf.worker.min.mjs'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(VERSION).then(c=>c.addAll(FILES.map(f=>new Request(f,{cache:'reload'})))).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==VERSION&&x!=='pa-meta').map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});

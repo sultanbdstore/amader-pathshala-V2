@@ -44,6 +44,9 @@ Free, offline, ad-free PWA. No server, no account, no data leaves the phone.
 ## আপডেট দেখা যাচ্ছে না?
 GitHub-এ ফাইল বদলে ১–২ মিনিট অপেক্ষা করুন (repo-র Actions ট্যাবে সবুজ ✔ দেখুন)। অ্যাপের হোম পেজের নিচে **সংস্করণ** লেখা আছে; পুরোনো দেখালে **"🔄 নতুন সংস্করণ লোড করুন"** চাপুন।
 
+## "This app cannot be installed" দেখালে
+কারণ প্রায় সবসময় repo-তে `manifest.webmanifest` বা `icons/` ফোল্ডার আপলোড হয়নি। এই সংস্করণে `index.html`-এর ভেতরেই ইনস্টলের তথ্য ও আইকন বসানো আছে — ফাইল না থাকলেও নিজে থেকে ঠিক করে নেয়। তবু সব ফাইল আপলোড করাই ভালো।
+
 ## ফাইল
 `index.html` (পুরো অ্যাপ) · `sw.js` (অফলাইন; আপডেটে VERSION বাড়ান) · `manifest.webmanifest` · `icons/` · `.github/workflows/pages.yml`
 
