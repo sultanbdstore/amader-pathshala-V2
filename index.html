@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>আমাদের পাঠশালা | Amader Pathshala</title>
+<meta name="description" content="বাংলায় কথা বলা শিক্ষণ অ্যাপ — ক্লাস ৩–৪, প্রাক-প্রাথমিক ও শিশুদের জন্য। বিজ্ঞাপনমুক্ত, অফলাইন।">
+<meta name="theme-color" content="#17365d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>:root{--navy:#17365d;--teal:#168477;--gold:#f5b914;--bg:#fff8e8;--card:#fff;--ink:#1d2a3a;--mut:#6b7a8c;--ok:#2e9e5b;--bad:#e5484d;--r:22px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%}
+body{font-family:"Noto Sans Bengali","Kalpurush","SolaimanLipi","Nirmala UI",system-ui,sans-serif;background:linear-gradient(180deg,#e6f5ff 0,#fff8e8 260px,#fff8e8 100%);background-attachment:fixed;color:var(--ink);font-size:17px;line-height:1.45;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+button{font:inherit;color:inherit;border:0;cursor:pointer}
+#app{max-width:540px;margin:0 auto;padding:0 14px 40px;min-height:100vh}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:8px;padding:10px 0;background:linear-gradient(180deg,#e6f5ff 70%,rgba(230,245,255,0))}
+.top h1{flex:1;margin:0;font-size:19px;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ib{width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 2px 6px #0002;font-size:21px;display:grid;place-items:center;flex:none}
+.chip{background:var(--navy);color:#fff;border-radius:99px;padding:6px 12px;font-weight:700;font-size:15px;white-space:nowrap}
+.chip.g{background:var(--gold);color:#4a3600}
+.tutor{display:flex;gap:10px;align-items:flex-start;margin:6px 0 14px}
+.bird{font-size:44px;line-height:1;flex:none;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-4px)}}
+.bub{flex:1;background:#fff;border-radius:6px 20px 20px 20px;padding:11px 14px;box-shadow:0 2px 8px #0002;font-size:18px;font-weight:600;color:var(--navy);min-height:48px}
+.bub small{display:block;font-weight:400;color:var(--mut);font-size:13px;margin-top:2px}
+.say{flex:none;width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;font-size:20px;box-shadow:0 2px 6px #0003}
+.hero{text-align:center;padding:18px 6px 6px}
+.hero img{width:88px;height:88px;border-radius:50%;box-shadow:0 3px 10px #0003}
+.hero h2{margin:8px 0 2px;color:var(--navy);font-size:26px}
+.hero p{margin:0;color:var(--mut)}
+.kids{display:grid;gap:14px;margin:18px 0}
+.kid{display:flex;align-items:center;gap:14px;background:#fff;border-radius:var(--r);padding:14px 16px;box-shadow:0 3px 10px #0002;text-align:left;width:100%;border:3px solid transparent}
+.kid:active{transform:scale(.98)}
+.kid .av{font-size:54px;line-height:1;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;flex:none}
+.kid b{font-size:24px;color:var(--navy);display:block}
+.kid span{color:var(--mut);font-size:14px}
+.kid .st{margin-left:auto;text-align:right;font-weight:700;color:#b07d00;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:10px 0}
+.tile{background:#fff;border-radius:var(--r);padding:14px 8px;text-align:center;box-shadow:0 3px 8px #0002;font-weight:700;color:var(--navy);font-size:17px;border-bottom:5px solid var(--c,#ccc);min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.tile:active{transform:scale(.96)}
+.tile i{font-style:normal;font-size:40px;line-height:1.1}
+.tile small{font-weight:400;color:var(--mut);font-size:12px}
+h3{margin:18px 2px 6px;color:var(--navy);font-size:18px}
+.card{background:#fff;border-radius:var(--r);padding:16px;box-shadow:0 2px 8px #0002;margin:10px 0}
+.card.c{text-align:center}
+.tabs{display:flex;gap:8px;margin:6px 0 10px;flex-wrap:wrap}
+.tab{padding:8px 14px;border-radius:99px;background:#fff;box-shadow:0 1px 4px #0002;font-weight:700;color:var(--navy);font-size:15px}
+.tab.on{background:var(--navy);color:#fff}
+.bar{height:12px;border-radius:9px;background:#dde7f0;overflow:hidden;margin:6px 0 12px}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:9px;transition:width .3s}
+.q{text-align:center;padding:10px 4px}
+.q .big{font-size:84px;line-height:1.1;margin:4px 0}
+.q .txt{font-size:30px;font-weight:800;color:var(--navy);line-height:1.35;word-break:break-word}
+.q .sub{font-size:15px;color:var(--mut)}
+.q svg{max-width:200px;height:auto}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.opt{background:#fff;border-radius:18px;padding:16px 8px;font-size:26px;font-weight:800;color:var(--navy);box-shadow:0 3px 8px #0002;border:3px solid #fff;min-height:68px;word-break:break-word}
+.opt.sm{font-size:19px}
+.opt:active{transform:scale(.97)}
+.opt.ok{background:#d9f7e4;border-color:var(--ok)}
+.opt.no{background:#ffe0e1;border-color:var(--bad);animation:shk .35s}
+@keyframes shk{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.ans{min-height:64px;margin:8px auto;max-width:260px;border-radius:16px;background:#fff;border:3px dashed #9db3c8;font-size:36px;font-weight:800;color:var(--navy);display:grid;place-items:center}
+.ans.ok{border-color:var(--ok);background:#d9f7e4}.ans.no{border-color:var(--bad);animation:shk .35s}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;max-width:320px;margin:8px auto}
+.kp button{height:56px;border-radius:14px;background:#fff;box-shadow:0 2px 5px #0003;font-size:26px;font-weight:800;color:var(--navy)}
+.kp button.go{background:var(--ok);color:#fff}.kp button.del{background:#ffe9c7}
+.btn{text-decoration:none;display:block;width:100%;padding:14px;border-radius:16px;background:var(--navy);color:#fff;font-weight:800;font-size:18px;box-shadow:0 3px 8px #0003;margin:10px 0;text-align:center}
+.btn.g{background:var(--ok)}.btn.o{background:#ff8a3d}.btn.w{background:#fff;color:var(--navy)}.btn.r{background:var(--bad)}.btn.s{padding:9px 14px;font-size:15px;display:inline-block;width:auto;margin:4px 4px 4px 0}
+.row{display:flex;gap:10px;align-items:center}
+.row>*{flex:1}
+.deck{text-align:center;padding:20px 10px}
+.deck .sym{font-size:130px;line-height:1.15;font-weight:800;color:var(--navy)}
+.deck .sym.t{font-size:96px}
+.deck .em{font-size:76px}
+.deck .nm{font-size:30px;font-weight:800;color:var(--teal)}
+.deck .en{font-size:20px;color:var(--mut)}
+.dot{display:inline-block;width:120px;height:120px;border-radius:50%;box-shadow:inset 0 -8px 0 #0002,0 3px 8px #0003}
+.pager{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pager .ib{width:56px;height:56px;font-size:26px}
+.strip{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:8px 0}
+.strip button{min-width:42px;height:42px;border-radius:12px;background:#fff;box-shadow:0 1px 4px #0003;font-weight:800;font-size:19px;color:var(--navy)}
+.strip button.on{background:var(--gold)}
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.1;margin:0 2px}
+.fr b{border-bottom:3px solid currentColor;padding:0 4px}.fr i{font-style:normal;padding:0 4px}
+.blocks{font-size:34px;letter-spacing:2px;line-height:1.3}
+canvas#tr{width:100%;aspect-ratio:1;background:#fff;border-radius:var(--r);box-shadow:0 2px 8px #0003;touch-action:none;display:block}
+.line{padding:10px 12px;border-radius:14px;font-size:24px;font-weight:700;color:var(--navy);margin:6px 0;background:#fff;box-shadow:0 1px 4px #0002;text-align:left}
+.line.on{background:#fff3c4;outline:3px solid var(--gold)}
+.line.ok{background:#d9f7e4}
+.mod{position:fixed;inset:0;background:#0007;z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.mod>div{background:#fff;width:100%;max-width:540px;max-height:92vh;overflow:auto;border-radius:24px 24px 0 0;padding:18px 16px 26px}
+.mod h3{margin-top:2px}
+.fld{display:block;margin:10px 0}
+.fld span{display:block;font-size:14px;color:var(--mut);margin-bottom:3px}
+input,select,textarea{font:inherit;width:100%;padding:11px 12px;border-radius:12px;border:2px solid #c9d6e2;background:#fff;color:var(--ink);user-select:text;-webkit-user-select:text}
+.pin{display:flex;gap:12px;justify-content:center;margin:12px 0}
+.pin i{width:18px;height:18px;border-radius:50%;border:3px solid var(--navy)}.pin i.f{background:var(--navy)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 18px;border-radius:99px;z-index:30;font-weight:700;max-width:90vw;text-align:center}
+.pop{position:fixed;inset:0;z-index:25;pointer-events:none;display:grid;place-items:center;font-size:90px;animation:pop 1.1s ease-out forwards}
+@keyframes pop{0%{transform:scale(.3);opacity:0}30%{transform:scale(1.2);opacity:1}100%{transform:scale(1) translateY(-60px);opacity:0}}
+.warn{background:#fff3cd;border-radius:16px;padding:12px 14px;margin:10px 0;font-size:15px;color:#6b4e00}
+.note{color:var(--mut);font-size:13px;margin:6px 2px}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl td,.tbl th{padding:6px 4px;border-bottom:1px solid #e3ebf2;text-align:left}
+.pb{height:9px;border-radius:6px;background:#e3ebf2;overflow:hidden;min-width:60px}.pb>i{display:block;height:100%;background:var(--ok)}.pb.lo>i{background:var(--bad)}.pb.mid>i{background:var(--gold)}
+.days{display:flex;align-items:flex-end;gap:4px;height:70px;margin:8px 0}
+.days i{flex:1;background:var(--teal);border-radius:4px 4px 0 0;min-height:2px}
+.stk{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.stk button{background:#fff;border-radius:16px;padding:8px 2px;font-size:38px;box-shadow:0 1px 4px #0002;line-height:1.2}
+.stk button small{display:block;font-size:12px;color:var(--mut)}
+.stk button.lock{filter:grayscale(1);opacity:.45}
+.baby{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.baby button{background:#fff;border-radius:28px;padding:18px 6px;font-size:84px;line-height:1.1;box-shadow:0 4px 10px #0003}
+.baby button small{display:block;font-size:20px;font-weight:800;color:var(--navy)}
+.bal{position:fixed;font-size:64px;z-index:9;animation:up 5s linear forwards;cursor:pointer}
+@keyframes up{from{transform:translateY(0)}to{transform:translateY(-120vh)}}
+.hide{display:none!important}
+.rest{text-align:center;padding:60px 10px}
+.rest .bird{font-size:90px}
+@media (max-width:360px){.opt{font-size:22px}.deck .sym{font-size:104px}}
+@media print{.top,.btn,.ib{display:none}}
+</style></head>
+<body><div id="app"></div>
+<script>
+/* ===== CONTENT BANKS (all original wording; no textbook passages, no Quran verses, no copyrighted poems) ===== */
+const BD='০১২৩৪৫৬৭৮৯';
+const bn=n=>String(n).replace(/\d/g,d=>BD[d]);
+const W=['শূন্য','এক','দুই','তিন','চার','পাঁচ','ছয়','সাত','আট','নয়','দশ','এগারো','বারো','তেরো','চৌদ্দ','পনেরো','ষোলো','সতেরো','আঠারো','উনিশ','বিশ','একুশ','বাইশ','তেইশ','চব্বিশ','পঁচিশ','ছাব্বিশ','সাতাশ','আটাশ','ঊনত্রিশ','ত্রিশ','একত্রিশ','বত্রিশ','তেত্রিশ','চৌত্রিশ','পঁয়ত্রিশ','ছত্রিশ','সাঁইত্রিশ','আটত্রিশ','ঊনচল্লিশ','চল্লিশ','একচল্লিশ','বিয়াল্লিশ','তেতাল্লিশ','চুয়াল্লিশ','পঁয়তাল্লিশ','ছেচল্লিশ','সাতচল্লিশ','আটচল্লিশ','ঊনপঞ্চাশ','পঞ্চাশ','একান্ন','বাহান্ন','তিপ্পান্ন','চুয়ান্ন','পঞ্চান্ন','ছাপ্পান্ন','সাতান্ন','আটান্ন','ঊনষাট','ষাট','একষট্টি','বাষট্টি','তেষট্টি','চৌষট্টি','পঁয়ষট্টি','ছেষট্টি','সাতষট্টি','আটষট্টি','ঊনসত্তর','সত্তর','একাত্তর','বাহাত্তর','তিয়াত্তর','চুয়াত্তর','পঁচাত্তর','ছিয়াত্তর','সাতাত্তর','আটাত্তর','ঊনআশি','আশি','একাশি','বিরাশি','তিরাশি','চুরাশি','পঁচাশি','ছিয়াশি','সাতাশি','আটাশি','ঊননব্বই','নব্বই','একানব্বই','বিরানব্বই','তিরানব্বই','চুরানব্বই','পঁচানব্বই','ছিয়ানব্বই','সাতানব্বই','আটানব্বই','নিরানব্বই'];
+function nw(n){n=Math.round(n);if(n<0)return 'ঋণ '+nw(-n);if(n<100)return W[n];let s='';if(n>=1000){s+=nw(Math.floor(n/1000))+' হাজার ';n%=1000}
+ if(n>=100){s+=['','এক','দুই','তিন','চার','পাঁচ','ছয়','সাত','আট','নয়'][Math.floor(n/100)]+'শো ';n%=100}
+ if(n)s+=W[n];return s.trim()}
+function sayN(x){if(Number.isInteger(x))return nw(x);const [i,f]=String(x).split('.');return nw(+i)+' দশমিক '+f.split('').map(d=>W[+d]).join(' ')}
+
+/* --- Bangla letters: [char, example word, emoji] --- */
+const VOWELS=[['অ','অজগর','🐍'],['আ','আম','🥭'],['ই','ইঁদুর','🐭'],['ঈ','ঈগল','🦅'],['উ','উট','🐪'],['ঊ','ঊষা','🌅'],['ঋ','ঋষি','🧘'],['এ','একটি','☝️'],['ঐ','ঐরাবত','🐘'],['ও','ওজন','⚖️'],['ঔ','ঔষধ','💊']];
+const CONS=[['ক','কলা','🍌'],['খ','খরগোশ','🐇'],['গ','গরু','🐄'],['ঘ','ঘর','🏠'],['ঙ','রঙ','🎨'],['চ','চাঁদ','🌙'],['ছ','ছাতা','☂️'],['জ','জাহাজ','🚢'],['ঝ','ঝড়','🌪️'],['ঞ','মিঞা','👨'],['ট','টিয়া','🦜'],['ঠ','ঠোঁট','👄'],['ড','ডিম','🥚'],['ঢ','ঢাক','🥁'],['ণ','ঘণ্টা','🔔'],['ত','তারা','⭐'],['থ','থালা','🍽️'],['দ','দাঁত','🦷'],['ধ','ধান','🌾'],['ন','নৌকা','⛵'],['প','পাখি','🐦'],['ফ','ফুল','🌸'],['ব','বাঘ','🐯'],['ভ','ভাত','🍚'],['ম','মাছ','🐟'],['য','যন্ত্র','⚙️'],['র','রাজা','👑'],['ল','লাল','🔴'],['শ','শসা','🥒'],['ষ','ষাঁড়','🐂'],['স','সূর্য','☀️'],['হ','হরিণ','🦌'],['ড়','বড়','🐘'],['ঢ়','আষাঢ়','🌧️'],['য়','ময়ূর','🦚'],['ৎ','বিদ্যুৎ','⚡'],['ং','বাংলা','🇧🇩'],['ঃ','দুঃখ','😢'],['ঁ','হাঁস','🦆']];
+/* --- English: [Letter, word, emoji, bangla] --- */
+const ABC=[['A','Apple','🍎','আপেল'],['B','Ball','⚽','বল'],['C','Cat','🐈','বিড়াল'],['D','Dog','🐕','কুকুর'],['E','Elephant','🐘','হাতি'],['F','Fish','🐟','মাছ'],['G','Goat','🐐','ছাগল'],['H','Hen','🐔','মুরগি'],['I','Ice-cream','🍦','আইসক্রিম'],['J','Juice','🧃','জুস'],['K','Kite','🪁','ঘুড়ি'],['L','Lion','🦁','সিংহ'],['M','Mango','🥭','আম'],['N','Nose','👃','নাক'],['O','Orange','🍊','কমলা'],['P','Parrot','🦜','টিয়া'],['Q','Queen','👸','রানি'],['R','Rabbit','🐇','খরগোশ'],['S','Sun','☀️','সূর্য'],['T','Tiger','🐯','বাঘ'],['U','Umbrella','☂️','ছাতা'],['V','Van','🚐','ভ্যান'],['W','Watch','⌚','ঘড়ি'],['X','Xmas tree','🎄','ক্রিসমাস ট্রি'],['Y','Yellow','🟡','হলুদ'],['Z','Zebra','🦓','জেব্রা']];
+/* --- Arabic letters: [glyph, bangla name] --- */
+const ARB=[['ا','আলিফ'],['ب','বা'],['ت','তা'],['ث','ছা'],['ج','জীম'],['ح','হা'],['خ','খা'],['د','দাল'],['ذ','যাল'],['ر','রা'],['ز','যা'],['س','সীন'],['ش','শীন'],['ص','ছদ'],['ض','দদ'],['ط','তো'],['ظ','যো'],['ع','আইন'],['غ','গাইন'],['ف','ফা'],['ق','কাফ'],['ك','কাফ (ছোট)'],['ل','লাম'],['م','মীম'],['ن','নূন'],['ه','হা (ছোট)'],['و','ওয়াও'],['ي','ইয়া']];
+/* --- things decks: [emoji|color, bn, en, extra] --- */
+const FRUITS=[['🍎','আপেল','Apple'],['🍌','কলা','Banana'],['🥭','আম','Mango'],['🍊','কমলা','Orange'],['🍇','আঙুর','Grapes'],['🍉','তরমুজ','Watermelon'],['🍍','আনারস','Pineapple'],['🍓','স্ট্রবেরি','Strawberry'],['🍋','লেবু','Lemon'],['🥥','নারকেল','Coconut'],['🍐','নাশপাতি','Pear'],['🍒','চেরি','Cherry']];
+const ANIMALS=[['🐈','বিড়াল','Cat','মিয়াউ'],['🐕','কুকুর','Dog','ঘেউ ঘেউ'],['🐄','গরু','Cow','হাম্বা'],['🐐','ছাগল','Goat','ম্যাঁ ম্যাঁ'],['🐑','ভেড়া','Sheep','ব্যা ব্যা'],['🦆','হাঁস','Duck','প্যাক প্যাক'],['🐓','মোরগ','Rooster','কুক কুক কু'],['🐸','ব্যাঙ','Frog','ঘ্যাঙর ঘ্যাঙ'],['🐯','বাঘ','Tiger','হালুম'],['🐘','হাতি','Elephant','পুঁউউ'],['🦁','সিংহ','Lion','গর্র্র'],['🐒','বানর','Monkey','উঁউঁ ঊঁঊঁ'],['🐎','ঘোড়া','Horse','চিঁহিঁহি'],['🐇','খরগোশ','Rabbit','লাফ লাফ'],['🐊','কুমির','Crocodile','কচ কচ'],['🦜','টিয়া','Parrot','টি টি'],['🐟','মাছ','Fish','ভুড়ভুড়'],['🦋','প্রজাপতি','Butterfly','ফুরফুর'],['🐢','কচ্ছপ','Turtle','ধীরে ধীরে'],['🦌','হরিণ','Deer','লাফ লাফ']];
+const COLORS=[['#e53935','লাল','Red'],['#1e88e5','নীল','Blue'],['#43a047','সবুজ','Green'],['#fdd835','হলুদ','Yellow'],['#fb8c00','কমলা','Orange'],['#8e24aa','বেগুনি','Purple'],['#212121','কালো','Black'],['#f5f5f5','সাদা','White'],['#6d4c41','বাদামি','Brown'],['#f06292','গোলাপি','Pink']];
+const SHAPES=[['⭕','বৃত্ত','Circle'],['🔺','ত্রিভুজ','Triangle'],['🟦','বর্গ','Square'],['▬','আয়তক্ষেত্র','Rectangle'],['⭐','তারা','Star'],['❤️','হৃদয়','Heart']];
+const BODY=[['👀','চোখ','Eyes'],['👂','কান','Ears'],['👃','নাক','Nose'],['👄','মুখ','Mouth'],['✋','হাত','Hand'],['🦶','পা','Foot'],['🦷','দাঁত','Teeth'],['👅','জিভ','Tongue']];
+const FAMILY=[['👩','মা','Mother'],['👨','বাবা','Father'],['👵','দাদি','Grandma'],['👴','দাদা','Grandpa'],['👦','ভাই','Brother'],['👧','বোন','Sister']];
+const VEHICLES=[['🚌','বাস','Bus'],['🚂','ট্রেন','Train'],['✈️','উড়োজাহাজ','Aeroplane'],['🚲','সাইকেল','Bicycle'],['🚢','জাহাজ','Ship'],['⛵','নৌকা','Boat'],['🚗','গাড়ি','Car']];
+const NUMW=Array.from({length:21},(_,i)=>[bn(i),W[i],String(i)]);
+const WEEK=['শনিবার','রবিবার','সোমবার','মঙ্গলবার','বুধবার','বৃহস্পতিবার','শুক্রবার'];
+const MONTHS=['বৈশাখ','জ্যৈষ্ঠ','আষাঢ়','শ্রাবণ','ভাদ্র','আশ্বিন','কার্তিক','অগ্রহায়ণ','পৌষ','মাঘ','ফাল্গুন','চৈত্র'];
+const SEASONS=['গ্রীষ্ম','বর্ষা','শরৎ','হেমন্ত','শীত','বসন্ত'];
+
+/* --- Static MC banks: [question, correct, w1, w2, w3, cls] cls 3 = from class 3, 4 = class 4 preview --- */
+const BGW=[
+['বাংলাদেশের রাজধানী কোনটি?','ঢাকা','চট্টগ্রাম','খুলনা','রাজশাহী',3],
+['আমাদের জাতীয় ফুল কোনটি?','শাপলা','গোলাপ','জবা','বেলি',3],
+['আমাদের জাতীয় ফল কোনটি?','কাঁঠাল','আম','লিচু','কলা',3],
+['আমাদের জাতীয় পাখি কোনটি?','দোয়েল','ময়না','টিয়া','কোকিল',3],
+['আমাদের জাতীয় পশু কোনটি?','রয়েল বেঙ্গল টাইগার','হাতি','সিংহ','হরিণ',3],
+['আমাদের জাতীয় মাছ কোনটি?','ইলিশ','রুই','কাতলা','পাবদা',3],
+['মহান স্বাধীনতা দিবস কবে?','২৬ মার্চ','১৬ ডিসেম্বর','২১ ফেব্রুয়ারি','১৪ এপ্রিল',3],
+['মহান বিজয় দিবস কবে?','১৬ ডিসেম্বর','২৬ মার্চ','২১ ফেব্রুয়ারি','১ বৈশাখ',3],
+['আন্তর্জাতিক মাতৃভাষা দিবস কবে?','২১ ফেব্রুয়ারি','২৬ মার্চ','১৬ ডিসেম্বর','১৫ আগস্ট',3],
+['পহেলা বৈশাখ কীসের প্রথম দিন?','বাংলা নববর্ষ','ইংরেজি নববর্ষ','স্বাধীনতার','শীতের',3],
+['জাতীয় পতাকার মাঝের বৃত্তের রং কী?','লাল','নীল','হলুদ','সাদা',3],
+['আমাদের জাতীয় পতাকার জমির রং কী?','সবুজ','লাল','নীল','কালো',3],
+['বাংলাদেশে মোট বিভাগ কয়টি?','৮টি','৫টি','৬টি','১০টি',3],
+['বাংলাদেশে মোট জেলা কয়টি?','৬৪টি','৫০টি','৭২টি','৮টি',3],
+['আমাদের জাতীয় সংগীত কোনটি?','আমার সোনার বাংলা','সারে জাহাঁ সে আচ্ছা','জনগণমন','চল চল চল',3],
+['বিশ্বের বৃহত্তম ম্যানগ্রোভ বন কোনটি?','সুন্দরবন','মধুপুর বন','লাউয়াছড়া','ভাওয়াল বন',3],
+['দীর্ঘতম প্রাকৃতিক সমুদ্রসৈকত কোথায়?','কক্সবাজার','কুয়াকাটা','সেন্টমার্টিন','পতেঙ্গা',3],
+['কোনটি আমাদের দেশের একটি নদী?','পদ্মা','হিমালয়','সাহারা','এভারেস্ট',3],
+['বাংলাদেশের মুদ্রার নাম কী?','টাকা','রুপি','ডলার','রিয়াল',3],
+['আমাদের রাষ্ট্রভাষা কী?','বাংলা','ইংরেজি','আরবি','হিন্দি',3],
+['আমাদের দেশের প্রধান খাদ্যশস্য কোনটি?','ধান','গম','ভুট্টা','আলু',3],
+['বাংলাদেশে ঋতু কয়টি?','৬টি','৪টি','৩টি','২টি',3],
+['কোন ঋতুতে সবচেয়ে বেশি বৃষ্টি হয়?','বর্ষা','শীত','বসন্ত','হেমন্ত',3],
+['পৃথিবীতে মহাদেশ কয়টি?','৭টি','৫টি','৬টি','৯টি',3],
+['আমরা কোন মহাদেশে বাস করি?','এশিয়া','আফ্রিকা','ইউরোপ','অস্ট্রেলিয়া',3],
+['ভাষা আন্দোলন হয়েছিল কত সালে?','১৯৫২','১৯৭১','১৯৪৭','১৯৯০',4],
+['আমাদের মুক্তিযুদ্ধ হয়েছিল কত সালে?','১৯৭১','১৯৫২','১৯৪৭','১৯৬৬',4],
+['কেন্দ্রীয় শহিদ মিনার কোথায়?','ঢাকা','চট্টগ্রাম','সিলেট','বরিশাল',4],
+['জাতীয় স্মৃতিসৌধ কোথায় অবস্থিত?','সাভার','কক্সবাজার','রাজশাহী','কুমিল্লা',4],
+['আমাদের দেশের দক্ষিণে কোন সাগর?','বঙ্গোপসাগর','আরব সাগর','লোহিত সাগর','ভূমধ্যসাগর',4],
+['পাহাড়ি অঞ্চল পার্বত্য চট্টগ্রাম কোন দিকে?','দক্ষিণ-পূর্ব','উত্তর-পশ্চিম','দক্ষিণ-পশ্চিম','উত্তর',4],
+['পৃথিবীর সবচেয়ে বড় মহাসাগর কোনটি?','প্রশান্ত মহাসাগর','আটলান্টিক মহাসাগর','ভারত মহাসাগর','আর্কটিক মহাসাগর',4],
+['পৃথিবীর সবচেয়ে বড় মহাদেশ কোনটি?','এশিয়া','আফ্রিকা','ইউরোপ','উত্তর আমেরিকা',4]];
+const SCI=[
+['গাছ কোথায় খাদ্য তৈরি করে?','পাতায়','শিকড়ে','ফুলে','কাণ্ডে',3],
+['গাছের কোন অংশ মাটির নিচে থাকে?','শিকড়','পাতা','ফুল','ফল',3],
+['আমরা শ্বাস নেওয়ার সময় বাতাস থেকে কী নিই?','অক্সিজেন','কার্বন ডাই-অক্সাইড','ধোঁয়া','পানি',3],
+['বরফ পানির কোন অবস্থা?','কঠিন','তরল','গ্যাস','কোনোটিই নয়',3],
+['পানি ফুটালে কী তৈরি হয়?','বাষ্প','বরফ','মাটি','তেল',3],
+['পানির তিনটি অবস্থা কোনগুলো?','কঠিন, তরল, গ্যাস','লাল, নীল, সবুজ','দিন, রাত, ভোর','মিষ্টি, টক, ঝাল',3],
+['সূর্য কী?','একটি নক্ষত্র (তারা)','একটি গ্রহ','একটি উপগ্রহ','একটি মেঘ',3],
+['পৃথিবী কাকে প্রদক্ষিণ করে?','সূর্যকে','চাঁদকে','মঙ্গলকে','তারাকে',3],
+['চাঁদ পৃথিবীর কী?','উপগ্রহ','গ্রহ','নক্ষত্র','ধূমকেতু',3],
+['আমাদের কয়টি প্রধান ইন্দ্রিয়?','৫টি','৩টি','৪টি','৭টি',3],
+['চোখ দিয়ে আমরা কী করি?','দেখি','শুনি','চাখি','ছুঁই',3],
+['হৃৎপিণ্ড শরীরে কী করে?','রক্ত পাম্প করে','খাবার হজম করে','শ্বাস নেয়','চিন্তা করে',3],
+['কোন খাবারে ভিটামিন সি বেশি?','লেবু','চিনি','তেল','লবণ',3],
+['কোনটি সুষম খাবার?','ভাত, মাছ, সবজি','শুধু মিষ্টি','শুধু চিপস','শুধু কোলা',3],
+['মাছ কী দিয়ে শ্বাস নেয়?','ফুলকা','ফুসফুস','নাক','ত্বক',3],
+['কোনটি জীব?','গাছ','পাথর','কলম','খাতা',3],
+['চুম্বক কোনটিকে টানে?','লোহা','কাঠ','কাগজ','প্লাস্টিক',3],
+['প্রজাপতির ডিম ফুটে প্রথমে কী বের হয়?','শুঁয়োপোকা','প্রজাপতি','পাখি','মাছ',3],
+['খাওয়ার আগে আমাদের কী করা উচিত?','হাত ধোয়া','দৌড়ানো','ঘুমানো','টিভি দেখা',3],
+['দিনে কতবার দাঁত ব্রাশ করা ভালো?','২ বার','১ বারও না','১০ বার','সপ্তাহে ১ বার',3],
+['সবুজ উদ্ভিদ খাদ্য তৈরিতে কিসের আলো লাগে?','সূর্যের আলো','বাতির আলো','চাঁদের আলো','আগুনের আলো',4],
+['খাদ্যশৃঙ্খলের শুরুতে থাকে কে?','সবুজ উদ্ভিদ','বাঘ','সাপ','মানুষ',4],
+['কোনটি স্তন্যপায়ী প্রাণী?','তিমি','হাঙর','কুমির','টিকটিকি',4],
+['বাতাসে সবচেয়ে বেশি কোন গ্যাস থাকে?','নাইট্রোজেন','অক্সিজেন','হাইড্রোজেন','কার্বন ডাই-অক্সাইড',4],
+['পৃথিবীর আকৃতি কেমন?','প্রায় গোল','চ্যাপ্টা','চৌকো','ত্রিভুজ',4],
+['দিন-রাত হয় কেন?','পৃথিবী নিজ অক্ষে ঘোরে বলে','চাঁদ ঘোরে বলে','সূর্য ঘোরে বলে','মেঘ আসে বলে',4],
+['আমাদের সৌরজগতে মোট গ্রহ কয়টি?','৮টি','৫টি','৯টি','১২টি',4],
+['সূর্যের সবচেয়ে কাছের গ্রহ কোনটি?','বুধ','পৃথিবী','মঙ্গল','শনি',4],
+['সবচেয়ে বড় গ্রহ কোনটি?','বৃহস্পতি','পৃথিবী','বুধ','মঙ্গল',4],
+['পরিবেশ ভালো রাখতে কী করা উচিত?','গাছ লাগানো','ময়লা ফেলা','গাছ কাটা','ধোঁয়া ছাড়া',4]];
+const ISL=[
+['ইসলামের স্তম্ভ কয়টি?','৫টি','৩টি','৪টি','৭টি',3],
+['দিনে কত ওয়াক্ত ফরজ নামাজ?','৫ ওয়াক্ত','৩ ওয়াক্ত','২ ওয়াক্ত','৭ ওয়াক্ত',3],
+['ফজরের ফরজ নামাজ কত রাকাত?','২ রাকাত','৩ রাকাত','৪ রাকাত','৫ রাকাত',3],
+['মাগরিবের ফরজ নামাজ কত রাকাত?','৩ রাকাত','২ রাকাত','৪ রাকাত','৫ রাকাত',3],
+['যোহরের ফরজ নামাজ কত রাকাত?','৪ রাকাত','২ রাকাত','৩ রাকাত','৫ রাকাত',3],
+['দিনের প্রথম ওয়াক্তের নামাজ কোনটি?','ফজর','যোহর','আসর','এশা',3],
+['রোজা কোন মাসে ফরজ?','রমজান','শাওয়াল','মুহাররম','রজব',3],
+['মুসলমানদের দুটি ঈদ কী কী?','ঈদুল ফিতর ও ঈদুল আযহা','নববর্ষ ও বড়দিন','পূজা ও ঈদ','জন্মদিন ও বিবাহ',3],
+['আমাদের শেষ নবী কে?','হযরত মুহাম্মদ (সা.)','হযরত ঈসা (আ.)','হযরত মূসা (আ.)','হযরত ইব্রাহিম (আ.)',3],
+['কুরআন শরিফ কোন ভাষায় নাজিল হয়েছে?','আরবি','বাংলা','ইংরেজি','উর্দু',3],
+['কুরআন শরিফে কয়টি পারা আছে?','৩০টি','২০টি','১০০টি','৫০টি',3],
+['পবিত্র কাবা শরিফ কোথায়?','মক্কা','ঢাকা','কায়রো','দিল্লি',3],
+['খাওয়ার শুরুতে আমরা কী বলি?','বিসমিল্লাহ','আলহামদুলিল্লাহ','সুবহানাল্লাহ','আল্লাহু আকবার',3],
+['খাওয়া শেষে আমরা কী বলি?','আলহামদুলিল্লাহ','বিসমিল্লাহ','ইন্নালিল্লাহ','আসসালামু আলাইকুম',3],
+['দেখা হলে মুসলমানরা কী বলে সালাম দেয়?','আসসালামু আলাইকুম','শুভ সকাল','হ্যালো','টাটা',3],
+['সবসময় কোন কথা বলা উচিত?','সত্য কথা','মিথ্যা কথা','খারাপ কথা','গালি',3],
+['বাবা-মায়ের সঙ্গে কেমন আচরণ করা উচিত?','ভদ্র ও বিনয়ী','রাগী','অবাধ্য','উঁচু গলায়',3],
+['জুমার নামাজ কোন দিন হয়?','শুক্রবার','সোমবার','শনিবার','বুধবার',3],
+['গরিবকে সাহায্য করা কেমন কাজ?','ভালো কাজ','খারাপ কাজ','দরকার নেই','লজ্জার কাজ',3],
+['পরিষ্কার-পরিচ্ছন্নতা ঈমানের কী?','অঙ্গ','শত্রু','বিপরীত','কিছুই না',3],
+['পানি না পেলে ওযুর বদলে কী করা হয়?','তায়াম্মুম','ঘুম','দৌড়','খেলা',4],
+['প্রথম ওহি কোন গুহায় নাজিল হয়?','হেরা গুহা','সাওর গুহা','আজন্তা গুহা','কোনোটিই নয়',4],
+['আজান কেন দেওয়া হয়?','নামাজের সময় জানাতে','খেলতে ডাকতে','ঘুম পাড়াতে','খাবার দিতে',4],
+['ওযুর ফরজ কয়টি (হানাফি মাযহাব)?','৪টি','২টি','৭টি','১২টি',4],
+['রোজা রাখা অবস্থায় কখন খাওয়া নিষেধ?','সুবহে সাদিক থেকে সূর্যাস্ত পর্যন্ত','সূর্যাস্তের পর','শুধু রাতে','সারা বছর',4],
+['যাকাত কাদের দেওয়া হয়?','গরিব ও অভাবীদের','ধনীদের','শুধু বন্ধুদের','কাউকে নয়',4]];
+/* manners / islam basics for little ones (simple) */
+const PREISL=[
+['খাওয়ার আগে কী বলি?','বিসমিল্লাহ','টাটা','হ্যালো','আচ্ছা'],
+['কে আমাদের সৃষ্টি করেছেন?','আল্লাহ','গাছ','চাঁদ','পাহাড়'],
+['দেখা হলে আমরা কী বলি?','আসসালামু আলাইকুম','হুম','যাই','কী'],
+['খাওয়া শেষে কী বলি?','আলহামদুলিল্লাহ','বিসমিল্লাহ','আজব','হুররে'],
+['কোন হাতে খাওয়া ভালো?','ডান হাতে','বাম হাতে','পা দিয়ে','কোনোটিই না'],
+['দিনে কয়বার নামাজ পড়ি?','৫ বার','১ বার','২০ বার','কখনোই না'],
+['আমাদের প্রিয় নবীর নাম কী?','হযরত মুহাম্মদ (সা.)','বাবা','রহিম','করিম'],
+['কুরআন কোন ভাষায়?','আরবি','চীনা','জাপানি','রুশ'],
+['বড়দের সাথে কেমন করে কথা বলব?','নরম ও ভদ্রভাবে','চিৎকার করে','মুখ ফিরিয়ে','গালি দিয়ে'],
+['সত্য বলা কেমন?','খুব ভালো','খারাপ','দরকার নেই','হাসির']];
+/* Bangla grammar pools */
+const ANTO=[['আলো','অন্ধকার'],['দিন','রাত'],['ভালো','মন্দ'],['সুখ','দুঃখ'],['উঁচু','নিচু'],['বড়','ছোট'],['সত্য','মিথ্যা'],['গরম','ঠান্ডা'],['ধনী','গরিব'],['নতুন','পুরোনো'],['হাসি','কান্না'],['শুরু','শেষ'],['কাছে','দূরে'],['সহজ','কঠিন'],['জন্ম','মৃত্যু'],['আগে','পরে'],['ভিতর','বাহির'],['দুর্বল','সবল']];
+const SYNO=[['চাঁদ','শশী'],['সূর্য','রবি'],['আকাশ','গগন'],['পানি','জল'],['মা','জননী'],['ফুল','কুসুম'],['পাখি','বিহগ'],['বাতাস','পবন'],['সাগর','সমুদ্র'],['পৃথিবী','ধরণী'],['বন','অরণ্য'],['নদী','তটিনী'],['বই','পুস্তক'],['ঘর','গৃহ']];
+const GEND=[['ছেলে','মেয়ে'],['বাবা','মা'],['ভাই','বোন'],['রাজা','রানি'],['দাদা','দাদি'],['নানা','নানি'],['সিংহ','সিংহী'],['শিক্ষক','শিক্ষিকা'],['চাচা','চাচি'],['মামা','মামি'],['পুত্র','কন্যা'],['ছাত্র','ছাত্রী']];
+const SPELL=[['সূর্য','সুর্য','সূর্জ'],['পরীক্ষা','পরিক্ষা','পরীখ্যা'],['শিক্ষক','সিক্ষক','শিখ্ষক'],['কৃষক','ক্রিষক','কৃসক'],['মূল্য','মুল্য','মূল্ল'],['ধন্যবাদ','ধন্নবাদ','ধন্যবাদ্য'],['স্বাধীনতা','স্বাধিনতা','সাধীনতা'],['অতিথি','অতিথী','অতীথি'],['বিজ্ঞান','বিজ্ঞাণ','বিগ্যান'],['পৃথিবী','পৃথিবি','পৃথীবী'],['প্রকৃতি','প্রকৃতী','প্রক্রিতি'],['মানুষ','মানুস','মানূষ'],['ব্যবহার','ব্যাবহার','ব্যবহাড়']];
+const POS=[['আমি ভাত খাই।','খাই','ক্রিয়া'],['সুন্দর ফুল ফুটেছে।','সুন্দর','বিশেষণ'],['রহিম স্কুলে যায়।','রহিম','বিশেষ্য'],['সে গান গায়।','সে','সর্বনাম'],['লাল গোলাপ ফুটেছে।','লাল','বিশেষণ'],['ঢাকা একটি শহর।','ঢাকা','বিশেষ্য'],['তারা মাঠে খেলছে।','তারা','সর্বনাম'],['পাখি আকাশে ওড়ে।','ওড়ে','ক্রিয়া']];
+const ONEWORD=[['যে গান গায়','গায়ক'],['যে চাষ করে','কৃষক'],['যে বই লেখে','লেখক'],['যে ছবি আঁকে','চিত্রশিল্পী'],['যে পড়ায়','শিক্ষক'],['যে রান্না করে','পাচক'],['যে নৌকা চালায়','মাঝি'],['যে মাছ ধরে','জেলে']];
+/* English pools */
+const VOC=[['apple','আপেল'],['book','বই'],['pen','কলম'],['school','স্কুল'],['teacher','শিক্ষক'],['water','পানি'],['sun','সূর্য'],['moon','চাঁদ'],['tree','গাছ'],['bird','পাখি'],['fish','মাছ'],['mother','মা'],['father','বাবা'],['brother','ভাই'],['sister','বোন'],['house','বাড়ি'],['door','দরজা'],['window','জানালা'],['table','টেবিল'],['chair','চেয়ার'],['red','লাল'],['blue','নীল'],['green','সবুজ'],['big','বড়'],['small','ছোট'],['hot','গরম'],['cold','ঠান্ডা'],['happy','খুশি'],['sad','দুঃখিত'],['run','দৌড়ানো'],['eat','খাওয়া'],['read','পড়া'],['write','লেখা'],['sleep','ঘুমানো'],['rice','ভাত'],['milk','দুধ'],['egg','ডিম'],['boy','ছেলে'],['girl','মেয়ে'],['friend','বন্ধু'],['flower','ফুল'],['river','নদী'],['mountain','পাহাড়'],['cow','গরু'],['rain','বৃষ্টি'],['day','দিন'],['night','রাত'],['hand','হাত'],['eye','চোখ']];
+const ENGSP=['apple','school','friend','mother','teacher','flower','water','house','orange','yellow','banana','garden','family','window','animal'];
+const ENGG=[['She ___ a girl.','is','am','are','be',3],['I ___ a boy.','am','is','are','were',3],['They ___ playing.','are','is','am','was',3],['We ___ students.','are','is','am','be',3],['He ___ a book.','has','have','having','haves',3],['There ___ a cat on the roof.','is','are','am','were',3],['This is ___ apple.','an','a','the a','some',3],['This is ___ book.','a','an','two','many',3],['Plural of "book" is ___.','books','bookes','bookies','book',3],['Plural of "child" is ___.','children','childs','childes','childrens',4],['Yesterday I ___ to school.','went','go','goes','going',4],['She ___ a letter yesterday.','wrote','write','writes','writing',4],['Opposite of "big" is ___.','small','tall','long','fat',3],['Opposite of "hot" is ___.','cold','warm','sun','fire',3],['Opposite of "tall" is ___.','short','long','big','wide',4],['Plural of "man" is ___.','men','mans','manes','mens',4],['I ___ a student.','am','is','are','be',3],['Birds can ___.','fly','flies','flying','flew',3],['The sun ___ in the east.','rises','rise','rising','rose',4],['He ___ football every day.','plays','play','playing','played',4]];
+const GREET=[['Good morning','সুপ্রভাত'],['Good night','শুভ রাত্রি'],['Thank you','ধন্যবাদ'],['Please','দয়া করে'],['Sorry','দুঃখিত'],['Welcome','স্বাগতম']];
+
+/* --- Original rhymes for little ones (written for this app) --- */
+const RHYMES=[
+{t:'চাঁদ আর তারা',e:'🌙',l:['চাঁদ উঠেছে আকাশ জুড়ে,','তারারা সব নাচে ঘুরে ঘুরে।','ঘুমাও সোনা চোখটি বুজে,','স্বপ্ন আসবে পরীর সুরে।']},
+{t:'ছোট্ট পাখি',e:'🐦',l:['ছোট্ট পাখি টুইটুই,','নাম কী তোমার বলো তুই?','ডানা নেড়ে হাসি হেসে,','উড়ে গেল দূর দেশে।']},
+{t:'বিড়াল ছানা',e:'🐈',l:['মিউ মিউ বিড়াল ছানা,','দুধ খেতে নেই মানা।','গুটিগুটি পায়ে চলে,','ঘুমায় মায়ের কোলে।']},
+{t:'ঝমঝম বৃষ্টি',e:'🌧️',l:['ঝমঝমঝম বৃষ্টি এলো,','গাছের পাতা ভিজে গেল।','ব্যাঙ ডাকে ঘ্যাঙর ঘ্যাং,','নাচে সবাই তা ধিন তাং!']},
+{t:'হাতি মামা',e:'🐘',l:['হাতি মামা ধপ ধপ,','শুঁড় দুলিয়ে চুপ চুপ।','কলা পেলে কপ কপ,','খায় সে গপ গপ।']},
+{t:'ফুলের বাগান',e:'🌸',l:['ফুটল ফুল লাল নীল,','প্রজাপতি করে মিল।','গুনগুনিয়ে আসে অলি,','হাসে সবাই কলি কলি।']},
+{t:'ঘুম আয়',e:'😴',l:['ঘুম ঘুম ঘুম আয়,','চোখের পাতায় বায়।','মা বলে সোনামণি,','ঘুমাও এখন তুমি।']}];
+/* --- Original short stories --- */
+const STORIES=[
+{t:'সত্যবাদী রনি',e:'👦',s:['রনি স্কুলে যাচ্ছিল।','রাস্তায় সে একটি মানিব্যাগ কুড়িয়ে পেল।','ব্যাগে অনেক টাকা ছিল।','রনি ব্যাগটি নিজের কাছে রাখল না।','সে শিক্ষকের কাছে গিয়ে ব্যাগটি জমা দিল।','মালিক ব্যাগ ফিরে পেয়ে খুব খুশি হলেন।'],q:['গল্পটি থেকে আমরা কী শিখি?','সৎ থাকা ভালো','লোভ করা ভালো','মিথ্যা বলা ভালো','রাগ করা ভালো']},
+{t:'বৃষ্টির দিনে টুনি',e:'🐦',s:['একদিন খুব বৃষ্টি হচ্ছিল।','টুনি পাখি তার বাসায় বসে ছিল।','হঠাৎ একটি কাঠবিড়ালি ভিজে কাঁপতে কাঁপতে এল।','টুনি বলল, এসো, আমার বাসায় জায়গা আছে।','দুজনে মিলে গল্প করল আর বৃষ্টি থামার অপেক্ষা করল।'],q:['টুনি কাঠবিড়ালিকে কী করল?','বাসায় জায়গা দিল','তাড়িয়ে দিল','ভয় দেখাল','কিছুই করল না']},
+{t:'রোজ একটু একটু',e:'📚',s:['সুমি রোজ একটু একটু পড়ত।','তার বন্ধু তন্ময় শুধু পরীক্ষার আগের রাতে পড়ত।','পরীক্ষার দিন সুমি শান্ত ছিল।','তন্ময় ভয় পেয়ে গেল।','তন্ময় বুঝল, রোজ পড়াই সবচেয়ে ভালো।'],q:['সুমি কীভাবে পড়ত?','রোজ একটু একটু','শুধু শেষ রাতে','একদমই পড়ত না','শুধু ছুটিতে']}];
+/* simple sentences for Farhan reading */
+const SIMPLE=['আমি ভাত খাই।','মা আমাকে ভালোবাসে।','বাবা অফিসে যায়।','পাখি আকাশে ওড়ে।','আমি বই পড়ি।','গরু ঘাস খায়।','চাঁদ রাতে ওঠে।','ফুল দেখতে সুন্দর।','আমি রোজ হাত ধুই।','আকাশ নীল।'];
+/* Talk-with-Tuni scripts: {say, chips:[[label, reply]], free:[keywords]} -- {n} replaced by child's name */
+const TALK_PRE=[
+{q:'তোমার নাম কী, বলো তো?',chips:[['{n}','বাহ! কী সুন্দর নাম! {n}, তোমার সাথে কথা বলে আমার খুব ভালো লাগছে।']],any:'বাহ! কী সুন্দর নাম! {n}, তোমার সাথে কথা বলে আমার খুব ভালো লাগছে।'},
+{q:'{n}, আজ তুমি কেমন আছো?',chips:[['ভালো আছি 😊','খুব ভালো! আমিও ভালো আছি।'],['ঘুম পাচ্ছে 😴','তাহলে একটু বিশ্রাম নিও। পরে আবার পড়ব।'],['মন খারাপ 😢','আহা! চলো একটা মজার ছড়া শুনি, মন ভালো হয়ে যাবে।']],any:'বাহ্‌, শুনে ভালো লাগল।'},
+{q:'তোমার প্রিয় ফল কোনটি?',chips:[['আম 🥭','আমারও আম খুব ভালো লাগে! কী মিষ্টি!'],['কলা 🍌','কলা তো শক্তি দেয়! খুব ভালো।'],['আপেল 🍎','আপেল খেলে শরীর ভালো থাকে।'],['লিচু 🍒','লিচু মিষ্টি আর রসালো!']],any:'বাহ্‌, খুব সুন্দর পছন্দ!'},
+{q:'বলো তো, সূর্য ওঠে কোন দিকে?',chips:[['পূর্ব দিকে','ঠিক বলেছ! সূর্য ওঠে পূর্ব দিকে।'],['পশ্চিম দিকে','প্রায় হয়েছে! সূর্য ওঠে পূর্ব দিকে, ডোবে পশ্চিম দিকে।']],any:'সূর্য ওঠে পূর্ব দিকে, আর ডোবে পশ্চিম দিকে।'},
+{q:'এক থেকে পাঁচ পর্যন্ত গুনতে পারো?',chips:[['হ্যাঁ, পারি!','চলো একসাথে গুনি: এক, দুই, তিন, চার, পাঁচ! দারুণ!'],['একটু পারি','কোনো সমস্যা নেই! আমার সাথে বলো: এক, দুই, তিন, চার, পাঁচ।']],any:'চলো একসাথে গুনি: এক, দুই, তিন, চার, পাঁচ!'},
+{q:'তুমি বড় হয়ে কী হতে চাও?',chips:[['ডাক্তার 👩‍⚕️','চমৎকার! ডাক্তাররা মানুষের সেবা করেন।'],['শিক্ষক 👩‍🏫','দারুণ! শিক্ষকরা সবাইকে জ্ঞান দেন।'],['পাইলট ✈️','বাহ! আকাশে উড়বে!'],['হাফেজ/আলেম 📖','মাশাআল্লাহ! খুব সুন্দর ইচ্ছা।']],any:'দারুণ ইচ্ছা! মন দিয়ে পড়লে সব হওয়া যায়।'},
+{q:'আজ তুমি কী কী শিখলে?',chips:[['অক্ষর','অনেক ভালো! আরও শিখব আমরা।'],['গণনা','বাহ! গুনতে শেখা দারুণ।'],['ছড়া','চমৎকার!']],any:'খুব ভালো! রোজ একটু একটু শিখলে অনেক বড় হওয়া যায়।'}];
+const TALK_C=[
+{q:'{n}, আজ স্কুলে কী শিখলে? আমাকে বলো।',chips:[['গণিত','গণিত খুব মজার বিষয়! চলো একসাথে কয়েকটা অঙ্ক করি।'],['বাংলা','বাংলা পড়তে পারা দারুণ! চলো একটা গল্প পড়ি।'],['ইংরেজি','ইংরেজি জানলে বিশ্বের অনেকের সাথে কথা বলা যায়।'],['বিজ্ঞান','বিজ্ঞান জানলে চারপাশ বোঝা যায়!']],any:'বাহ্‌! রোজ শেখা খুব ভালো অভ্যাস।'},
+{q:'তোমার প্রিয় বিষয় কোনটি?',chips:[['গণিত','চমৎকার! গণিত চিন্তা করতে শেখায়।'],['বাংলা','খুব ভালো! বই পড়লে মন বড় হয়।'],['ইংরেজি','দারুণ! রোজ কয়েকটা শব্দ শিখলেই হবে।'],['বিজ্ঞান','দারুণ! প্রশ্ন করা বিজ্ঞানীর কাজ।']],any:'সুন্দর পছন্দ!'},
+{q:'এখন নামতা কতটা পর্যন্ত মুখস্থ আছে?',chips:[['১০ পর্যন্ত','বাহ! এবার ১১ থেকে ১৫ শেখার চেষ্টা করো।'],['৫ পর্যন্ত','ঠিক আছে, আমরা মিলে ৬ থেকে ১০ শিখব।'],['এখনো কম','কোনো সমস্যা নেই। রোজ একটা করে নামতা শিখলে হয়ে যাবে।']],any:'রোজ একটু অনুশীলন করলেই হয়ে যাবে।'},
+{q:'বলো তো, বাংলাদেশের জাতীয় ফুল কী?',chips:[['শাপলা','একদম ঠিক! জাতীয় ফুল শাপলা।'],['গোলাপ','প্রায় হয়েছে! জাতীয় ফুল শাপলা।']],any:'জাতীয় ফুল হলো শাপলা।'},
+{q:'বড় হয়ে তুমি কী হতে চাও?',chips:[['ডাক্তার','দারুণ! মানুষের সেবা করবে।'],['শিক্ষক','চমৎকার!'],['ইঞ্জিনিয়ার','বাহ! নতুন কিছু বানাবে।'],['বিজ্ঞানী','দারুণ! রোজ প্রশ্ন করা অভ্যাস করো।']],any:'খুব সুন্দর স্বপ্ন! মন দিয়ে পড়লে হয়ে যাবে।'}];
+const PRAISE=['দারুণ!','চমৎকার!','বাহ্‌, ঠিক হয়েছে!','শাবাশ {n}!','খুব ভালো!','অসাধারণ!','তুমি পেরেছ!'];
+const RETRY=['আবার চেষ্টা করো।','প্রায় হয়েছে, আরেকবার ভাবো।','কোনো সমস্যা নেই, আবার দেখো।'];
+const STICKERS=['🐯','🦜','🐘','🐠','🦋','🐼','🦁','🐬','🦄','🚀','🌈','🏆','🐢','🦚','🌺','🍉'];
+
+/* ===== EXPANSION PACK 2 ===== */
+BGW.push(
+['বাংলাদেশের জাতীয় কবি কে?','কাজী নজরুল ইসলাম','মাইকেল মধুসূদন দত্ত','জীবনানন্দ দাশ','সুকান্ত ভট্টাচার্য',3],
+['আমাদের জাতীয় সংগীতের রচয়িতা কে?','রবীন্দ্রনাথ ঠাকুর','কাজী নজরুল ইসলাম','জসীমউদদীন','সুফিয়া কামাল',3],
+['আমাদের দেশের পুরো নাম কী?','গণপ্রজাতন্ত্রী বাংলাদেশ','ভারত','নেপাল','শ্রীলঙ্কা',3],
+['কোন ফসলকে সোনালি আঁশ বলা হয়?','পাট','ধান','গম','তুলা',3],
+['চা-বাগান বেশি কোথায়?','সিলেট অঞ্চলে','বরিশালে','খুলনায়','রংপুরে',3],
+['একুশে ফেব্রুয়ারি আমরা কী পালন করি?','শহিদ দিবস ও মাতৃভাষা দিবস','বিজয় দিবস','শিক্ষা দিবস','মা দিবস',3],
+['কোন ঋতুতে কাশফুল ফোটে?','শরৎ','গ্রীষ্ম','শীত','বসন্ত',3],
+['বাংলাদেশে সবচেয়ে ঠান্ডা ঋতু কোনটি?','শীত','গ্রীষ্ম','বর্ষা','শরৎ',3],
+['বাংলাদেশের বৃহত্তম জেলা (আয়তনে) কোনটি?','রাঙামাটি','ঢাকা','খুলনা','সিলেট',4],
+['বাংলাদেশের উত্তরে কোন দেশ আছে?','ভারত','মিয়ানমার','চীন','নেপাল',4],
+['বাংলাদেশের দক্ষিণ-পূর্বে কোন দেশ আছে?','মিয়ানমার','ভারত','শ্রীলঙ্কা','ভুটান',4],
+['ঢাকা কোন নদীর তীরে অবস্থিত?','বুড়িগঙ্গা','কর্ণফুলী','পদ্মা','সুরমা',4],
+['চট্টগ্রাম বন্দর কোন নদীর তীরে?','কর্ণফুলী','মেঘনা','যমুনা','তিস্তা',4],
+['জাতীয় পতাকার সবুজ রং কীসের প্রতীক?','সবুজ প্রকৃতি ও তারুণ্য','শীতকাল','আকাশ','নদীর পানি',4],
+['বিশ্বের আয়তনে সবচেয়ে বড় দেশ কোনটি?','রাশিয়া','ভারত','চীন','বাংলাদেশ',4],
+['পৃথিবীর সবচেয়ে উঁচু পর্বতশৃঙ্গ কোনটি?','মাউন্ট এভারেস্ট','কিলিমাঞ্জারো','মাউন্ট ফুজি','আল্পস',4],
+['জাতীয় সংসদ ভবন কোথায়?','ঢাকা','চট্টগ্রাম','রাজশাহী','সিলেট',4]);
+SCI.push(
+['বেঁচে থাকতে আমাদের কোন গ্যাস দরকার?','অক্সিজেন','নাইট্রোজেন','হিলিয়াম','ধোঁয়া',3],
+['কোনটি মাংসাশী প্রাণী?','বাঘ','গরু','ছাগল','হরিণ',3],
+['কোনটি তৃণভোজী প্রাণী?','গরু','সিংহ','বাঘ','শেয়াল',3],
+['পাখির শরীর কী দিয়ে ঢাকা?','পালক','লোম','আঁশ','পাথর',3],
+['মাছের শরীর কী দিয়ে ঢাকা?','আঁশ','পালক','লোম','কাপড়',3],
+['কোনটি শাক?','পালংশাক','আম','লিচু','কলা',3],
+['দুধ আমরা কোন প্রাণী থেকে পাই?','গরু','মুরগি','মাছ','সাপ',3],
+['ডিম থেকে কোন প্রাণীর ছানা হয়?','মুরগি','গরু','ছাগল','বিড়াল',3],
+['দাঁত ভালো রাখতে কী কম খাওয়া উচিত?','মিষ্টি ও চকলেট','ভাত','সবজি','মাছ',3],
+['নিজে আলো দেয় কোনটি?','সূর্য','পাথর','মাটি','বই',3],
+['পানি বিশুদ্ধ করতে কী করা ভালো?','ফুটিয়ে নেওয়া','ঝাঁকানো','রং মেশানো','রোদে ফেলা',3],
+['মেঘ থেকে কী পড়ে?','বৃষ্টি','বালি','পাথর','ধুলো',3],
+['উদ্ভিদ বড় হতে কী লাগে?','পানি, আলো, মাটি','শুধু চিনি','শুধু অন্ধকার','কিছুই না',3],
+['কোনটি বিদ্যুতের পরিবাহী?','তামার তার','কাঠ','রবার','কাচ',4],
+['ভিটামিন ডি কোথা থেকে পাওয়া যায়?','সূর্যের আলো','চিনি','লবণ','তেল',4],
+['হাড় শক্ত করতে কী দরকার?','ক্যালসিয়াম (দুধ)','চিনি','চা','কোলা',4],
+['রংধনুতে কয়টি রং থাকে?','৭টি','৫টি','৩টি','১০টি',4],
+['কোনটি প্রাকৃতিক সম্পদ?','পানি','মোবাইল','টেলিভিশন','বই',4]);
+ISL.push(
+['আল্লাহ কয়জন?','একজন','দুইজন','তিনজন','চারজন',3],
+['ইসলামের প্রথম স্তম্ভ কোনটি?','ঈমান (কালেমা)','নামাজ','রোজা','হজ',3],
+['নামাজের আগে কী করতে হয়?','ওযু','দৌড়ানো','ঘুমানো','খাওয়া',3],
+['এশার ফরজ নামাজ কত রাকাত?','৪ রাকাত','২ রাকাত','৩ রাকাত','৫ রাকাত',3],
+['আসরের ফরজ নামাজ কত রাকাত?','৪ রাকাত','২ রাকাত','৩ রাকাত','৬ রাকাত',3],
+['নবীজি (সা.) কোথায় জন্মগ্রহণ করেন?','মক্কা','মদিনা','ঢাকা','কায়রো',3],
+['প্রতিবেশীর সাথে কেমন আচরণ করা উচিত?','ভালো','খারাপ','ঝগড়া','অবহেলা',3],
+['ছোটদের প্রতি আমাদের কেমন হওয়া উচিত?','স্নেহশীল','কঠোর','রাগী','অবহেলাকারী',3],
+['বড়দের প্রতি আমাদের কেমন হওয়া উচিত?','শ্রদ্ধাশীল','অবাধ্য','বেয়াদব','রাগী',3],
+['ওয়াদা করলে কী করা উচিত?','রক্ষা করা','ভুলে যাওয়া','ভাঙা','লুকানো',3],
+['ছাত্রজীবনে আমরা কী করব?','মন দিয়ে পড়াশোনা','শুধু খেলা','ঝগড়া','ফাঁকি',3],
+['ঈদুল ফিতর কোন মাসে হয়?','শাওয়াল','রমজান','জিলহজ','মুহাররম',4],
+['ঈদুল আযহা কোন মাসে হয়?','জিলহজ','রমজান','শাওয়াল','রজব',4],
+['মসজিদে প্রবেশের সময় কোন পা আগে দিতে হয়?','ডান পা','বাম পা','দুই পা একসাথে','কোনোটিই নয়',4],
+['কুরআন শরিফ কীভাবে পড়া উচিত?','শুদ্ধভাবে ও মনোযোগ দিয়ে','তাড়াহুড়া করে','খেলতে খেলতে','না পড়ে',4],
+['হালাল উপার্জন কোনটি?','সৎভাবে কাজ করে আয়','চুরি','ঘুষ','প্রতারণা',4]);
+PREISL.push(
+['ঘুম থেকে উঠে কী করি?','হাত-মুখ ধুই','আবার ঘুমাই','খেলনা ছুড়ি','চিৎকার করি'],
+['বড়দের দেখলে কী বলব?','সালাম দেব','চুপ থাকব','দৌড়াব','মুখ ফেরাব'],
+['কারও জিনিস নিতে হলে কী করি?','অনুমতি চাই','কেড়ে নিই','লুকিয়ে নিই','কিছুই করি না'],
+['সত্য কথা বললে আল্লাহ কী করেন?','খুশি হন','রাগ করেন','কিছুই না','ভয় দেন'],
+['খাওয়ার পরে কী করি?','হাত ধুই','ফেলে যাই','দৌড়াই','ঘুমাই'],
+['মসজিদে কেমন থাকব?','শান্ত ও ভদ্র','চেঁচামেচি করে','দৌড়ে','ঝগড়া করে'],
+['মা-বাবার কথা কী করা ভালো?','শোনা','না শোনা','উল্টো করা','হাসা'],
+['নামাজের আগে কী করি?','ওযু','খেলা','ঘুম','টিভি']);
+ANTO.push(['উত্তর','দক্ষিণ'],['পূর্ব','পশ্চিম'],['মিষ্টি','টক'],['লম্বা','খাটো'],['হালকা','ভারী'],['পরিষ্কার','নোংরা'],['অতীত','ভবিষ্যৎ'],['সাহসী','ভীতু'],['জ্ঞানী','মূর্খ'],['স্বাধীন','পরাধীন'],['শান্তি','অশান্তি'],['উদয়','অস্ত']);
+SYNO.push(['হাতি','গজ'],['সিংহ','কেশরী'],['মেঘ','বারিদ'],['চোখ','নয়ন'],['মাথা','মস্তক'],['রাত','রজনী'],['দিন','দিবস'],['ঘোড়া','অশ্ব'],['হাত','কর'],['সোনা','স্বর্ণ'],['তারা','নক্ষত্র'],['বন্ধু','সুহৃদ']);
+GEND.push(['নেতা','নেত্রী'],['যুবক','যুবতী'],['বালক','বালিকা'],['স্বামী','স্ত্রী'],['পিতা','মাতা'],['বাঘ','বাঘিনী']);
+SPELL.push(['কৃতজ্ঞ','কৃতগ্য','কৃতজ্ঞ্য'],['বিদ্যালয়','বিদ্যালয','বিধ্যালয়'],['শারীরিক','শারিরিক','শরীরিক'],['ধরিত্রী','ধরীত্রী','ধারিত্রী'],['সমুদ্র','সমুদ্দ্র','সমূদ্র'],['কৃষি','ক্রিষি','কৃষী'],['অধ্যায়','অধ্যায','অধ্যয়'],['প্রতিযোগিতা','প্রতিযোগীতা','প্রতিজোগিতা']);
+POS.push(['বাঘ বনে থাকে।','বাঘ','বিশেষ্য'],['মেয়েটি ভালো গান গায়।','ভালো','বিশেষণ'],['আমরা স্কুলে যাই।','আমরা','সর্বনাম'],['পাখিটি উড়ে গেল।','গেল','ক্রিয়া'],['ছোট খোকা হাসে।','ছোট','বিশেষণ'],['সে বই পড়ছে।','পড়ছে','ক্রিয়া'],['নদী বয়ে চলে।','নদী','বিশেষ্য']);
+ONEWORD.push(['যে চুরি করে','চোর'],['যে চিকিৎসা করে','চিকিৎসক'],['যে কাপড় সেলাই করে','দর্জি'],['যে বিমান চালায়','বিমানচালক'],['যে দেশ শাসন করে','শাসক'],['যে ভিক্ষা করে','ভিক্ষুক'],['যে কবিতা লেখে','কবি']);
+VOC.push(['pencil','পেন্সিল'],['bag','ব্যাগ'],['shirt','শার্ট'],['shoe','জুতা'],['hat','টুপি'],['dog','কুকুর'],['cat','বিড়াল'],['lion','সিংহ'],['tiger','বাঘ'],['elephant','হাতি'],['bread','রুটি'],['tea','চা'],['sugar','চিনি'],['salt','লবণ'],['road','রাস্তা'],['city','শহর'],['village','গ্রাম'],['market','বাজার'],['doctor','ডাক্তার'],['farmer','কৃষক'],['morning','সকাল'],['evening','সন্ধ্যা'],['today','আজ'],['yesterday','গতকাল'],['tomorrow','আগামীকাল'],['sky','আকাশ'],['star','তারা'],['cloud','মেঘ'],['wind','বাতাস'],['fire','আগুন'],['good','ভালো'],['bad','খারাপ'],['new','নতুন'],['old','পুরোনো'],['long','লম্বা'],['short','খাটো'],['walk','হাঁটা'],['sing','গান গাওয়া'],['play','খেলা']);
+ENGSP.push('pencil','brother','sister','father','market','doctor','village','evening','people','beautiful');
+ENGG.push(['My name ___ Rina.','is','am','are','be',3],['___ you a student?','Are','Is','Am','Do',3],['He ___ to school every day.','goes','go','going','gone',4],['I have two ___.','hands','hand','handes','handing',3],['Plural of "box" is ___.','boxes','boxs','boxies','boxen',4],['Past tense of "eat" is ___.','ate','eated','eats','eating',4],['We ___ a song yesterday.','sang','sing','sings','singing',4],['Opposite of "up" is ___.','down','top','high','above',3],['Opposite of "happy" is ___.','sad','glad','funny','kind',3],['Opposite of "day" is ___.','night','sun','light','noon',3],['There ___ two books on the desk.','are','is','am','be',3],['What ___ your name?','is','are','am','do',3],['Plural of "tooth" is ___.','teeth','tooths','toothes','teeths',4],['Plural of "mouse" is ___.','mice','mouses','mices','mouse',4]);
+GREET.push(['Good evening','শুভ সন্ধ্যা'],['Good afternoon','শুভ অপরাহ্ন'],['How are you','তুমি কেমন আছ'],['See you','আবার দেখা হবে'],['Excuse me','মাফ করবেন']);
+RHYMES.push(
+{t:'রোদ ঝলমল',e:'☀️',l:['রোদ ঝলমল সকাল বেলা,','খোকা-খুকু করছে খেলা।','পাখির গানে ঘুম ভাঙে,','আকাশ হাসে রঙে রঙে।']},
+{t:'নৌকা ভাসে',e:'⛵',l:['নৌকা ভাসে নদীর জলে,','মাঝি গায় গান দুলে দুলে।','ঢেউয়ের সাথে হাত মেলায়,','সূর্য ডোবে বিকেল বেলায়।']},
+{t:'মা আমার',e:'👩',l:['মা আমার সবচেয়ে ভালো,','তার হাসিতে ঘর আলো।','গল্প শোনায় রাত হলে,','ঘুম আসে তার কোলে চলে।']},
+{t:'ছোট্ট মাছ',e:'🐟',l:['ছোট্ট মাছ ঝিলমিল,','পুকুর জলে করছে মিল।','লেজটি নেড়ে সাঁতার কাটে,','ঘুরে বেড়ায় ঘাটে ঘাটে।']});
+STORIES.push(
+{t:'ছোট্ট চারাগাছ',e:'🌱',s:['বাগানে একটি ছোট্ট চারাগাছ ছিল।','মিতা রোজ তাতে পানি দিত।','কয়েকদিন পর চারাটিতে নতুন পাতা এল।','কিছুদিন পর গাছে সুন্দর ফুল ফুটল।','মিতা বুঝল, যত্ন নিলে সবকিছু বড় হয়।'],q:['মিতা রোজ কী করত?','গাছে পানি দিত','গাছ কেটে দিত','গাছ ভুলে যেত','গাছ ছিঁড়ত']},
+{t:'হাত ধোয়ার গল্প',e:'🧼',s:['টিটু খেলে এসে সোজা খেতে বসল।','মা বললেন, আগে হাত ধুয়ে নাও।','টিটু সাবান দিয়ে ভালো করে হাত ধুলো।','এরপর সে মজা করে ভাত খেল।','জীবাণু থেকে দূরে থাকতে হাত ধোয়া দরকার।'],q:['খাওয়ার আগে কী করা উচিত?','সাবান দিয়ে হাত ধোয়া','দৌড়ানো','টিভি দেখা','ঘুমানো']});
+SIMPLE.push('আমি স্কুলে যাই।','আমার একটি বল আছে।','গাছে ফল ধরে।','নদীতে নৌকা চলে।','মা রান্না করেন।','আমরা সত্য কথা বলি।','সূর্য পূর্ব দিকে ওঠে।','আমি সালাম দিই।');
+TALK_PRE.push(
+{q:'তোমার প্রিয় রং কোনটি?',chips:[['লাল','লাল তো খুব সুন্দর রং!'],['নীল','নীল আকাশের রং!'],['সবুজ','সবুজ গাছের রং!'],['হলুদ','হলুদ সূর্যের রং!']],any:'বাহ্‌, সুন্দর রং!'},
+{q:'কোন পশু তোমার ভালো লাগে?',chips:[['বিড়াল 🐈','মিয়াউ! আমারও বিড়াল ভালো লাগে।'],['হাতি 🐘','হাতি তো অনেক বড়!'],['বাঘ 🐯','হালুম! বাঘ খুব সাহসী।'],['পাখি 🐦','টুইটুই! পাখি আকাশে ওড়ে।']],any:'বাহ্‌, সুন্দর পছন্দ!'},
+{q:'খাওয়ার আগে হাত ধুয়েছ?',chips:[['হ্যাঁ, ধুয়েছি','শাবাশ! পরিষ্কার থাকা ভালো।'],['না, ভুলে গেছি','এখনই ধুয়ে এসো, কেমন?']],any:'খাওয়ার আগে হাত ধোয়া ভালো অভ্যাস।'});
+TALK_C.push(
+{q:'আজ বাড়িতে কাকে সাহায্য করেছ?',chips:[['মাকে','মাকে সাহায্য করা অনেক ভালো কাজ!'],['বাবাকে','চমৎকার! সবাইকে সাহায্য করা উচিত।'],['ভাইবোনকে','দারুণ! ভাইবোন একে অপরের বন্ধু।'],['এখনো করিনি','আজ একটা ছোট কাজে সাহায্য করে দেখো!']],any:'সাহায্য করা অনেক ভালো অভ্যাস।'},
+{q:'একবারে কতক্ষণ পড়তে ভালো লাগে?',chips:[['১৫ মিনিট','ছোট ছোট সময়ে পড়লে ভালো মনে থাকে।'],['৩০ মিনিট','চমৎকার! মাঝে একটু বিরতি নিও।'],['১ ঘণ্টা','বাহ! তবে চোখের বিশ্রামও দরকার।']],any:'নিয়মিত পড়াই আসল।'});
+
+/* ===== QUESTION GENERATORS ===== */
+const rnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=rnd(0,i);[a[i],a[j]]=[a[j],a[i]]}return a};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function mc(topic,text,say,correct,wrongs,o={}){
+  wrongs=[...new Set(wrongs.filter(w=>w!==correct))];
+  const opts=shuf([correct,...wrongs.slice(0,3)]);
+  return Object.assign({topic,type:'mc',text,say,opts,ans:opts.indexOf(correct)},o);
+}
+const numQ=(topic,text,say,ans,o={})=>Object.assign({topic,type:'num',text,say,ans},o);
+function nearNums(a,dec){const s=new Set();const st=dec?0.1:1;let t=0;while(s.size<3&&t++<60){let v=a+pick([-1,1,-2,2,-10,10,-3,3])*st*(Math.random()<.5?1:(dec?1:1));v=dec?Math.round(v*10)/10:v;if(v!==a&&v>=0)s.add(v)}return [...s]}
+const fr=(n,d)=>`<span class="fr"><b>${bn(n)}</b><i>${bn(d)}</i></span>`;
+const frSay=(n,d)=>`${nw(d)} ভাগের ${nw(n)} ভাগ`;
+function clockSvg(h,m){const a1=((h%12)+m/60)*30,a2=m*6;const p=(a,l)=>{const r=(a-90)*Math.PI/180;return `${100+l*Math.cos(r)},${100+l*Math.sin(r)}`};
+ let t='';for(let i=1;i<=12;i++){const r=(i*30-90)*Math.PI/180;t+=`<text x="${100+74*Math.cos(r)}" y="${100+74*Math.sin(r)+6}" text-anchor="middle" font-size="17" font-weight="700" fill="#17365d">${bn(i)}</text>`}
+ return `<svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="94" fill="#fff" stroke="#17365d" stroke-width="6"/>${t}<line x1="100" y1="100" x2="${p(a1,46).split(',')[0]}" y2="${p(a1,46).split(',')[1]}" stroke="#17365d" stroke-width="8" stroke-linecap="round"/><line x1="100" y1="100" x2="${p(a2,66).split(',')[0]}" y2="${p(a2,66).split(',')[1]}" stroke="#e5484d" stroke-width="5" stroke-linecap="round"/><circle cx="100" cy="100" r="6" fill="#17365d"/></svg>`}
+const fmtT=(h,m)=>bn(h)+':'+bn(String(m).padStart(2,'0'));
+
+/* ---- math (class 3/4) : each takes lvl 1..3 ---- */
+const MG={
+ add(l){const [a,b]=l==1?(()=>{const a=rnd(10,89);return [a,rnd(10,99-a)]})():l==2?[rnd(100,999),rnd(100,999)]:[rnd(1000,6000),rnd(1000,3999)];
+  return numQ('add',`${bn(a)} + ${bn(b)} = ?`,`${nw(a)} যোগ ${nw(b)} সমান কত?`,a+b)},
+ sub(l){let a,b;if(l==1){a=rnd(30,99);b=rnd(10,a-1)}else if(l==2){a=rnd(200,999);b=rnd(100,a-1)}else{a=rnd(2000,9999);b=rnd(1000,a-1)}
+  return numQ('sub',`${bn(a)} − ${bn(b)} = ?`,`${nw(a)} বিয়োগ ${nw(b)} সমান কত?`,a-b)},
+ mul(l){let a,b;if(l==1){a=rnd(2,5);b=rnd(1,10)}else if(l==2){a=rnd(6,10);b=rnd(2,10)}else{a=rnd(12,99);b=rnd(11,30)}
+  if(l<3&&Math.random()<.5)[a,b]=[b,a];return numQ('mul',`${bn(a)} × ${bn(b)} = ?`,`${nw(a)} গুণ ${nw(b)} সমান কত?`,a*b)},
+ div(l){let b,q;if(l==1){b=rnd(2,5);q=rnd(2,10)}else if(l==2){b=rnd(2,9);q=rnd(5,30)}else{b=rnd(2,9);q=rnd(50,150)}
+  const a=b*q;return numQ('div',`${bn(a)} ÷ ${bn(b)} = ?`,`${nw(a)} ভাগ ${nw(b)} সমান কত?`,q)},
+ tab(l){const a=l==1?rnd(2,5):l==2?rnd(6,12):rnd(11,20),b=rnd(2,10);const miss=Math.random()<.4;
+  return miss?numQ('tab',`${bn(a)} × ? = ${bn(a*b)}`,`${nw(a)} কে কত দিয়ে গুণ করলে ${nw(a*b)} হয়?`,b):numQ('tab',`${bn(a)} × ${bn(b)} = ?`,`${nw(a)} গুণ ${nw(b)} সমান কত?`,a*b)},
+ frac(l){if(l==1){const d=pick([2,3,4,5,6,8]),k=rnd(1,d-1);const bl='🟦'.repeat(k)+'⬜'.repeat(d-k);
+   const w=[...new Set([fr(d-k,d),fr(k,d+1),fr(Math.min(d-1,k+1),d)])];
+   return mc('frac',`<div class="blocks">${bl}</div>কত অংশ রঙ করা?`,`ছবির কত অংশ রঙ করা আছে?`,fr(k,d),w,{html:true,sm:false})}
+  if(l==2){const d=rnd(5,12),a=rnd(1,d-1);let b=rnd(1,d-1);while(b==a)b=rnd(1,d-1);const big=Math.max(a,b);
+   return mc('frac',`${fr(a,d)} ও ${fr(b,d)} — কোনটি বড়?`,`${frSay(a,d)} আর ${frSay(b,d)} — কোনটি বড়?`,fr(big,d),[fr(Math.min(a,b),d)],{html:true})}
+  const d=rnd(5,12),a=rnd(1,d-2),b=rnd(1,d-1-a);const s=a+b;
+  return mc('frac',`${fr(a,d)} + ${fr(b,d)} = ?`,`${frSay(a,d)} যোগ ${frSay(b,d)} সমান কত?`,fr(s,d),[fr(s,d*2),fr(a*b%d||1,d),fr(Math.min(d-1,s+1),d)],{html:true})},
+ money(l){const it=pick([['কলম','কলমের'],['খাতা','খাতার'],['আম','আমের'],['ডিম','ডিমের'],['বই','বইয়ের'],['পেন্সিল','পেন্সিলের']]);
+  if(l==1){const t=rnd(2,15);return numQ('money',`${bn(t)} টাকা = কত পয়সা?`,`${nw(t)} টাকা কত পয়সা?`,t*100,{exp:'১ টাকা = ১০০ পয়সা'})}
+  if(l==2){const p=rnd(3,25),n=rnd(2,9);return numQ('money',`একটি ${it[1]} দাম ${bn(p)} টাকা।<br>${bn(n)}টির দাম কত টাকা?`,`একটি ${it[1]} দাম ${nw(p)} টাকা। ${nw(n)}টির দাম কত টাকা?`,p*n)}
+  const p=rnd(5,40),n=rnd(2,6),tot=p*n,pay=Math.ceil((tot+1)/50)*50;
+  return numQ('money',`${bn(n)}টি ${it[0]} কিনতে ${bn(tot)} টাকা লাগল।<br>${bn(pay)} টাকা দিলে ফেরত কত?`,`${nw(n)}টি ${it[0]} কিনতে ${nw(tot)} টাকা লাগল। ${nw(pay)} টাকা দিলে কত টাকা ফেরত পাবে?`,pay-tot)},
+ time(l){if(l==2&&Math.random()<.4){const u=pick([['১ ঘণ্টায় কত মিনিট?',60],['১ দিনে কত ঘণ্টা?',24],['১ সপ্তাহে কত দিন?',7],['১ বছরে কত মাস?',12],['১ মিনিটে কত সেকেন্ড?',60]]);return numQ('time',u[0],u[0],u[1])}
+  const h=rnd(1,12),m=l==1?0:l==2?pick([0,30]):rnd(0,11)*5;const ok=fmtT(h,m);
+  const w=[fmtT(h%12+1,m),fmtT(rnd(1,12),m),fmtT(h,m==0?30:0),fmtT(rnd(1,12),(m+15)%60)];
+  return mc('time',`<div>${clockSvg(h,m)}</div>`,'ঘড়িতে কয়টা বাজে?',ok,w,{html:true})},
+ meas(l){const sets=[['কিলোমিটার','মিটার',1000,'কিমি'],['মিটার','সেন্টিমিটার',100,'মি'],['কেজি','গ্রাম',1000,'কেজি'],['লিটার','মিলিলিটার',1000,'লিটার']];
+  const s=l==1?pick(sets.slice(1,3)):pick(sets),k=rnd(2,9);
+  if(l<3||Math.random()<.4)return numQ('meas',`${bn(k)} ${s[0]} = কত ${s[1]}?`,`${nw(k)} ${s[0]} কত ${s[1]}?`,k*s[2],{exp:`১ ${s[0]} = ${bn(s[2])} ${s[1]}`});
+  const r=rnd(1,9)*100;return numQ('meas',`${bn(k)} ${s[0]} ${bn(r)} ${s[1]} = কত ${s[1]}?`,`${nw(k)} ${s[0]} ${nw(r)} ${s[1]} মিলে কত ${s[1]}?`,k*s[2]+r)},
+ patt(l){const st=l==1?pick([2,5,10]):pick([3,4,6,7,9]);const dn=l==3&&Math.random()<.5;const a=dn?rnd(5,9)*st+st*2:rnd(1,10);
+  const seq=[0,1,2,3].map(i=>a+(dn?-1:1)*i*st);const nx=a+(dn?-1:1)*4*st;
+  return numQ('patt',`${seq.map(bn).join(', ')}, ?`,`এই ধারায় পরের সংখ্যাটি কত?`,nx)},
+ geo(l){if(l==1){const s=pick([['ত্রিভুজের কয়টি বাহু?','৩টি',['৪টি','২টি','৫টি']],['বর্গের কয়টি বাহু?','৪টি',['৩টি','২টি','৬টি']],['আয়তক্ষেত্রের কয়টি কোণ?','৪টি',['৩টি','২টি','৫টি']],['ত্রিভুজের কয়টি কোণ?','৩টি',['৪টি','২টি','৫টি']],['বৃত্তের কয়টি কোণ আছে?','একটিও নেই',['৪টি','৩টি','২টি']],['বর্গের সব বাহু কেমন?','সমান',['ছোট-বড়','বাঁকা','কোনোটিই নয়']]]);return mc('geo',s[0],s[0],s[1],s[2])}
+  const L=rnd(4,12),Wd=rnd(2,L-1);
+  if(l==2)return numQ('geo',`আয়তক্ষেত্রের দৈর্ঘ্য ${bn(L)} সেমি, প্রস্থ ${bn(Wd)} সেমি।<br>পরিসীমা কত সেমি?`,`একটি আয়তক্ষেত্রের দৈর্ঘ্য ${nw(L)} সেন্টিমিটার, প্রস্থ ${nw(Wd)} সেন্টিমিটার। পরিসীমা কত?`,2*(L+Wd),{exp:'পরিসীমা = ২ × (দৈর্ঘ্য + প্রস্থ)'});
+  return numQ('geo',`আয়তক্ষেত্রের দৈর্ঘ্য ${bn(L)} সেমি, প্রস্থ ${bn(Wd)} সেমি।<br>ক্ষেত্রফল কত বর্গ সেমি?`,`একটি আয়তক্ষেত্রের দৈর্ঘ্য ${nw(L)} সেন্টিমিটার, প্রস্থ ${nw(Wd)} সেন্টিমিটার। ক্ষেত্রফল কত বর্গ সেন্টিমিটার?`,L*Wd,{exp:'ক্ষেত্রফল = দৈর্ঘ্য × প্রস্থ'})},
+ dec(l){const f=()=>rnd(11,99)/10;let a=f(),b=f();let op='+';if(l==3){op='−';if(b>a)[a,b]=[b,a]}
+  const r=Math.round((op=='+'?a+b:a-b)*10)/10;
+  return numQ('dec',`${bn(a)} ${op} ${bn(b)} = ?`,`${sayN(a)} ${op=='+'?'যোগ':'বিয়োগ'} ${sayN(b)} সমান কত?`,r,{dec:true})},
+ place(l){let n,ds;do{n=l==1?rnd(100,999):rnd(1000,9999);ds=String(n).split('')}while(new Set(ds).size<ds.length||ds.includes('0'));const i=rnd(0,ds.length-1);const pos=ds.length-1-i,v=+ds[i]*Math.pow(10,pos);
+  return numQ('place',`${bn(n)} সংখ্যাটিতে ${bn(ds[i])} এর স্থানীয় মান কত?`,`${nw(n)} সংখ্যাটিতে ${nw(+ds[i])} এর স্থানীয় মান কত?`,v,{exp:'অঙ্ক × ঘরের মান (একক ১, দশক ১০, শতক ১০০, হাজার ১০০০)'})},
+ order(l){const set=new Set();while(set.size<4)set.add(l==1?rnd(10,99):l==2?rnd(100,999):rnd(1000,9999));const a=[...set];const big=Math.random()<.5;const v=big?Math.max(...a):Math.min(...a);
+  return mc('order',`${a.map(bn).join(' , ')}<br>${big?'সবচেয়ে বড়':'সবচেয়ে ছোট'} সংখ্যা কোনটি?`,`${a.map(nw).join(', ')}. ${big?'সবচেয়ে বড়':'সবচেয়ে ছোট'} সংখ্যা কোনটি?`,bn(v),a.filter(x=>x!==v).map(bn),{html:true})},
+ round(l){const n=rnd(l==1?11:101,l==1?999:9999),u=l==1?10:100;const r=Math.round(n/u)*u;
+  return numQ('round',`${bn(n)} কে নিকটতম ${l==1?'দশকে':'শতকে'} প্রায় করো`,`${nw(n)} কে নিকটতম ${l==1?'দশকে':'শতকে'} প্রায় করো`,r,{exp:l==1?'এককের অঙ্ক ৫ বা বেশি হলে দশক বাড়ে':'দশকের অঙ্ক ৫ বা বেশি হলে শতক বাড়ে'})},
+ big(l){const a=rnd(10000,60000),b=rnd(10000,39999);if(Math.random()<.5)return numQ('big',`${bn(a)} + ${bn(b)} = ?`,`${nw(a)} যোগ ${nw(b)} সমান কত?`,a+b);
+  const x=Math.max(a,b),y=Math.min(a,b);return numQ('big',`${bn(x)} − ${bn(y)} = ?`,`${nw(x)} বিয়োগ ${nw(y)} সমান কত?`,x-y)}
+};
+const MATH3=[['add','যোগ','➕','add'],['sub','বিয়োগ','➖','sub'],['mul','গুণ','✖️','mul'],['div','ভাগ','➗','div'],['tab','নামতা','🔢','tab'],['frac','ভগ্নাংশ','🍕','frac'],['money','টাকা-পয়সা','💰','money'],['time','ঘড়ি ও সময়','⏰','time'],['meas','পরিমাপ','📏','meas'],['patt','ধারা','🧩','patt'],['geo','জ্যামিতি','🔺','geo'],['place','স্থানীয় মান','🏠','place'],['order','বড়-ছোট সাজাই','↕️','order']];
+const MATH4=[['mul4','বড় গুণ','✖️','mul',3],['div4','বড় ভাগ','➗','div',3],['frac4','ভগ্নাংশ যোগ','🍰','frac',3],['dec','দশমিক','🔟','dec',1],['geo4','পরিসীমা-ক্ষেত্রফল','📐','geo',2],['big','বড় সংখ্যা','🏔️','big',1],['round','প্রায় মান','🎯','round',1]];
+
+/* ---- subject pools ---- */
+function poolQ(topic,pool,cls,say){const items=pool.filter(p=>p[5]<=cls);const p=pick(items);return mc(topic,esc(p[0]),p[0],p[1],[p[2],p[3],p[4]],{sm:true,sayOpts:true})}
+const SG={
+ bgw:c=>poolQ('bgw',BGW,c),sci:c=>poolQ('sci',SCI,c),isl:c=>poolQ('isl',ISL,c),
+ bn(c){const t=pick(c>=4?['anto','syno','gend','spell','pos','one']:['anto','syno','gend','spell','pos']);
+  if(t=='anto'){const p=pick(ANTO);const w=shuf(ANTO.filter(x=>x!==p)).slice(0,3).map(x=>x[1]);return mc('bn',`"${p[0]}" এর বিপরীত শব্দ কোনটি?`,`${p[0]} এর বিপরীত শব্দ কোনটি?`,p[1],w,{sm:true})}
+  if(t=='syno'){const p=pick(SYNO);const w=shuf(SYNO.filter(x=>x!==p)).slice(0,3).map(x=>x[1]);return mc('bn',`"${p[0]}" এর সমার্থক শব্দ কোনটি?`,`${p[0]} এর সমার্থক শব্দ কোনটি?`,p[1],w,{sm:true})}
+  if(t=='gend'){const p=pick(GEND);const w=shuf(GEND.filter(x=>x!==p)).slice(0,3).map(x=>x[1]);return mc('bn',`"${p[0]}" এর স্ত্রীবাচক শব্দ কোনটি?`,`${p[0]} এর স্ত্রীবাচক শব্দ কোনটি?`,p[1],w,{sm:true})}
+  if(t=='spell'){const p=pick(SPELL);return mc('bn','কোনটি শুদ্ধ বানান?','কোনটি শুদ্ধ বানান?',p[0],[p[1],p[2]],{sm:false,spell:true})}
+  if(t=='pos'){const p=pick(POS);return mc('bn',`${esc(p[0])}<br>“<u>${p[1]}</u>” কোন পদ?`,`${p[0]} এখানে ${p[1]} কোন পদ?`,p[2],['বিশেষ্য','বিশেষণ','ক্রিয়া','সর্বনাম'].filter(x=>x!==p[2]),{html:true,sm:true})}
+  const p=pick(ONEWORD);return mc('bn',`এককথায় প্রকাশ করো:<br>“${p[0]}”`,`এককথায় প্রকাশ করো: ${p[0]}`,p[1],shuf(ONEWORD.filter(x=>x!==p)).slice(0,3).map(x=>x[1]),{html:true,sm:true})},
+ en(c){const t=pick(['v1','v2','sp','gr','gr','gt']);
+  if(t=='v1'){const p=pick(VOC);return mc('en',`“${p[0]}” মানে কী?`,`${p[0]}. এর বাংলা কী?`,p[1],shuf(VOC.filter(x=>x!==p)).slice(0,3).map(x=>x[1]),{sm:true,speakEn:p[0]})}
+  if(t=='v2'){const p=pick(VOC);return mc('en',`“${p[1]}” এর ইংরেজি কী?`,`${p[1]} এর ইংরেজি কী?`,p[0],shuf(VOC.filter(x=>x!==p)).slice(0,3).map(x=>x[0]),{sm:true,optLang:'en'})}
+  if(t=='sp'){const w=pick(ENGSP);const a=w.split('');const i=rnd(1,a.length-2);const bad=a.slice();bad[i]=bad[i]=='e'?'a':bad[i]=='a'?'e':bad[i]=='i'?'y':bad[i]=='o'?'u':bad[i]+bad[i];
+   const bad2=w.slice(0,-1);return mc('en','Which spelling is correct?','Which spelling is correct?',w,[bad.join(''),bad2,w+'e'],{sm:true,optLang:'en',lang:'en'})}
+  if(t=='gt'){const p=pick(GREET);return mc('en',`“${p[0]}” মানে কী?`,`${p[0]}. এর বাংলা কী?`,p[1],shuf(GREET.filter(x=>x!==p)).slice(0,3).map(x=>x[1]),{sm:true,speakEn:p[0]})}
+  const g=pick(ENGG.filter(x=>x[5]<=c));return mc('en',esc(g[0]),g[0],g[1],[g[2],g[3],g[4]],{sm:false,lang:'en',optLang:'en'})}
+};
+/* ---- preschool ---- */
+const DECKS={fruit:FRUITS,animal:ANIMALS,color:COLORS,shape:SHAPES,body:BODY,family:FAMILY,vehicle:VEHICLES};
+function thingQ(topic,deck){const d=DECKS[deck];const p=pick(d);const o=shuf(d.filter(x=>x!==p)).slice(0,3);
+  if(deck=='color'){return mc(topic,'এটা কোন রং?','এটা কোন রং?',p[1],o.map(x=>x[1]),{big:`<span class="dot" style="background:${p[0]}"></span>`,html:false,bigHtml:true})}
+  if(Math.random()<.5)return mc(topic,'এটা কী?','এটা কী?',p[1],o.map(x=>x[1]),{big:p[0],sm:true});
+  return mc(topic,`${p[1]} কোনটি?`,`${p[1]} কোনটি? ছবি দেখে বলো।`,p[0],o.map(x=>x[0]),{bigOpts:true})}
+const PG={
+ letter(){const all=[...VOWELS,...CONS.slice(0,32)];const p=pick(all);const o=shuf(all.filter(x=>x!==p)).slice(0,3);
+  if(Math.random()<.5)return mc('letter','কোন অক্ষরটি বললাম?',`${p[0]}. কোন অক্ষরটি বললাম?`,p[0],o.map(x=>x[0]),{big:'🔊',bigOpts:true,hear:p[0]});
+  return mc('letter',`${p[1]} — কোন অক্ষর দিয়ে শুরু?`,`${p[1]}. কোন অক্ষর দিয়ে শুরু?`,p[0],o.map(x=>x[0]),{big:p[2],bigOpts:true})},
+ numhear(l){const n=rnd(1,l>1?20:10);const o=nearNums(n).map(bn);return mc('numhear','কোন সংখ্যাটি বললাম?',`${nw(n)}. কোন সংখ্যাটি বললাম?`,bn(n),o,{big:'🔊',bigOpts:true})},
+ count(l){const e=pick(['🍎','🐟','⭐','🎈','🐥','🌸','🚗']);const n=rnd(1,l>1?15:8);return mc('count',`${e.repeat(n)}`,'ক-টি আছে? গুনে বলো।',bn(n),nearNums(n).map(bn),{big:'',cnt:e.repeat(n),bigOpts:true,sayN:n})},
+ addp(l){const a=rnd(1,l>1?6:3),b=rnd(1,l>1?5:3);const e=pick(['🍎','🍌','⭐','🐥']);
+  return mc('addp',`${e.repeat(a)} + ${e.repeat(b)} = ?`,`${nw(a)} আর ${nw(b)} যোগ করলে কত হয়?`,bn(a+b),nearNums(a+b).map(bn),{bigOpts:true,cnt:1})},
+ subp(l){const a=rnd(3,l>1?10:6),b=rnd(1,a-1);const e=pick(['🍎','🍌','⭐','🐥']);
+  return mc('subp',`${e.repeat(a)} − ${e.repeat(b)} = ?`,`${nw(a)} থেকে ${nw(b)} বিয়োগ করলে কত থাকে?`,bn(a-b),nearNums(a-b).map(bn),{bigOpts:true,cnt:1})},
+ bigger(){let a=rnd(1,20),b=rnd(1,20);while(a==b)b=rnd(1,20);return mc('bigger',`${bn(a)} ও ${bn(b)} — কোনটি বড়?`,`${nw(a)} আর ${nw(b)} — কোনটি বড়?`,bn(Math.max(a,b)),[bn(Math.min(a,b))],{bigOpts:true})},
+ seq(){const a=rnd(1,15);return mc('seq',`${bn(a)}, ${bn(a+1)}, ?`,`${nw(a)}, ${nw(a+1)}, এরপর কত?`,bn(a+2),[bn(a+3),bn(a+1),bn(a)],{bigOpts:true})},
+ enA(){const p=pick(ABC);const o=shuf(ABC.filter(x=>x!==p)).slice(0,3);
+  if(Math.random()<.5)return mc('enA',`${p[1]} — কোন অক্ষর দিয়ে শুরু?`,`${p[1]}. starts with which letter?`,p[0],o.map(x=>x[0]),{big:p[2],bigOpts:true,lang:'en',sayEn:p[1]});
+  return mc('enA',`${p[0]} for ?`,`${p[0]} for?`,p[2],o.map(x=>x[2]),{bigOpts:true,lang:'en'})},
+ arb(){const p=pick(ARB.slice(0,28));const o=shuf(ARB.filter(x=>x[1]!==p[1])).slice(0,3);
+  if(Math.random()<.5)return mc('arb','এই হরফের নাম কী?','এই হরফের নাম কী?',p[1],o.map(x=>x[1]),{big:`<span style="font-family:'Noto Naskh Arabic','Amiri',serif;font-size:100px" dir="rtl">${p[0]}</span>`,bigHtml:true,sm:true});
+  return mc('arb',`${p[1]} কোনটি?`,`${p[1]} কোনটি? ঠিক হরফটি বেছে নাও।`,p[0],o.map(x=>x[0]),{bigOpts:true,arabOpts:true})},
+ pisl(){const p=pick(PREISL);return mc('pisl',esc(p[0]),p[0],p[1],[p[2],p[3],p[4]],{sm:true})},
+ fruit:()=>thingQ('fruit','fruit'),animal:()=>thingQ('animal','animal'),color:()=>thingQ('color','color'),shape:()=>thingQ('shape','shape'),body:()=>thingQ('body','body'),family:()=>thingQ('family','family')
+};
+/* ---- unified question maker ---- */
+function makeQ(topic,kid){
+  const st=statOf(kid,topic);const l=st.lvl||1;const cls=kid.cls||3;
+  if(MG[topic])return MG[topic](l);
+  const m4=MATH4.find(x=>x[0]==topic);if(m4)return Object.assign(MG[m4[3]](m4[4]==1?st.lvl||1:m4[4]==2?Math.min(3,2+(st.lvl>1?1:0)):3),{topic});
+  if(SG[topic])return SG[topic](cls);
+  if(PG[topic])return PG[topic](l);
+  return MG.add(1);
+}
+
+/* ===== CORE: state, storage, speech, audio ===== */
+const KEY='pathshalaApp.v1';
+const $=s=>document.querySelector(s);
+const todayS=()=>new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
+const ydayS=()=>new Date(Date.now()-86400000-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
+function mkKid(id,name,age,av,band,cls,limit){return{id,name,age,av,band,cls,limit,stars:0,spent:0,stickers:[],streak:0,last:'',today:{d:'',sec:0},stats:{},days:{},badges:[]}}
+function blank(){return{v:1,pin:null,settings:{rate:.85,pitch:1.1,sound:true,voice:true,voiceName:'',remind:{on:false,times:['17:00','19:30'],done:{}}},kids:[mkKid('k1','ফারিহা',10,'👧','c',3,45),mkKid('k2','ফারহান',5,'👦','pre',0,30),mkKid('k3','ফারজানা',1,'👶','baby',0,15)],custom:{},crh:{}}}
+function load(){try{const d=JSON.parse(localStorage.getItem(KEY));if(d&&d.kids){const b=blank();d.settings=Object.assign(b.settings,d.settings||{});if(!d.settings.remind||!d.settings.remind.times)d.settings.remind=b.settings.remind;d.custom=d.custom||{};d.crh=d.crh||{};return d}}catch(e){}return blank()}
+let DB=load();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(DB))}catch(e){}if(typeof saveMeta=='function')saveMeta()}
+const kidById=id=>DB.kids.find(k=>k.id===id);
+function statOf(k,t){return k.stats[t]||(k.stats[t]={a:0,c:0,lvl:1,run:0,miss:0})}
+const BADGES=[['first','🌟','প্রথম সঠিক উত্তর',k=>tot(k).c>=1],['s50','🏅','৫০টি সঠিক',k=>tot(k).c>=50],['s200','🥇','২০০টি সঠিক',k=>tot(k).c>=200],['st3','🔥','৩ দিন টানা',k=>k.streak>=3],['st7','🚀','৭ দিন টানা',k=>k.streak>=7]];
+function tot(k){let a=0,c=0;for(const t in k.stats){a+=k.stats[t].a;c+=k.stats[t].c}return{a,c}}
+function record(k,topic,ok,first){const s=statOf(k,topic),d=todayS();s.a++;let ev='';
+  if(ok){s.c++;s.run++;s.miss=0;if(s.run>=4&&s.lvl<3){s.lvl++;s.run=0;ev='up'}}else{s.miss++;s.run=0;if(s.miss>=2&&s.lvl>1){s.lvl--;s.miss=0;ev='down'}}
+  const dy=k.days[d]||(k.days[d]={q:0,c:0});dy.q++;if(ok)dy.c++;
+  if(k.last!==d){k.streak=k.last===ydayS()?k.streak+1:1;k.last=d}
+  if(ok&&first)k.stars++;
+  for(const b of BADGES)if(!k.badges.includes(b[0])&&b[3](k)){k.badges.push(b[0]);setTimeout(()=>toast(b[1]+' নতুন ব্যাজ: '+b[2]),900)}
+  save();return ev}
+const stars=k=>k.stars-k.spent;
+/* ===== speech ===== */
+const TTS={voices:[],tok:0,
+ get ok(){return 'speechSynthesis' in window&&'SpeechSynthesisUtterance' in window},
+ init(){if(!this.ok)return;const f=()=>{try{this.voices=speechSynthesis.getVoices()||[]}catch(e){}};f();try{speechSynthesis.addEventListener('voiceschanged',f)}catch(e){speechSynthesis.onvoiceschanged=f}},
+ norm:v=>String(v.lang||'').toLowerCase().replace('_','-'),
+ find(lang){const L=lang=='bn'?['bn-bd','bn']:['en-us','en-gb','en-in','en'];const p=DB.settings.voiceName;
+  if(lang=='bn'&&p){const v=this.voices.find(v=>v.name===p);if(v)return v}
+  for(const l of L){const v=this.voices.find(v=>this.norm(v).startsWith(l));if(v)return v}return null},
+ hasBn(){return this.voices.some(v=>this.norm(v).startsWith('bn'))},
+ stop(){this.tok++;try{speechSynthesis.cancel()}catch(e){}},
+ say(text,o={}){return new Promise(res=>{
+  if(!this.ok||!DB.settings.voice||!text){res();return}
+  if(!o.queue)this.stop();
+  const lang=o.lang||'bn';const chunks=(String(text).replace(/<[^>]+>/g,' ').match(/[^।.?!]+[।.?!]?/g)||[]).map(c=>c.trim()).filter(Boolean);
+  if(!chunks.length){res();return}
+  const voice=this.find(lang);let n=chunks.length,fin=false;const done=()=>{if(!fin){fin=true;res()}};
+  const tm=setTimeout(done,Math.min(30000,chunks.join('').length*170+2500));
+  setTimeout(()=>chunks.forEach(c=>{const u=new SpeechSynthesisUtterance(c);u.lang=lang=='bn'?'bn-BD':'en-US';if(voice)u.voice=voice;u.rate=DB.settings.rate*(o.rate||1);u.pitch=DB.settings.pitch;
+   u.onend=u.onerror=()=>{if(--n<=0){clearTimeout(tm);done()}};try{speechSynthesis.speak(u)}catch(e){if(--n<=0)done()}}),o.queue?0:60)})},
+ async seq(list){this.stop();const t=this.tok;for(const s of list){if(t!==this.tok)return;await this.say(s.t,{lang:s.lang,queue:true,rate:s.rate})}}
+};
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+function listen(cb){if(!SR){cb(null,'unsupported');return false}
+ try{const r=new SR();r.lang='bn-BD';r.interimResults=false;r.maxAlternatives=3;let got=false;
+  r.onresult=e=>{got=true;const a=[...e.results[0]].map(x=>x.transcript);cb(a.join(' '))};
+  r.onerror=e=>{if(!got){got=true;cb(null,e.error||'error')}};r.onend=()=>{if(!got){got=true;cb(null,'nospeech')}};r.start();return true}catch(e){cb(null,'error');return false}}
+const normT=s=>String(s).replace(/[।,.?!“”"'\-]/g,' ').replace(/\s+/g,' ').trim();
+function simil(heard,target){const h=normT(heard).split(' '),t=normT(target).split(' ');let m=0;for(const w of t)if(h.some(x=>x===w||(w.length>3&&x.includes(w.slice(0,Math.ceil(w.length*.7))))))m++;return m/t.length}
+/* ===== sounds ===== */
+let AC=null;
+function tone(f,d,t='sine',when=0){if(!DB.settings.sound)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=t;o.frequency.value=f;g.gain.setValueAtTime(.18,AC.currentTime+when);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+when+d);o.connect(g);g.connect(AC.destination);o.start(AC.currentTime+when);o.stop(AC.currentTime+when+d)}catch(e){}}
+const sfx={ok(){tone(660,.12);tone(880,.18,'sine',.1);try{navigator.vibrate&&navigator.vibrate(20)}catch(e){}},no(){tone(220,.25,'triangle')},win(){[523,659,784,1046].forEach((f,i)=>tone(f,.2,'sine',i*.12))},pop(){tone(900,.07,'square');tone(500,.1,'square',.05)}};
+function toast(m){const e=document.createElement('div');e.className='toast';e.textContent=m;document.body.appendChild(e);setTimeout(()=>e.remove(),2600)}
+function popEmoji(e){const d=document.createElement('div');d.className='pop';d.textContent=e;document.body.appendChild(d);setTimeout(()=>d.remove(),1200)}
+
+/* ===== VIEWS & ACTIONS ===== */
+const U={view:'home',kid:null,hist:[],bub:'',last:'',sub:null,mtab:3,qz:null,dk:null,rd:null,tk:null,cd:null,tr:null,bb:{sec:null},rep:null,stMode:'listen',st:null,rh:null,ip:null};
+const kid=()=>kidById(U.kid);
+const COL=['#ff7043','#26a69a','#5c6bc0','#ec407a','#ffb300','#66bb6a','#29b6f6','#ab47bc'];
+const TNAME={add:'যোগ',sub:'বিয়োগ',mul:'গুণ',div:'ভাগ',tab:'নামতা',frac:'ভগ্নাংশ',money:'টাকা-পয়সা',time:'ঘড়ি ও সময়',meas:'পরিমাপ',patt:'ধারা',geo:'জ্যামিতি',mul4:'বড় গুণ',div4:'বড় ভাগ',frac4:'ভগ্নাংশ যোগ',dec:'দশমিক',geo4:'পরিসীমা-ক্ষেত্রফল',big:'বড় সংখ্যা',bgw:'বাংলাদেশ ও বিশ্ব',sci:'বিজ্ঞান',isl:'ইসলাম শিক্ষা',bn:'বাংলা',en:'ইংরেজি',letter:'অক্ষর চেনা',numhear:'সংখ্যা শোনা',count:'গণনা',addp:'যোগ',subp:'বিয়োগ',bigger:'কোনটি বড়',seq:'পরের সংখ্যা',enA:'English ABC',arb:'আরবি হরফ',pisl:'ভালো অভ্যাস',fruit:'ফল',animal:'পশু-পাখি',color:'রং',shape:'আকৃতি',body:'শরীর',family:'পরিবার',read:'পড়া',talk:'কথা',cards:'আমার প্রশ্ন',trace:'লেখা',story:'গল্প',place:'স্থানীয় মান',order:'বড়-ছোট সাজাই',round:'প্রায় মান'};
+const MENU_C=[['🎯','আজকের চ্যালেঞ্জ','daily'],['🔢','গণিত','math'],['📖','বাংলা ব্যাকরণ','quiz','bn'],['🔤','ইংরেজি','quiz','en'],['🔬','বিজ্ঞান','quiz','sci'],['🇧🇩','বাংলাদেশ ও বিশ্বপরিচয়','quiz','bgw'],['🕌','ইসলাম শিক্ষা','quiz','isl'],['🗣️','আমার সাথে পড়ো','stl','read'],['💬','টুনির সাথে কথা','talk'],['📚','গল্প শুনি','stl','listen'],['📖','পাঠ্যবই','books'],['📝','আমার প্রশ্ন','cards'],['🎁','স্টিকার','stk']];
+const MENU_P=[['🎯','আজকের অনুশীলন','daily'],['🅰️','বাংলা বর্ণ','sub','bnl'],['🔢','সংখ্যা ও গণনা','sub','numb'],['➕','যোগ-বিয়োগ','sub','arith'],['🔤','English ABC','sub','abcm'],['🕌','আরবি হরফ','sub','arbm'],['🍎','চিনি ও শিখি','sub','things'],['✍️','লিখে শিখি','sub','trs'],['🤲','ভালো অভ্যাস','quiz','pisl'],['📚','গল্প শুনি','stl','listen'],['🎵','ছড়া','rhymes'],['💬','কথা বলি','talk'],['🗣️','আমার সাথে পড়ো','read','simple'],['📖','পাঠ্যবই','books'],['📝','আমার প্রশ্ন','cards'],['🎁','স্টিকার','stk']];
+const SUBS={
+ bnl:['বাংলা বর্ণ',[['স্বরবর্ণ শিখি','🅰️','deck','vowel'],['ব্যঞ্জনবর্ণ শিখি','🔡','deck','cons'],['অক্ষর চিনি (কুইজ)','🎮','quiz','letter'],['স্বরবর্ণ লিখি','✍️','trace','vowel'],['ব্যঞ্জনবর্ণ লিখি','🖊️','trace','cons']]],
+ numb:['সংখ্যা ও গণনা',[['সংখ্যা শিখি','🔢','deck','num'],['গুনে বলি','🧮','quiz','count'],['শুনে সংখ্যা চিনি','👂','quiz','numhear'],['কোনটি বড়?','⚖️','quiz','bigger'],['পরের সংখ্যা','➡️','quiz','seq'],['সপ্তাহের দিন','📅','deck','week'],['বাংলা মাস','🗓️','deck','month'],['ঋতু','🌦️','deck','season']]],
+ arith:['যোগ-বিয়োগ',[['যোগ','➕','quiz','addp'],['বিয়োগ','➖','quiz','subp']]],
+ abcm:['English ABC',[['A-Z শিখি','🔤','deck','abc'],['কুইজ','🎮','quiz','enA'],['ABC লিখি','✍️','trace','abc']]],
+ arbm:['আরবি হরফ',[['হরফ শিখি','🕌','deck','arb'],['হরফ চিনি (কুইজ)','🎮','quiz','arb'],['যবর-যের-পেশ','📖','harakat']]],
+ things:['চিনি ও শিখি',[['ফল','🍎','deck','fruit'],['পশু-পাখি','🐯','deck','animal'],['রং','🎨','deck','color'],['আকৃতি','⭐','deck','shape'],['শরীর','👀','deck','body'],['পরিবার','👨‍👩‍👧','deck','family'],['যানবাহন','🚌','deck','vehicle']]],
+ trs:['লিখে শিখি',[['স্বরবর্ণ','🅰️','trace','vowel'],['ব্যঞ্জনবর্ণ','🔡','trace','cons'],['সংখ্যা','🔢','trace','num'],['ABC','🔤','trace','abc']]]};
+const DECK_Q={vowel:'letter',cons:'letter',num:'count',abc:'enA',arb:'arb',fruit:'fruit',animal:'animal',color:'color',shape:'shape',body:'body',family:'family'};
+/* ---------- helpers ---------- */
+function nav(v,push=true){if(push&&U.view!==v)U.hist.push(U.view);U.view=v;render();window.scrollTo(0,0)}
+function hdr(title,back=true){const k=kid();return`<div class="top">${back?'<button class="ib" data-a="back" aria-label="পিছনে">←</button>':''}<h1>${title}</h1>${k?`<span class="chip g">⭐ ${bn(stars(k))}</span>`:''}</div>`}
+const tutorHtml=()=>`<div class="tutor"><div class="bird">🐥</div><div class="bub" id="bub">${esc(U.bub||'')}</div><button class="say" data-a="replay" aria-label="আবার শোনো">🔊</button></div>`;
+function tutor(t,o={}){U.bub=t;U.last=t;U.lastLang=o.lang||'bn';const b=$('#bub');if(b)b.textContent=t;if(o.speak!==false)return TTS.say(t,o)}
+const nm=t=>t.replace(/\{n\}/g,kid()?kid().name:'');
+const tiles=(arr)=>`<div class="grid">${arr.map((a,i)=>`<button class="tile" style="--c:${COL[i%COL.length]}" data-a="${a[2]}" data-t="${a[3]||''}" data-n="${a[0]}">${a[0].startsWith('<')?a[0]:`<i>${a[0]}</i>`}${a[1]}</button>`).join('')}</div>`;
+const tilesX=(arr)=>`<div class="grid">${arr.map((a,i)=>`<button class="tile" style="--c:${COL[i%COL.length]}" data-a="${a[2]}" data-t="${a[3]||''}"><i>${a[1]}</i>${a[0]}</button>`).join('')}</div>`;
+function modal(h){closeModal();const m=document.createElement('div');m.className='mod';m.id='mod';m.innerHTML='<div>'+h+'</div>';m.addEventListener('click',e=>{if(e.target===m)closeModal()});document.body.appendChild(m);return m}
+function closeModal(){const m=$('#mod');if(m)m.remove()}
+const ageTxt=k=>k.band=='c'?`ক্লাস ${bn(k.cls)} · ${bn(k.age)} বছর`:k.band=='baby'?`${bn(k.age)} বছর · ছড়া ও খেলা`:`${bn(k.age)} বছর · স্কুল/মাদ্রাসার প্রস্তুতি`;
+/* ---------- render ---------- */
+function render(){const V={home:vHome,menu:vMenu,sub:vSub,math:vMath,deck:vDeck,quiz:vQuiz,stl:vStl,story:vStory,read:vRead,talk:vTalk,cards:vCards,stk:vStk,trace:vTrace,baby:vBaby,rhymes:vRhymes,rhyme:vRhyme,parent:vParent,rep:vRep,rest:vRest,books:vBooks,reader:vReader};let h;
+ try{h=(V[U.view]||vHome)()}catch(e){console.error(e);h=`<div class="card">কিছু একটা সমস্যা হয়েছে। <button class="btn" data-a="home">হোমে যাও</button><small>${esc(e.message)}</small></div>`}
+ if(U.view!='baby')document.querySelectorAll('.bal').forEach(b=>b.remove());$('#app').innerHTML=h;if(U.view=='reader')drawPage();if(U.view=='trace')initTrace()}
+/* ---------- HOME ---------- */
+function vHome(){let h=`<div class="hero"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AABOMUlEQVR4Xs19B3hUZdb/77bpM5lJ753QQgcBBQREwV4QsHddddfuFreBZZuu7qrrrmUtK1ZQ7AVEwYLSeyAESAiQnkmmt1ve/3PeO4kB0XW/b3e///s8A8nkzp17Tz+/c857Bfx/sBhjIgBREAQDAL36l9NuRSSW8AHIS79yAdDvTkC1mgcqKQARAAEAnQA66OVx2XvC0cTRdyiuYkycDjD6LkEQ6P//syX8X30zEX316tXijBkztL5roIsxGMsBMFJX4+N2N7aMajzUXXOgpae4rSvk6w4mrIFICtG4inhSg66bvJIkETarDJddQYZTQXaGPZmf4w6UF/paKkty9g6tLNyqWJ2bAGyXJaEj/TG+Vq1aJU+fPp0YcQTj/1vrv84Axpg0f/5SLF06X6ebdNgsiMaTY6AnZ3+xec/J67cfGFvX1OPdfaAHza1dCAf9ELUeuJQQfLYofI6EkWFLwW3TmUUyaZbSRYQTkhBKKOiN28TeuAth1QND9sHlyUJpQQ6GVmRieIUvNKG2fMvx4wZ/pCj25W6XfWMkrSELFy4UFy1aJAiCwK/rv7X+awwgwqeljKs8Y6wKwPkrP994/kdr94z/cnsH6vYehBptQamn3Rhb6jcmlMcxvJSJ5Xk2ISczA25PpiA4fIDFA0h2QExbICMJaDEgFQaLBxAJ97KuniCaO+Js5yHGNjU52KZDmWJzME+U7MUYWl2CE0YWYNbkQVtmTxv3OiAtFQShIU10gbTzv8WI/zgD0jdDRGeKJCKl6TMOt7b9YMmH68985/NGx4Zte2E3mjG16rB2+sigMGWYRawqLxbknOGAeyRgGwFDqUYCWUjoAlQDYAKZHYCuXhDIeZgv+hYyJDJLwsq6IekHgWQ9EN4Go2sn9jcfZGt2p4z3t3nY6n1FcgTlGD+iGmdMqUycP+e49ytLi56wWZUVyRS3iv8VRvzHGMAYE5YuXSrOnz9fl0UBqm6cumtv053PvfnVzFeX16G9pQHTqw5olx7fJZ481inmVY4Dsk8CHJMRE6sRhYiUAagxQI/u58JpcxXCYrUjmVTR2RNGLJmCpulQNZ3fiM2iIMPjgsvpgCBIEESTURYZcEqAkzUC0S+Bno/hb9yIj7aEjMVfZhsf7y2Xs/JqsGD2cFx+9qTPRw2t/qPVIr+dUnUsWbJEmjdv3n/MWf9HGJA2N9yWMsaO3998eOHfXvn0lGfe3AQj0sAun9RkXD0jKo4cMUJA0fmAaw6iYp4p3fxDAAs3wPB/AoveBqdvEHTXBDQHvNi4qw0b65rR0hmAzaqgOM+HiqJMlOX7UJjnQ6bXA0WRoBsMgiiBCQIMJiCR0sBEGZIMKAAyxS5YEyuAttewe8dW9vQqm/Hsl5WCZh8kXnHWWNx44YmrBleW3S0Iwqfp+yAT+m/3D/9WBgyUesZYnqom7/nj0+9c9/CL6xDrqTduOWkfu/7klFRUewqQdw2S1nFIEbE1cGklc8ICG2G0vQqrEIQtfwaC8glYs1vFe5/VYefeZh7tjB5cjONHV2JoRR7ycnxw2SV+IxSLkk8l10znCwUiiETCSKVSKCsvA0U/8UQCdocNYTqOAV4rkMe2At3PoKPuAzz5kag/tHKQILkHi7dcNAl3XH36cw6745eCILTMm7dEWrLk36sN/zYGHCX1F36wev0Dix7/qGj9xq3shhP3Gj87MyCVjj4TyL8ZCesgGCRLehKCaIUgA6x3E/TGh2BhXbCUX4hO42Qs/bQdL7+/Bi0dXRgzpBTnzRqDqeNqkJedAVnmLgBRHWhqPISWw804sG8v2loOIx6PQRRFBHp6EIlGoWsa5l94CZKpJFpbWzFt+onILqqA2+dELAGkVCDDDmQbTRC7/oLWbW/g/ndd+sOf1IijR44UFt1wcsfZsyb/TBCE5/7d2vBvYcAqxuQZgqAxxjzJZPzhhY8uu+IPf1+FiaX7tT8v2CtPmnICUPorpGy1pnjqSUCUIBAVYwehNfwCcvBTKNVXwa9ciSffO4zHXvoA4UgY5540FlefNwUTRlZCkAQkdHCGdbT1YOvaz7Bz8yZs3boVXV1+EgIYOvkDhqRm5gkZGR44HU4kkgkYhsF9Bq2htcNRO3IUTjhxJiprhiCZUiHJFlgVwKftAQ7fh81frsJtr1Zqn+2rlm+7cgbuvvm8l91O548EQejpu+f/bbj6v2bAqlVMnjGDE3/Mpp17Ft/6u9eHf7Fuk/7783aJd5yjCPKwu6FlnMttu6CrnDiQLaadP/Ag9IZfwVo0FWrJH/HUCg2/fuRl+P09uOy8qbj90pMxanAhIgYQihmwO0SosQReeuZJLH3pRS7hsqLAanNA1TSomgpVJXsmgOkGREmErMiQJRmGwRCKhCGLIqxWKzRNQ09PLwoK8rD4lSUYOnwoojHVVCtJgVUCHJH3wep/iUfeirDbl9Ya40aPlh6+a+7eyWOHXyYIwlpK4gYmkv/VJQgCFi5cJadVct5Lb30S8U74ERs0eY667pkCxvZfy/RUL1MZY5qmMl1LMV3XGDkHPbydpT4fw9hKK2M9z7FVG5vZiLN/x5A/n82+/lG2adchZjDGelXGGv1J5k8yFlQZW/bGMnbyjGmsvKiQDR88hA0eVMPKy8rZ4OpqNqq2lpWXlbGS4hJWUlzMigoLmdfrZcVFxayioopVVFSy4uISlpuTy/Ly8lkN/2wFKyspYVdeeRXr6O5hSY2xWEpn0ZTGwokUi2iMqakwY00/Yluez2e1U09RnaNvYM8uXZFgjF1G905REvm+/yrx6Qvpi9PEv+P+J19nqLyMzV9wvNazvISx7sUsaTCm6YzpusoMXWOGwThR9QOPstQ7YGz7DBbq3cd+dN9bDDnnscKpt7E3Pt7KSJX8KmMNfpU1B1T++/b6Peyi+eezIRWlbFB5KSstKmSF+fksNyebZWdlsUyfj/9ODKCf6T16Oex2lpeXx/LzC1huXj4rKSlh2dnZLDMri1VXVrN8eq+4mBXk5rJrrr6aJRJJpmo6S2kaU3WDpVSVJVTGEnThPUtZeGU5u/TiiTrKLzHu/csSxhj7FdGAnPN/jQlHEf+3P7l/MUPJhdovbx5psPVjGIvu4BesqqbEG3qKE97QIkzfPJ+pb4Cx9t+zNdsPs+oTf8KQcTq7+b6XWG8kyUIGY7u7ddbYq7HuuMGiGmPP/eM5Nnr4EFZdXMDKigqZx+1mvgwP82Z4WEV5ORs6ZCgrKChghYWFrLioiBOeEzw3l7ldblZYUMAGVQ9i2dk5zOfLZG6XixUVFbOc7ByWlZXFP1NWXMxyM73s3nvuIaIyVVWZTgzQDZZUdRZLplhEZ8yI7WFs03HsN3cMN1BygXbTvc/Q4X+m6G3evHn/eSYQ8Reu6jc79//w7qcZSuarf/31IIPtnM3UVA+LksQkSZIMbnY48WP7mbp6KNOXWxiLrGR/XryWIesMljPmGrZiTR03S/sDBqvvVllbRGf+mMZC8SS79bbbWKbbwaU+JyuTeT0elpudzWxWK/NmZHAi5+fns4yMDOZyuVh19SBuZnJyclhpSSnLzclhGR4PGzZ0ONcEet/pdPLPuFxulp2VzcpKy1h+bh4rIQYW5LMv1m5gcZ2xzqjG9vQabBe9egy2syvJdvUyFkmEGas/iz1zb5WBsnnq1T9/glj2V1EQ/vPmiDx/2uz8lhO/bH5q8W/LGWtYwOKqygJxxiLxFEuqBlPJ5hPxg2tZ6gM3Y18OYonoPnbFnc8ziCew0y7/LWvvDrGAxtiODpU1B3XWHdNZD3GQMbZ56zZWkp/Dhg+qZFWlxSzb52WlJWVcuonYGRlezgBZllg+mZm8fFZYWMwZUFhYxO17VVU1KygoZE6Hg+VkZ3MTZbFY+O/ENI/HwxwOB/N5fSwvN4d5nE523rnnch/QEtFZQ6/OdvgNVuc32O4enW3vSrFdfoMFyL7uv4K99kApQ/m8lMkE/eE+dPVf8Qff+2DGmCyYoeYdP33gxbsee3q5tvj6DcolC6YjWvos4gkdiqhCkCWeWQmywlN+fd0sKIUnorP0Vcy75Cl89vb7+MUfbsGiOxfgUAjo7tGQ7ZRglRgsIoMiCjjc2oY/3LcI8XiCn6c3EOThoyApECUJmqpC01Qe6xcUFFG6DV9mJgKBAOw2OxLJOFQtBWaIsMgysrKyEQoFEezthSwAqWSSJ2cULWV4Mnj4CsOA1+vF1i1b8dWnq3DCrFmI9GqwyRKdnidxDlmCqutoDwOs+FnMnfdDvI53lbl/geqwWW4m9yUIAtkxTqt/hRHfueiEack///6nlpHNN81OwwUsnGKsNaCyrnCKBeM6iyaSLEmRT/cKlnwPjNWfw/a1drGhU29icE5nTy9Zxc3S9k6NNfg11hE1WDBhsIRmMH80xWKMsd/e/wBzKBKrrijnkk9SS7Y9KzOTFRUWMa+XHG02KykpZeUV1ayopIx5fVmsvKKSZeXmM19mFrM5nIRFMFGSmUVRmE1RmCyKLMtpYy5F4uCg2+1iubl5XAMyPG42qKKC5WZnsbGjR7Hu3iDrSRnsQEhnu/w6q+/R2W6/zvb26GxPt8oaulMsTMq6/0r23H2V5BPUe0zHzKOjPpr9s/VPNSCNZpLkj3z57dX/+Mnv3jR+eW6ddMOCSiFavhi9EQ2KyCBQ7s90CBYL0LMG2sY5sA6+ALvlR3DKqT/F4cMtePvtBzFn5lhsadeQaRfhUgQ4FAbNENCbYIgzGR1dEXy+cgWc7gwe2ydSKpwOB0+qDENHLBaFzWIFFCtkQYRVjwOJOLyKACPkR7WNwe2xwtAU5LpdsCkyRENHOKmhJ64ikjLQGlRBgCczDKhqErIsQzcE9AQCyMrMxM66XVi5YjnmzZ+HnogGqyRDJdxC4AUjiKLACRcIq2Alz+Dy888V2gLbpbv+qOhFed6nGGN7BEFYNxAd+Lb1nQwgp7toEeema8O2Xa/eeN/rjvkT9un3XiqK8apX0B0RIEGHwLEEnScwCNdD3zoX9srzUa88gpPP/DHaOrqw8u0/4vjja7GtTUWeS4JDBuwyENUE9CTBCVyYIWNf02Hs2bMHGV4vAsEgGBhPmiSJTAGDJFNSZcCX8GN2TTYmDiqD0+PhpokxAzluBxyEijqtcMuUERuIxBOIpDQIuo7mti6saWjB7kM92NKdgs3pNVFVQ4coyQiFw8j2+bD4uWdxxjnnwqqISOmATPLFAJVuUwQUSQAzGHoiOqSKF/Czi04S9nQ0CDfdt8wyqCzvFcbYWGHRomBagL+12vbdGrB6tXT33TO0224LPHb7A28OyZX3aY9fdVDWhy1HZ8ILRlgOwQlEfFGGoPqh7f4R3AUnoNn1F5x23kK0tHZg+Rt/4MTf0aqi0C1zwttkhmAK6EwATpnBbQVHKg81N0JLEVRhQgYWWeFSl0xSbVdAttOKQUoE1588CpPHDIfi9MBisUOQRCgWKyRRgG4YMCgzTiYgqQm4si0colBTKeTn5WBIWR527juMIbub8eGBAFKSA0lDh2yxcgSVjk2lVCQSSditDmgk/RCgMQaFsh8GSAKgiyKYpqEz5kTRkJfw6BUniVvubdRu+8Mb5R88XviUcM/d56+ePp1o/K8zIK0+ZHrm/fyhly9bs3aztu7nW2Xf+D+hlQ3jN2dR6NykmiIE6NAPPASnwwd//mOYf8XDaGrYh6Uv3IvpU0ZiKye+BIdCzgxIGQI6EuaNORWu2xAZsHfPHoQjUQ4d22xWyJKIUCgEaCo3D1NyJVx34njU1tZCcmdCtji4M5UUCyceiSfBDUxNQba5YDADuq7DUDUoNhVqkqpoAiYMt6E4ywNZ3o2P2gx0Si5oOplSAe1dXbh83DhkeZzojKjcBEVUBuocoO+iYIFif37NooRUKoFOuRJFYx/G4quvk8fd49R+8+T7cw2DXUEA3neZomNqAKnNokWLyKFkv/fJV4/+7smPjfvP2ylOmHk2/M4LEAsmIJG4cvqROMhg3e9C0tphDPoTbvr5G1j/5QY88tBtOPfUidjUpqHALcOpMLTHAY0KLYTXU01YYYhp4MT3CETnFJd4m9XCTU40kcTwLBuSSREWxLBgXC2qKqsg2NyQLS7IdgdERTEvhVdgFMDQIEgWCMyAoGuQCKQzGIxUApLVBklWEBZE+HJ0nD6xBi2fNqC1zYCmaxCZCeA17KnnAJ3DKqE3bl4rfQeZNYtA12/C5yTbRIt4LIFuz1kYceKn+POCt8UfPusxpo4tf4gxtkIQFrV/myniTD3GEu6++24jFAr+7t4nV+VNLNlv3HKuIsYL7kcgokEiSeOLAg0FQvwgWHgTnNW3488vNWDJ+x/j9lsuxk2Xn4rN7RrynSJcFqAlJqA7AUQ0suxmSTHBmUEqLQI6Q/PePUgkU5z4hN1n2i2YO64cM6oyce3kUoweVgPZ7oZic0K2OSDanBAcLogOD2C187BVoP8tNvNnelnskGwOyHYXJJsTiisDNrcXdrcXGb5sjC3LhkWLQ9VJokVugrr9PdwvkUbQtXosAlxp7dUoLCUwEYLJBN6ZISEYURHLuw8/OCtDnFGzn939+CpfZ3f3g8DdvERxLEJ/gwF96sIYm/C3Vz6+at3GrfojFzTIlmG/Q3fKw6WLvpXOZkY+KvTgRrgLT8aKbTb847V3ccbMibjvpxdhW7eBTBsRX0BHnKErQXE+40gj3Rhdk00UYJcE2GWBS2o4FocgitzxUqlxZEkmRlYW4ZKTJ+CkyWMh25yw2m1p4jvMmiNdB+UdkgJGmkkCwovFMic+FAvXUtFi5c6ajpcUKxSbC05vFsYOqUBNjpNrnkVREI/H4fN5YbdbuVmyykCmFci0mFIT04G4Rg7ZjIzMO6FqkoHuhB3SkAfw8AWNUl3ddv2vL39yAWPsRKqmEW2PZsKxNIApsoRdDfv/8KcXvhKvn7YHx02bil7bGUjGk5DEPqtFXy6BxQ/A5szCwehQvPzWJ8jJ9OLBuy7F4aTMCeqzCQipQFuMCG3SRWdkR01fQE6NJIqiKZss4tTTToMsSTzascgSnLIIxWZDQX4B7C4PZKcTsiODO3+mJXkCRdEI01QzGDA0Hl5ysRXp9hg3Rfx9NcGJRMyniEexO2BxuODMyERpcTHsioJYPM6/+/QzzjBF1tCRZaWyJuNST+95lLT56RPrPi0gf5BIwq/MwIgTZuP2WXvw8ItfYdP23fenm8++0QR2BAP6WkdSqjbr2TfXzoj66/VfnB2U9OK7EYgZPP413Wa65qdHIeph6PaRWPnlbvgDYdxx1emwF+SiM6gjxynysl9n3Iwa+P0wcC0gwlDdljJMYoxhVgpQVloKh9PJM1WLJMLrcSEnJxsWlxtWYoDdzeu8TNdM9Seiq8QI3YwTOcF1MKpz6ikwNQmWiAPJBJiuwtA1HtqSVkgWK2RZQpxC1UQSigiee+Tk5uKkk07i1+tUKMAwfUCfuTHfB9dkLof9nKAYQEAwZkAtXIgfnxmTpNge/dk31x8H4ExqyzlaC45gAIX8iiJjy876Xz/z5mbcOnMvisecAz8GQ1dTEHm0k24HocvSAlCchahvjmNfcwumjRuMqVPHYlurjkKXwG+oIWQSfHyOGUtbRAF0FjoPdUuY98DFlfuDUWPGoLy8nIeRgwqzMagwCxkZGabNd7ggSBIvtJDj5XVJCsoJ/uD5CCmlDFgs3AdAsXETxUhwBAZDVWGQk6f/dUIKGCRRhMh05LutsCoSYrE4Ro0ciaqqKp5vkNAdsdKdjAOJPoD+3CwbWgp+owy5oy7Ej2fvxT/e3sS+3LjjV33BzcDz9TOAOHO3IBiplDr1lQ+3TNVCe4wbT1ElLedWROIGv9C+T3LBYwZk2YpwyoWmQ+1wOWyYd9ok7OwlZyVwp0UEJ3WtyQBiqonz0Ht0Aroxbqa57xVA5DB0BpfLBY/HgyyPCyWZLhR77bBbFFPq6Riy77IFosUOUbFAdHogun0QnD7A6jDtvWwDyPZbbNxJSy4PJPqbpMAQZB7Xa7qBVFIjC4ai3GxU5HnhtSmwkxk89TRTQ3XKRdLNR/3ibwqPSfS0A+hb/Q5ZRDRuQM36Ea6ZJUh2dS97dfm2cQBOoeBmoBb0M2Dp0qX8NE0HD938yvI6XDG50SgYeSp6QNKocs4O5DpXS9mNDn+UmmdxwphqKL4sdEV0FLsE3igVSgElTlNVQykBCdUMQXkjFWmAwLhpot8JJCMzQoweO2YMJwZFJ6Mqi3kuQCaHUZuJqCCuCwgmDfgTAg42HUKkox3cv1k9YJINkK39r2gwjN3bdmDzznr4kwYSTIQhiDzRisbj3P/YXG5MGVGNaUNLkO31YOKkSSZ5B9qcY7TwptGJAQzpYwxdbwp+VoCs4efg2qmN7NXlO9jO+r23EGxNlqaPZ30gG2/FY4yV/emZt89oP7yHXXdlTGI51yGSMLGPPtvfx30yA9GEhlA4Bq/bgZFDy7G7lyHfKcCtkMMSOMJpI8cL82eSditZDP6Oaf+J8DaZmCRwDSAnOW7MaKx/bwnG1Q5GVnY2mKHCYDo27mjAF/UtaOoKIZjUEAxHUZPtwtTaSpwx+xTkFBZwX0KoKV9qEhu21+HxZR9hb0cIuiCgIi8TZTleZDtkzB4zCFkeB3RRRkFhCWpKO1HWmUBNTQ3/OIWk6WTHpPJRTKBcxkzOBvwt/TMJUizOYGRdi6umvyb+6ZMGvLN6xyzdMAYLgrCnLy/gDFhtCqQB6Be8u6bJNr2ySRs+apQcEEdym0kSeIShS694IsVDxcEVuUhKdmo7RBlJP3dGZO/TTRCMIh3SCvJYAgyK2JgAA4w3SXEt4H6dmoNEjJgwGRnZebBZbTyiId/zxbY9uH/ZGgSSBnRB5A7cwlR0siRaWmwItjYh20Vhp4PnEAI54GQUqUgQGZJBMomOQATtvRFsaOzk2tfY5sePz58Bm2Jw+CKeVFFTWwu328VzAR5uk+k7hvQTncnHkRbQ3/t40P8/XaOmolcYhKoRxwlzhtRr73zeKP/4msQlAH5FneFEc86AGab0Cys/33jBuq0NeGJul4DC2zhWQ13bxGcz1j2SD+Sk7FYZBbkUhhrwWimeN2N8k6MCLAJDRAUORhg8FvOCCQwm7eYOmZIxMrXMgMcmIbhhObQNqzmOn6BISHajrcuP7fta8IM5E1CS6+N2mkYKwqEIYqEQSkqLICZDiLY3w5FTYuYD8RCiXa0o8Sg457ghmJXUYLEocGe4EUtpiCZ17Gxqxfr6RswYO5QHAYG4ipHjR8JIJXk+wcXuKOKbNDDJzCM7KiUcrQXpJQoGwikgK/8CXHbCzeKFzzfgg9Vb5jHGqOOOOxh5AE4xctXGxpE2rYmdMs4tqY45UMMUJaRzh4HBQFojKVPM9rmgSxYkNAN5TtOx9s089F1sT5LxmN+0mYwmMbiGcKdKXSoC4xGIkYgi+PrjKLSLqLSlEE0ByVgcjc2HMX1kGUSD4fOd+9CVFNHYEYDFZsfkweVw94aR6Svldt2uxiHqdiR7OhALhxGKM/RqdmzuDGBbM3VeWzCoKAu1XhFzTxiBDXua0NHpR16RC0kmQVy7DE3uGMqvuIs7J16sOeLmTeHp94fppuC+o0xIJK0VogQtZSDpPgkzx2SJvhcPGKs3Ng0+c9bk8QDWEu3TMQk3mKd9sa1VnFZ1WM+pGo+AkQUYKW6tj6J9/yLf4PM4ubMlR0v2PEG4zoAPkJNL6nQj5ssqm1JP9p8OoyyTIiNKZpGMI6+4DL6K4agZVI5EPIZuvx9lmQ5kK8Dazbtx+FAnTj1lDnxiCqPL83DauefDYXdBMAjtTEBPRCGEu6GGepCIBJAIh1AzpBaTJx6HnHgXTpk9G6VVtVi9YTfCna2YOrQcCgykqMIGHZOHVMLR2QympcxMf8AaSAcCE1WDErRvOYAziTiRQsBww1MxGScNbjE+39qCRCJyRp8xkRctWmRQ8vDV5vpTduxpxh/nBAVkzeJh48Dpnf4v7/NHHDBTeGNUPGZwR0oRDtl7STChW47TpaMcMjMucs500YLpjIn9FAaSCpOekdOLJ+OQNQmyoSMQCiOjtABuZw6iyRROn5GBWDSOSEsdLp41haOS0W2foaSiDAgdgmR1cfCNkFDKF8gH5OVmwUgFURzpwXVnzYSb9SLQewhzTz4BGW47crJp2klAWzgBt8uBLLsdvsxciFZ7WvqPvcgw99n+b7FApiOHgDg1rWaejDNGvye89VozvtzUcLJFkanfVJfTcWnWw8+9O16NHMKUYVaR2U+AFhU4QfpU6uhFDHDYFKgUwzNq/xY4qkmMoMVtPdVfdYKeAbfla0Um52VmsWYeQJrD1TaVRCwahis3C3bC3l02yFY7NCbC4fLC5sjg5ovqw0y2QpQt3FcoRgSGksUhbCI8B98kBRlZecggKskOZGc4+FwBJWAl+ZkmSkEYv54CDJXnFolIFMmUCzHRAhs5X5KOo/xe3+obc+rzjUfkSAMCIwosKOfTXZNx/FCnKCYPYcPO5pHJlFpEDb99wM7ouqYeN02mVFaUihGhDIwgXfMqv+F8+XuCAEUmnNy8JCIqSTmZFMJN+lSzN8X4YIUkMG5q6DhapC3Ut0+REmkaBxFScegEmDm88DocELO8EBU7FIsMxWY3fUcfwkmxviia0U5MAwEMaiIG0eoAszg46kl1R3K8MkdEKREjBlH2LHETA11FPBpCMiVCNATIVFKVRSSEtN8jLU4ngEcHQhYKm5mpBfxvfZHQUeEqD7gNFWHko7isQqjO7NB3NgVsAMYCaDHJocfH1TX6Mbakx5BzahHVyUN+d1GfSyx5Do6LE4FNaSfJIOLTi/6WxaeIGNcSEsG+sG0gI4jFfOCFMlerFb2N9Tjc0QWPL9NEMWULZFGCQli+jSBn6qiWIVAdQCQE1I5EikG0Z0C0uXlGTJAzk6zcscoOD2egbLOZ+I/Fwv8uWeywWp0QJQsUSUZ5QQ5YLAzJm8nJYorFUVBEepHgmA7067joGyv9USpWkXUQskdhQnkv29XYhUgkMME0UQB27msZ3dzShQkVMcAzCkkTcT7mCQe+TU6VbD45VWIA1UuTBEimGUCDEVRwp/C0T2XN4wmWIBCOcVDLQp0sBoPszYHF5UF7WyuCZLacVO0SedLHq12E7RDEQPZZsfHvp6QrqWpgug4LSb/DC2Z1AzY33E4X9KRK0zkQ7E7+nkCaQecgBDUNADJBgqJY0BOOoafHD4s74wjNP3oRDcisklAd4YS/xVwRk0g44RqN8RUJ4XBbF+r3t47iDKD4v+lQV00o2I3hpdRmMATUwd0fAfRz8chFb9OXmxCtiRaSxJNJoiyY3tepiE7mhRBPmeSAGGWqNWXI2XazHkygHG8rlxTIFbVgbhciogIjFumvPRD2JBDOQwUgiV4W/iLCK6IId06uCZnICtcYQ6fkiiEzrxC6RiXJlFl0proBNytmWZHOSZqUSsTQEUkiLjtgKShPa0B/Hty/TDjdvNcjzNIxBLY/bxIE7gdgGYxhJZIQi3Rh/+Hu6r4wNONAW6CIRkHL8+yCIZVyhPcIHOQYxKfVZ074hVA50WDwJ76OhkjqydZTJYmknIoaUYLtmWma+pqKiRwUidF5LFStcjqxfe9BBIIBzjAasKA/smQc/E5EOc1ys7WEkqa2lja88fGX8O+tQ/zALtRt3YI3V3yGWDjItYuoxu+JmEAXxlWSOCBChEET22g42IJO2OAoG5wOPkwSDjREdKow93um0H2vxR06oInFKM1zCRbWi+bW3gIAOWSC8ls6g5kuOYScrAwkkc2z0m+zfV+LQpoBHBnth+LRHjFrvBRAkIqSqjplIEOBWfTmDpjkzyxwEEhH8TRXZ4PBOnQytJwaHO7sQUdXNwxdBTN086VRsYUcjdnHz3N0sn3xGPRoFMeNGA6W0tHbG4HdYsekIZWI9fTC6aCRVrOGAIIY6P7oRbAI1YFpmiYcRac/yJNCctT9CVg/lU0/Rl0cfcTvM9MDM6X+BG3AMvMBDQn4kJXpEzIsIbR0hcnOFVIUlO8PJiw+e5S53D4hxEg0aZDiu51Ln7PnbXvpdFwWGToiVJYTkGc3hYzoQ1JDOQBJP0UPvL+H6KajP3Sl7yNoQ8nIhTrpfPQYT2J/82GMriyEnJHB8wKJc1XlNpuKLhxbSsWxq6EBb321DQ6rgqFVFbB5vFi/fiPHYoaUF2JOphcuTwYEYkIiZsouM1tXSPIpYdmz/wB64yoKTrsScGZw08ajwL4QBwSlM56/kF+jP/Shod9vGUgxGS5XFrKdh1lPMEnCzxmQG4ykkOlIMNFRJvBopT81+o6Vlno+cZSOfCgHCCcZmgIMeQ4BNKxCyRYlZRYGVHgENIVNRx1SzbyBugS5EzbbM/kP8WgYMV3Aur0tOGFoJ1xWC0gkCBaRCWEyUoj6o+jo6AQ5tPe+3IxP6ppQmp2JPW29KM72otvfi47eED7b3YRD7Z2YNGwQsrMzUVxYwOFnyiXIRxHTqWd0295mhHUJujf/G86OlEU1DLRE0+gnv2eCVCiH+TpbHhiB9v/c/0M6ErRnIsu5nwUiKfpLLjHAG4mp8NhSjCbQzXaoY8N/R9i8Pv1LOyTy8g7ZDDN3dhkYnWtOLnJzm0YNkxpDuQs4FBXQHjMZk2UB4mnNMINpAclUClabDZubWrBm53547Fbk5eRwVFaxKmhpbMT6bXXYeKALBwMxZDkUzB0/AsMKcs05Mk3DsHGj4A+F8UndLrQGonhz3XZ4HHbMGjsYo4cO5oUZQmJS0TAONDZh98EOyBYFWRmefgaQphKTFEniRbfSDFNI6L44cqIBwQS1s1Ad47s9AoffuZPzwOtQWQdPj+ElBjhp44sCG/XfOY4ZVv0TReARAUm1yypwJuzt0dEUFDE4U+T2XiYN4TbbdMrlblJfAS1RAVGN8QJLrh2wpYXJ58tEbnYW6g4fxLp9bcj3OjBaEFBAyZwio/5gCzbtO4jmnhhy3C5MKspDtjODZ80ZdgfcogJ/zADTLRifX4CWSBB1nd2cAfsOtaGmtBCK3Yme3jCCXZ1Yt6sZ2w91I6OwvD/55GaSypWiiI5IGKsaG7Ct7TC6IiH+XqHHi3GFZZhcOghZDis6wqSj3x288JBVcsBl1dGcpHAx7pKBpI2wcIU2vhCpGer7WbS0sPLjKWyNaYyjodkOoK6b4atWgzOAm5a0nyAYmjJFsqHkA0pddJNAR8xkDplcc8ZXgNNJ8boVmw92ozDDjqRuYFQ8juxQCEYyBkGxYuLQXBTZbGjtVOHTNeSQOoUNRIQEXFQDjsSwqz0G0SajtiALreEYaHOO3mAIye4e1O03B74/rDuE9kgSoyoqeDmUiE8NuzE1hfs//QjPb1mH1lDQLFMyiWfu1GlBGjkoKxc/Ov5EXDr6BPijOlK6wbGwY5GR01ZUYJEZ1JiBlKoTGPA/X33mjfwG4d75TqAsQ4Qs6NjWoaOxRMQgr5kTfJ2cpe19+hKpbZXC1N4kJXKmo1MUK0aPHoNtW7eiOx7HF/s6+KxA4+EunDWhBqFIFDFIGFZeiKoMC4q8ceR4SpCXU2g26VK9WTfQ4fdjuM+BPI8KwyrhxTV1nGh7mlvR1NaFls4ebG/txZ7uCJx2B5d+m93Ow9Xm3h5cvOQ5rD3YBK/NgSyHExFdwWzfAXSqDmyP5sAqaGgO9OL6N17BZ0178dhZF9GuLWbi9z2CVMMgQwg5SaqmckNN8PP3X2T2+kLQYErgzUoVXhEZVgGHIgzv7tdx6zglbUvNsJQ6UsS0mvEEhVBVySzWkAP32gTeBcFndq023h3XHEjALQOHgzHINitawhpvN0+oKlTBjqQWxPaWCDzth8AsVs5aq90OTYtBZGF0hTWUeAtR7HPhUKcf/kgCmw92IhGJYVNLEDGCya1WFBQWw+l0oDMSxjmLn0B9dwfy3RkwDBUWIYmYbsEP8zdhXaQAnwXyUWGL8Nqz0+LBC1s2IqnpeP78K9EePrYGmAAkNZwJkKnfSZFShExFaPw/0kMdUrEjsPx/Zvv7KpW0AkmzCJ9tFzAkR8ahsIodnQxftjHMLCbmmGBcn0ni0V86kiCuExYkS6a22DO8qKiuQn5+PiLRCHRdQ0tUhSOp4vD6BsQFG3K9Thzo6EWJ145uXcbmpiZ8ta8V/qTA+4my3XaUZLsxrjQbQ0ty0HC4E42dQXxW3wFK42juoDMSQwKS2fouACfNmsUBxtvfex11nW0o9GTwgW9CY2/O34Fzs/ciX4lhqKMHs31NeLhlHJb5B8EpEIN9WLpjCyYUl+HmybNwsDcF2h1m4OJ+WosikpRgcyqQFFuEjgjQTlPBuCLQfjtmA9Wx9WCgXePmjMKwNFHjKuORDYVnE4tEOCwiP9dbe3Vu46lgw8PVozLodOSJJI+tBURSBF0wTD3hBHh9mfxnqjV3RxLoiGhIijakBBktYRVvbdqH1TsP8Hou1aY7g3FeiE8k4ugKhOCSJGS6HIgmNSz9qh7vbD+EMJPRHIijJRDhJVe6XrIAmZlZKM3Lx5pDTXh95xZkO5zc+capHwoMD7Ych63RAmRYYsi1RvFyVy1e8w+BTVARSqbQE4si2+HCw2tWoSUUgJNaaQY4VMo9OG1TIQRiiuC082p4gBjQ5XVZ0BuzCbTZEW8POVbH4je8ihkTUwxPkQ3Z+KYgDVwAhU4Bk4olHh2RWVrSYGbWJPUU/ZivPijDRJISmplBc8YStuP2YOq0afB43FySqHOBSp/dsRRiiQSi8QR2toWwclcL1uw+gD3+KMpyM+F2OHiNoDgzAwd7Qli2oQFPfLIddR1hhFIGOoMRHjIaFjuoCY2yY0rYhg0bjqrKCjy/eR03i3SOi0aNx7C8Qo5mdkdSiCQiWNubi/qwC92xGMKxBO91mlRSgTmDanmFkJj2bv1W+OwERB5ZLuO0TfTCH7UKXhqIADrJCbdnZVhTvQmnJRLqYVYhRRBjOhn7bo9Ap+e13jTLmiPUAwqUuRhmlkk8GiLmEGPeP8BwbjWhgoxnnzyLTFdlzLZE6pIg2CLdhWC1w5edg5zMTESCvVA1A3EjCYvF0j9gR51yjSENu1r83HHzLgaedVs4pu8PxqCLFsSSKkKJJOK0KwcDEsRMggaSKdgUimoEVFVUwJ2XjfUHm2AjwA7An8+YB6fFgl2d7djasg9ZIQVXbXGh3J7Cj0ZJmDzpdIwtLMCIvHx8emA/Vuyrg0WSsaZ5P66dMP0oSFmERTCQDPvRHXMKEz1Wut1WzoDCnIzesOrJ6+ppQTm6AaGQEu3+KOfb2EBEpIELgpaJ0DR3tanTbMbyWhjOGyzh5d0MOVZgezeQY2eYVmR2FRtUiOFAUlrqqT9IMuEJWddQlOUxVVaUYbVYEU+G+QQLdatR4mOxWPlgRGtXHDarFXqcWicBt92KzkgcUT1qSqCkc8LHCStPF1jIXNG0DO+UBkNBUQm2bdqEhkPNCCQT5oAHAwLxGNxWK2rzCvgLmAqrfQdEqwvHj67g++NE6VwGBRBJzjRK2g4Fe5FQdR6OmvdH0qbAhh509vayQLJMKMp2hwC0cR9QWuBrNeRMvseaqB/iCjDQfn1jpTXLbLQFMixkw83qVl03ONxANzAyCzixxMTCM6zAli5gQ4fZEU2nIPtLkk8ZMTVzcZela/A6ZWzctBXPPvEkakeO5YS0Kopp61WVO81UKsnbyKmJl160FQ3939kbRNJgCCZUBBMpdAVD8AcCnDlUwUokk9yx07ipxDQObQyuHYeUKmDTli2QrRym5bfc145J35viiKzOm8pkplEMj554AkmCwM09N/ln6F/TcRNWlRZdYjyVXo0WHOqMsBR8KCvwtpMJoo44VlWa3eD2ZKPuIDOQ3MPTbsLf+UoT+2gH3LeICQVO84t5KdIAPjhgmhMi/JxyoCbL3OuNmNAQADZ3mXiiia2bXXRkhKgz2etRsHNHHX5w5TWw2N0YOX4aMrMIoSU0VO3HxqjMqMgKN0kEXXDYgKBpCjQoL4nG+DwxMYmbNx5xCVAUhdtqqyjwYT6ry4vpJ5+NIaPGQ43G4LTa+H30rT7iklbwdvw0FkpbohGDjobt6X48NhusEgmMeR6eVZOypfZg10GN2V05qCrN2UezxFzohlUVby0tysHGA3a+wR2lZ8fMiPvqn/2L8SpYph0c/UzpAoee9/UyfN4KPhVD5zmzUkCRy4yYvDagIw7s6U1XzwxzhkuUJZRmKFjz2RrceNV16OnuhjcrDyPHn4ChI6h8KsBlowkJAvlUPrJKeBHdHB831cwaNhGVevx1Q+dVLjuNMBGkQH6HAzlEeAvsigirNxeFZTUYO2ESDEFCuLUd5VnZplTz1hmzY24gQ45e9DctfQx9B2lWTXYuR331tBCTnvOUN7ING5usrIi20aws3NYf7kiKfdPwimxsOpgp6l3b4eSta98Y5jjm6pOV4dlm5zPZbZ8VWHlIwIGwOYhhFRlmlwnIdVCPKBVjKLTU0JkQYXXI8Dlk9HR24rlnn8dtP7iRjwdJiszVPL+oFCfOOhPZ+cW8LCnQhE46UkokzF1xCbqwp5kRjsU4akrSR6aAd7Dx7g6GWDIJl0Sd2yIkRwZ8vizMXXAZsksK0RMMYseGTTihqIyDeTQy5bM7+GfpRauP0ERYYgzprUOxwMWngNJbaIJhVvUwrv19vpOMKwUrzL8VGw74hGEVOXB5vBv7GQBg67AKX+RAMF88cOAgc7FDfPYrPcl1TFyj703T5gFlHqDaa75Nkk89O+8cYEilt9KhbHd8joE8m4Fct4QhxQq8SgqrVqzCTT+8BeedfjbuXngv4skkB9zI1oco+lFVHD/zNJx+1lw+++Wi8SSB8RFS2q6ApJ8yZtqoKRajrcokPnRBponMA2mDuasiZdsy/4zscPP5sHkXXI6TTj4NapIhGo3hszVfoZYpKM/LRzAew48/eANLtm/Gfn831zwyQ26LFRkWO2ci2fm6jhY8vvZL/HXdJzwTHllQiJOrhsEf001nThQRLXCjE60HG9lef540vNJLHpt28oVMO8YqstS16qutm2Vn8bQvdm80qk5aI8lKCfQkFSW+hov6SnNHpgSmI6UMdloxsD9oOmTqAyLz9PFhhtNKzNarbK+IAi/Q0NSKJS+/i/ffehO7dtRxAhH8QDgMnw3j24cpCPX60d7egUFVpbjoyh9yEO2Lz1ZCazvIe05jTDSn3HmljCbpDe6g6cX9QRpKJkaQP8ggdbR74fDl4Ny5F+HEsy6DL8uNLn8E4Z5O9ESi+OCZF/GLm67AtS8+gxe3rsdzm9ZyTajOysbUqkFwhoGUIOLvTWuxrrkRzYEeRFJJWNIR1b0nn0UdsdCMFK8V0HXRBmFS8ius3R0xNEuJNKG2dKfNajnEe0MXLVokUnPW5LHVHw0fVDbt3a0edrl/JRyFFyKYMJts+yl/9M8DKgekBfkOYGoR8FkLMcDgHQ8UN7RARI1iYMPna/HOsjewZvVqHDrcwsc7rTYrHC6FF9FNJ077gGq8MzoaCaHtYCMGV5fCnlWAi66+BdUV5XjvnbeQjIbQ2NSAWFw3+0upVqAoPESl/UOhyLzQT1sVuKzU6KsiBgUnHT8Ns+achamzTodktSNuMLS3NJF0IjcvD/949VX8acJY/PKsubjv7WUozMjgt7+tvQXrDjdzQvPpfd3gM2VOxQrJJqI3FsNDZ5yHE8uH9MMQHHYBg5NcV+dKvLvVyWoqSzF59KCVNAK7ivGRQlOgJcn+3pRRhfc880KR1NO4Ad7iXgRF+nJS36/nA/q04JsREgNtuTYuh6EnJSIlycj1AGKoF5++tgJ/fP8N7NiyGdFYHIrFAqfLld7/gZywGXGRtFClijtmw0AyEcPOrRtw/IwZPAqqHVKJmvIbkVc2FG09EbzxzEOIdOxHZzAMi8XGN+bjbZEUBmoaN0VU8Ygm4hhx3FQUFFfglLnXYPrx48xSKvV/ylZ8/tVG3qDl8WZyTbzjxz/DI39+EA8vuAR3f/g2wtEIPFYbXA5nP8pJdCBn3RkNI8fpwtPnX4QFtRNxMGBiQGbDFvlSC7xiFOGmL/FRfaF4/vnFcLky3qH7pR3caVuV9BwOts04rnLnIy9WjPho825jwYQVomJZAC2ZMicjB1L+CC6YYRaHECQZDgcwswz4eGMd1ixdji2ffIhD+/fx0JAaohwOJ49iiOgUqZCtNmEKahOk6MNsByYmWKxWbNmwBsGwCi9NH1E92W7DtDlnIBSOo3bYcGz4+B3sfP9ptPu7Ua/KJuakqzwaotlfRXJi4ow5uPSGOzG4qgw2Xy4M0eCILDnrQEjFlrWfwW63mzMBlN07nbjl9p/gR9deg38smIv3Og5yuLk9EECC2lt4U7GMIo8bl1Ufhx8cdyJKM3K45PNpnnS4wse4aFPB5Cp8tLXL6FbHiNPHle8DsD6dMpjzAatW8V1hNca0VyeMWjPi+TXrjAVnLRE9FQvgT5ARSsezA2C6r/0BtQvSNsECIqEgNn25CZ+tWI4t69eho72dJ1EC7eFg6Bxz6WvnM0AFDRMGoPCNnDkhkXTR9CJTZLPZ0Ly/Hrt37sCMqWOg6hoMkeBuHVk2K2rya1FdloOGabPRuuJJrFq+DN2qwqOfUocBX/VJqJ17C46fMALlJYTpUOGJNAyIpKhjQ8TBpj1oa9wOm93B8wkqANN2+JmZmXj0qacw9JNVmDv3HJw8dgw0jxMJSeC7MOY63SjLLES2zQNVENAaTJqSPyBWJ9NIuQ8OvYLn1/iMkcNqxNOmjXlNEASVdlwkmnMGTJ/et5mE9PIZUyp+9asHKyz12zezmvI6oVcZzqVxYIGBAhueoFAJQTcQ7AngwL4GbN2wDnXbt6O9rQ3hhAam2KEl4jBU8/O6Qappso6kTbSa28TQ7JeZyBHhze1riCm6ISEajeDTj97DiVPGIqxKyPKIPPsmYIvKoL78fEwtyUdk/OM4fsYctH+1jBdsskedgoKZl8NHCUoa2VLIKVJGzKFwgzNg/fr18Pv9cHsyYDDqwKPhbII7gJycArQHwvjL3xejpLAQVZWVGDasFkXFxdDLHGgRJQSlCHKy3JCpGWxA0kqMEGUFXtaI5p1f4f1dtdJPb6jSLTbHCybNp3O7yxlA86u0C6IoCI31+5s+fPil9Wf/fVWd9sfjn5ZdmfcjGu6BSMNv6X5ssxJG/TMiksEAWvbtQ3frYUiMLsYGI2WFyChlZ0hSE6uJvEFTqZk1vdEFKCs1SSPA7PMxJ+8p0TJbV2SZnKgN+7Z+hLaWK5CV5aEQBLJi9hGRsPkkQFV1FHhkdFWORDSsY1BpDgpGHA+nnIJgBE30k2Oa1AhNxh9IJTTEIgw7NqyE1wVQF6SatrSkIebAvc7zC7fbjQyfC6KioifSAVfMCjfLg8sIwm1XCG7i98jpkp7+MfQkHG4fpN5n8dxqUbf7asSzTqpdJUti3cKFfCavf7DGdIDm/v40qjTzjj+8+PGzL7xg7L7/oJhz/N8R2nwT38uZ9e/tMSAQpfvRaTDazGj5ziT0SmeoR2Li/caxf/7qnxah023i1NdD0AOvx6bntvoaESj9p/bG7m4/r0s47FY+OJLmKv/S9BBc/5QOd8K6gUg4xIFHfuzR6X96RoybyXSBnv6nMJf8Xb/57Gt1TAcr1GmXMKxwj30CoU03YNidOfq5514q/fXXl50lCMI7Azd87Q/yifiUE5BLuGD26LVPL9s48W8f7tUXTVwuPb//Fjy3+HFkZmb3b/3bt7jT5LVJ8x2OjfRNh/A3+o/8+jNHexW+CxVhLSRJA7vyzJNy80X2fwC+buJcfYJgwtuKPNgE3fgc8JEbnZuMo7+lryNtRmlbAlMCTfSYT+8M7DHvNytf96FTQ5iup1vqj0yKuF/rCfix4PzL8dNxn+OZ5SE9KEwRF8wesR3AB9SLO3A/uSOQ5gFacOqtv138/rMvvqzvfWivFB/yGiZc9BxiET8Hwfqkmkcu1OBEEQsVN9I38Z1I6jEW2ftYIsXPQwPfx/r8QNCLLpq3M1Idm54boBDymG73TDfd9jeOp+8wqZp1b5dNO0LQ+++FQw0CYikJbtuxW/NNwREQTlJuke7MG7DoGkn7JYsTa1+6EXmH5qHm1hL93HMukJ64+8r5giAsPXq74yO6ItImiO7qwyvPnrjmxfe2nnDvkmb90d8/Li384cW4454/INNNWkD7NJjEz8lywO20o62zxxzm/hqBhUSAVLrua07MENG+Hv/vI2o8kcS0cVXIcDnw+cZdoM1CiDB86xgKANIn5fu1cUILKHSmkOU0Q8LGLieSugi3lbB5At76elDN9nhqAh5XGkBJZgwrd+fBqlCkZUq8Rp0YEoF5InLcSRxX3oPlu9LdceZeVPz76Jz0GerkO3/sYazZnwV6Zg0taiDmyaAso7Pbj3tuugyDM5/Bzx/S9YRliHTV2RO2AFjWt//eQKYdWTXutyICGzW85ie3XDQZf/l0CLa8/zauPyuOiROmIhAMmdt68f3TGF577Od4/5m7ISsWTtxESkc0nuI/+wNRqKoB6rzTNMYrVHSR1AjWdxxVunqCMdx8xdmYe+oUdLV0c6iXypbhaJL/H4lTGZJyBIk7yIQq4W8XbsbfL92IB+duw5s3ruGtKe0hG2TRQFITEU2RjQbuO2sn15BLJh7EOaNa4Y9akFBFfkwoLvO/RZMyuiJWzBrSiZum70dvzIK4SiVVEb1RhROYtKcnakFldhQPnLedfz4Ypx4fA8EElfklhMIRjBp5HG4+X8buFa/igZVDcdNFkzFxbO1PB+RbR6xv9AX17WsjCMKXfr9/8bJPdl9604sd+mdjfi099NPncPLl2/mN+XvD+PG15yGWSKLDH0RNeSHWbt2D5/94G1KqhoriPLzzyXpMnTCcN0Nd9/NH8YsfzsPQqhJuZu783bPwehz4411XYfueAxg1pBw//cNzOG3O8bjmgtkcs3/42be5Fvzs+vN5jP7Y4vewen09irMZqnMiOP2xKdi2NweH/vwmThvejskVPZgzoo2jrwvfHYZLjjuIa2buw9ZDPuS6E/DYNHx08+fY3e7G7z4cirvP2AmvK4kch4prnh+PUl+ME2fxFes5Ya9ZPA43z9yHCeU9cCg6fvz6SFTnRrCnw8216qmLN8FmV9HZ68Dd7w2DAQkP/Ww+bG3X49YXivXqmpHSjRdMf0MUhI++bduyY2kAd0nkkDMzM3/86+tm+NccqBEeebHTGFf0D/zi5uvR2t6Fovxs/PCy03HX/c8jEo2jvDiXE/a82ZOxbPmXfOua2VPHcKKdMXMCbDYLd6YffrYJtYPLMGl0DSf+qrU78NxrHyOPGmp7w3j5kR9j975DfAr/rhvmYcTgMoyrrcLv/vYa6vY2Q1bsKPVFqL8SV0w+gCeuWcsveGV9HjKdKXy4owBVORGMLg6gNWjD53X5eGVjCcaX9uLDunwsXleK2cM6MLwwiBum7cdHdfl4aX0Jb1gaWRzEjlYP/riyBicO6uLno9RqeV0+qrKjmFTRg0E5EeztdJnbXMYUfLEnBxdMaEUq1oFbr7sOJ1QvxVMvNbEV9YOFX/9gRrioIP/WAYP031jHZADFqOlnanWcM3vKbbdfNVO8c9loY8vbz+COC8I46cSTcc28GfC6nbjrB+dxIvk8LgwqL0R7Vy+WffgVsn1u/H3JR9zBbt3ViDNnHseP8zgdvG7a3h1AVVkB/vTMWxwNPXC4k88nkL0n4Ix8ylOvLscJ44bhhTdXY82X2zhWRM8MG5of4iajO2LlJuW0v0zB4LwwJlf4uT0nwq3Zn41RRUEs35UHj03ldv+pNRWwW3QcDtjxaUMOfvDSOFw8+QDOGd3KTUxFVhRPflHJbf2edjemVnfjuPJe3rbpc6Sw7kAmRhQRkzLws9n1CMQVTKgIY+N+AaOOOxeLrjSw+/3HcMuS0fr1l0wXLzxzxk8EQTj4XVtXfpsGcFNEHlsUhMV3XXvqkrFjRsuX/n2kFlr7I7zywBxceO6ZOOPqhbjs9j9h+Webcfy4ITh+3FB0dAeQ4XFizPAqbK8/gHNnT8beA638cVGlhTmc2JleN6wWqq4Ct1xxJu7/6RX0MDds3bmfT7t39wRRVpSLnXuaMWFkNXY0HIA9w9XvNE8a0on1TZn4zbKR+M0HQ7HjkBcnD+1AeW4EKU1Ehk3lDrXYF8fQ/DBmD2/n0U0oasFZI9uw9ZAXl0xsxuD8EN7dUoQRhUGMLenlWtXQ4caZI9vQHrZhSF4Y1QUhfk6HRUdNXpgzmjTgnNEtfOicaXG4bDL+9pMJUHfegsueHKJX1YyUf3XDae8qsvR4GnL41of/fGffiblx6yJ6edZs2rFpzjV/qzxn6EZj8UKP2GB/HtPm/xKBYC+OGzUE2T4Pr8OSk91RfwCnTh+Ht1eu40zx94ZwuN2Py86dic11+7m52dfcBqtFwfFjh6B+/2G+5c0na7Zi6nG1mDVlNGhofOWarThlyhis2bQbPYEwFBoh1UScNLiTa0Bdqwd2RecO0WPXcOHEZmw/6EWGXUNb0IZoSuKmZ2dbBmfKJ7vzuI/Y3+1Eb9SCi487CJtFx+ubixFJyphU4cebW4swudLPTUx9hxtXTGnCjmYvHFbze+jpfav35mBMcRjjS1rxxYEKLP3DHGQmHsMNfxKNZ9aPFj944vqWmSeMHSMIQnc67v/WfUO/u/HnyAx5wrOvf/TFVXe+IN1zzjrxV7eNEla2/xYX3LiQbzXJ+gYVaP8dq4Uzw0NdafEkRwgJGg6GYxyr520lNGLKGHfi1AQlySJcDjsisTji8STH9t0uO8KRGJwOm4kypkPHSIIeS2LwXU7S6AgPNykqIVNDkRKFi5R8UTRjkw1eMHJbNR46WmXagYXx4ymPovclkXEtybCrZgTFN401qIvtiLCVyrxuu4FokiEcNvDq47/G/GGP4qFHP2J3vDTO+OvvLsYNF506UxCEz77P1sX/lAFpJvTtnH7JfX99bfGvfv+69vTVa6WrbjxdWLbzR7j69ru5SSHpp7idMlFCFCnV5xluGq6m2ioBbjx1T8/3kI8wsXMzC+4roPd1OdB56HwDkzM+msTBuwHZNR+VTY8NDUAVBv5Mx/NjCDKgvIQ2YO1vlSS4wdxKoe/8FOnQMWkoy/yMJHLsiZqGn3xgIRYctxivPP4iLnx8ivaLW8+R77vtwusFQaD97L/XDurfqz09vW09nfAFxlh5Z0/k3qv/rqsu25vK/GsdwEMLcc3t9/AEjeqzhHb1FVlMaMFcX8MDX8OGfW3qfYszcECs0HeegWsg4fsWEYf2JDIlZsDRR0EFJsxgLiL2wNX3+8Dzm/Ng5jmJ+Mkk9SDp+OsfFmHBpKV4++nFuPCpKeq1l81S7rvtwt//K8Sn9b0YQIuYkHYo9zGmZ8fiqVsWPE4w5kvK/KticP3tHlxx++8QjYbg4jNY/77t8/9/WGRCo9EoFIsdi/+yEGfVPo13nl6M8/46Rb3w3BOVx3592VOiKNxFNOIS+D3X92YArenTp+sEW0uifKtupKiUdcOCv0ELJ96Vrr6mR3jv2d/gsjsex7799cjOzOJMOEoAv7E4jMuhaFPSTLi6b6eqrz9tIqDpwlAapjgWZnT05/kMAtUeeLthelY4be76dmT/Z4sKRf7eHpSWVOK5P/4Ik3J+g5ceX4GL/24S/9nfXvus0+G87vzzl0hEo3/lIdH/EgPoxPRUkqVLl0qiqNxoGEx12JSbr3lK0tuCm8VfXneFsOrZx3HtPZ/hveXvIsvn43afQLZvW1arwv1BUjVHYy28dUTnbSaEshK6SGaI2klo4w1aRBBqrKXuZu4f0r0/RGhy3vRZOt5K05WqxrehoSI4MYMK/uR3HA5y8NH+9kP6nqMZ2uezOrq6MGvGKfj7olNQGL0BD/6pkd35yvH6tZfOUv666IqnHHb7deovfikuWfSvP+bwX2JA2hRxJsyfv5TgilvosR05Pufdv3pQZg0d9caT158pvvGHR/Hb0XfigceehK7F4HG7+205EaKsOB9ulxO9gRDOnnMilr33CaZOGoO9TYcwpnYwf99ht6G9y4/N2+s5EctK8rFnXzMmjB6GCaOH8+L+h6u+4n8759Tp2Nt4EIX5Ofjo07WckOWlBdi7/yAGV5ehdkg1Dra0Y/jgSsTiCYTCUc5EE9s32wvXbd7JM3yTyRRESIhEIrwGctdtt+DuywTo28/GD55wGE+unij8/JbT5N/cftHvRUG4iy1cKLJFiwhn/mcK/431LzNgIBOWLl1CTKBnpjQX5fmeuOk3b1i3/mKvtvjaK+Wfz70WJ43/Ne64fxk2bPwKGR43HwMiyaWa6pDqcrR3dnNClBTlo7Qon0+0U3hKj6MlrZk0dgQ2btvNJZiIuH3XPmR6M/hGTqQVRFBatGddd08v/0yXvxfFhXkYOXQQdu1pRJbPywk8dFAFr27Rd9Pq6Q2hvLSQ78xL0PWKT9dyO8+jnFQKPb0BjB41Hg/8dD6mVb+G+nf+gkufGq5t66yWH7vvLP3GS06nRxo+zh/w+T+Q/L71vcLQ71p9+DY9tnbNpp3/uPm3r1dv27FNe3DuVumWiwsFlCzCA28oePSZV9HZ2cIZQe3kdPMxvhe1CTkTM3xeD4/7KY9IqSonWCAY5h3NZJbIvNDzgsl0kPmpqSxDTyAIf0+QM4mkm160SNPoPER80oJgKMJf9LvH5YTTaUfz4TZkuF3chAUCYd4IQGhvZlY+brh8Pn4xX4bQtghPvNzEblkyRq+uqZUf/fncgzMmjabnAqyiR3rdM3Mm3ft30ui71v+aAbQGPE8yKxAO/XXhI2/Mf+S51Zhe3aA9fPEBeeQp56Eldjl+9+IBvPbOhwgESNUtZl9/uoPN7HDT++N+sv/EGLLN5v6dpoMmyScppZ9NbaKNvumpF2adoe9Y3oybJgwdx3s80zNb5vNoqKXRfEYBtcnQFKbL7cO5p8/Bzy+pRnnGi6hfuQS3vFCir6ivkX5w8TTce8u5b+VkZlKc3/7/zcM8+9ZRj7O9etnyL36/8G8rs+vqthu3zqhnv5qnS77xl6ChYzYeef0g3l6xGl2dLbDbqIPZbjZ/8Z22jmp8POr3vmiIJIfv/cDHXvuiG7NocvTiG88OKJnynVno4RCUdSdTyM7Ox+mzTsTN51dheNFKhLcsxm+WGMaDHw9F1aBacdENswIXnHHiL2RJ+Cv1kH2fDPf7rn+LBgxgAseO0vvQlYbC4d8++Oz7Fz/y0loI0Xr9zlkNwk1n2UX3yPPQFpyFf3wSx7IVG7B7zy6oyRhnBmkFDw95p5wZ4fxPNdwsT5s1a7pR0jbqniOoW1HsqBk0BOeefBwun0X7VK9CfOdreOydiHH/ikEsbhks3XThZNx55WlLM30ZdwmCsB//C2f7bevfyoC+NbDuyRibtbOhceHfXvl8yj/e3gRbqsG4dkoju342xLJxJwiwzcZnDcV48/MOfLp+JxoPNCEWpVYScLCO7D5v4KJhiPQX9Av51zV5vgb+naBrCkvJl5A/4NvkOzwoL6vAtAnDcc7UAswc0gaoy9Gy+Qv2xHLdeOLzCiEs1ogXnzEWNy6Yum7M8EH3CILwvmlm/zOPrv2PMCBtr4X585eKS5fO1+1WC4FuczfuqL/z+bfWT1qyYieCXQ04ZXCTduWJAfH0SYWiUjUJECdi++FCfF6Xwtodrdi97yBa29sRDgf4nqD0TABuetKJ28D6M2+PTGNK9FgtxUL9PBkoyMvDkKpSTBxRhKm1NowpbuOdgUbTV/hgbYvxzKdu48PdFbLDV4PzTxmBy84cv2ny2OEPAniFwkoqTC1atIjXSL6vWflX1n+MAUf5Bj4OTP060Vji9D37D1z/2vKNc975olHeWrcXXvEAO6mmRT9nfEw4cZRXzK0aJMBXC7BqdIZy0dhpRVOHgUNdcXT2xBEI05gqzYSZmbZVkeGwW+B125GbaUdJjh0VeRIqc5PI83QB4j4gsBP+xgb26bZe9uZGu7FyT6HUo1UII4YOwhlTKox5c8avGDao8gkAb/cR+99p6/+rJuhY6+ibYYwNN4zUgvc+2XTeynX7hq/Z1oo9jQchJA+hytuuT6gIsEnVqjCq0iJUFmYIvpwsAe5swOYDZDcgUsth+sHytMcaoyFt2oyoFwh1I+D3s6aWINvWlGTr9slsfaNX2NebL+mWYgyqKMOUUYU4aWJV/Zxpo9602VyviIKw7eumWrNJ7V+R5P/p+o9rwNGLM2LRIoa7+ZOF+O8AJsZioVO/2LRn1oYdB0fVNQXs9Qe6+WZMsXAXZNYD2uYr2xFlWc4E89o15rbrsMomyVKawDfJCMRkwR+zCt1RpxBMZUAVfKCBOJrJGlKejeHl3sSE2pIdk8bWfOz1+Mi2r6VG2fQ18g0MCSb6n2S0/9P1X2fAANMk0hbuA5/JTht4J1JaCYDRkUhg/O79LaMaD/mrD7T2FNIea72hlBigifVYiteNCZenRX1EtI0yjf97XVZkeixGYY47WFrgba8qydk3uKJgu9ebSTNZW+xWpTlBA83pRc6VGmX/Uzb+n63/MwYMYARdg7h6NYQZM7jaHxHJpzUklxAH2mONtvminaZos6OEqvLJOEWSUrTxBSD10tYLNABNU+gAOo5hSoRVq1YRaslrQP9NaT/W+n9SIpdiflHiXQAAAABJRU5ErkJggg==" alt=""><h2>আমাদের পাঠশালা</h2><p>টুনির সাথে পড়ি • শিখি • খেলি</p></div><div class="kids">`;
+ h+=DB.kids.map((k,i)=>`<button class="kid" data-a="kid" data-id="${k.id}" style="border-color:${COL[i%COL.length]}33"><span class="av" style="background:${COL[i%COL.length]}22">${esc(k.av)}</span><div><b>${esc(k.name)}</b><span>${ageTxt(k)}</span></div><div class="st">⭐ ${bn(stars(k))}<br>🔥 ${bn(k.streak)}</div></button>`).join('')+'</div>';
+ if(!TTS.ok)h+='<div class="warn">⚠️ এই ব্রাউজারে কথা বলার সুবিধা নেই। Chrome ব্যবহার করুন। (লেখা ঠিকই দেখা যাবে)</div>';
+ else if(TTS.voices.length&&!TTS.hasBn())h+='<div class="warn">🔈 ফোনে বাংলা ভয়েস পাওয়া যায়নি। সেটিংস → ভাষা → টেক্সট-টু-স্পিচ → Google → ভয়েস ডেটা ইনস্টল → বাংলা। তারপর অ্যাপ আবার খুলুন।</div>';
+ const pk=pendingKids();if(pk.length&&pk.length<=DB.kids.length)h+=`<div class="warn">🔔 টুনি ডাকছে: <b>${esc(pk.map(k=>k.name).join(', '))}</b> — আজকের চ্যালেঞ্জ বাকি!</div>`;
+ if(!isStandalone())h+=U.ip?'<button class="btn o" data-a="install">📲 ফোনে অ্যাপ হিসেবে ইনস্টল করুন</button>':'<button class="btn o" data-a="installHelp">📲 ফোনে ইনস্টল করবেন কীভাবে?</button>';
+ h+='<button class="btn w" data-a="parent">🔒 অভিভাবক প্যানেল</button><p class="note" style="text-align:center">কোনো বিজ্ঞাপন নেই • ইন্টারনেট ছাড়াই চলে • সব তথ্য এই ফোনেই থাকে<br>সংস্করণ '+APP_VER+'</p><button class="btn s w" data-a="refreshApp">🔄 নতুন সংস্করণ লোড করুন</button>';return h}
+function greet(k){const n=k.name;return k.band=='c'?`হে ${n}! মনোযোগ দিয়ে শোনো। আজ আমরা একসাথে পড়ব। কী শিখতে চাও?`:k.band=='baby'?`হাই ${n} সোনা! এসো, আমরা ছড়া শুনি আর খেলি।`:`হ্যালো ${n}! চলো আজ একসাথে অনুশীলন করি। তুমি কী করতে চাও?`}
+/* ---------- MENU ---------- */
+function vMenu(){const k=kid();let h=hdr(esc(k.name))+tutorHtml();
+ if(k.band=='c')h+=`<div class="tabs"><button class="tab ${k.cls==3?'on':''}" data-a="cls" data-t="3">ক্লাস ৩ (এখন)</button><button class="tab ${k.cls==4?'on':''}" data-a="cls" data-t="4">ক্লাস ৪ (সামনের বছর)</button></div>`;
+ h+=tiles(k.band=='c'?MENU_C:MENU_P);
+ if(k.band=='c')h+='<p class="note">ক্লাস ৪ বেছে নিলে সামনের ক্লাসের অতিরিক্ত প্রশ্নও আসবে। পাঠ্যবই (NCTB) অনুযায়ী মিলিয়ে নিতে শিক্ষকের সাহায্য নিন।</p>';
+ return h}
+function vSub(){const s=SUBS[U.sub];return hdr(s[0])+tutorHtml()+tilesX(s[1].map(x=>[x[0],x[1],x[2],x[3]||'']))}
+function vMath(){const k=kid();const arr=U.mtab==3?MATH3:MATH4;let h=hdr('গণিত')+tutorHtml();
+ h+=`<div class="tabs"><button class="tab ${U.mtab==3?'on':''}" data-a="mtab" data-t="3">ক্লাস ৩</button><button class="tab ${U.mtab==4?'on':''}" data-a="mtab" data-t="4">ক্লাস ৪ (আগাম)</button></div>`;
+ h+=`<div class="grid">${arr.map((a,i)=>`<button class="tile" style="--c:${COL[i%COL.length]}" data-a="quiz" data-t="${a[0]}"><i>${a[2]}</i>${a[1]}<small>লেভেল ${bn(statOf(k,a[0]).lvl)}</small></button>`).join('')}</div>`;
+ if(U.mtab==3)h+=`<h3>নামতা শিখি</h3><div class="strip">${[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map(n=>`<button data-a="deck" data-t="tab${n}">${bn(n)}</button>`).join('')}</div>`;
+ else h+='<p class="note">ক্লাস ৪-এর আগাম প্রস্তুতি — বিষয়ের তালিকা আনুমানিক, স্কুলের বইয়ের সাথে মিলিয়ে নিন।</p>';return h}
+/* ---------- DECKS ---------- */
+function deckOf(k){
+ if(k=='vowel'||k=='cons'){const a=k=='vowel'?VOWELS:CONS;return{title:k=='vowel'?'স্বরবর্ণ':'ব্যঞ্জনবর্ণ',items:a.map(x=>({sym:x[0],em:x[2],nm:x[1],say:[{t:x[0]+'।'},{t:`${x[0]} দিয়ে ${x[1]}।`}]}))}}
+ if(k=='num')return{title:'সংখ্যা',items:NUMW.map(x=>({sym:x[0],nm:x[1],em:+x[2]>0&&+x[2]<=10?'⭐'.repeat(+x[2]):'',say:[{t:x[1]}]}))};
+ if(k=='abc')return{title:'English ABC',items:ABC.map(x=>({sym:x[0]+x[0].toLowerCase(),em:x[2],nm:x[1],en:x[3],say:[{t:`${x[0]}. ${x[0]} for ${x[1]}`,lang:'en'}]}))};
+ if(k=='arb')return{title:'আরবি হরফ',items:ARB.map(x=>({sym:x[0],arab:1,nm:x[1],say:[{t:x[1]}]}))};
+ if(DECKS[k]){const c=k=='color';return{title:TNAME[k]||k,items:DECKS[k].map(x=>({em:c?'':x[0],col:c?x[0]:'',nm:x[1],en:x[2],sub:x[3]?`${x[1]} বলে “${x[3]}”`:'',say:[{t:x[1]},{t:x[2],lang:'en'}].concat(x[3]?[{t:`${x[1]} বলে ${x[3]}`}]:[])}))}}
+ if(k=='week'||k=='month'||k=='season'){const a=k=='week'?WEEK:k=='month'?MONTHS:SEASONS;return{title:k=='week'?'সপ্তাহের দিন':k=='month'?'বাংলা মাস':'ঋতু',items:a.map((x,i)=>({sym:x,t:1,nm:'ক্রম: '+bn(i+1),say:[{t:x}]}))}}
+ if(k.startsWith('tab')){const n=+k.slice(3);return{title:`${bn(n)} এর নামতা`,items:Array.from({length:10},(_,i)=>({sym:`${bn(n)} × ${bn(i+1)} = ${bn(n*(i+1))}`,t:1,nm:'',say:[{t:`${nw(n)} গুণ ${nw(i+1)} সমান ${nw(n*(i+1))}`}]}))}}
+ return{title:'',items:[]}}
+function vDeck(){const d=U.dk,it=d.items[d.i];let h=hdr(esc(d.title))+tutorHtml();
+ h+=`<div class="card deck">${it.col?`<span class="dot" style="background:${it.col}"></span>`:''}${it.sym?`<div class="sym ${it.t||it.sym.length>3?'t':''}" ${it.arab?'dir="rtl" style="font-family:\'Noto Naskh Arabic\',\'Amiri\',serif"':''}>${esc(it.sym)}</div>`:''}${it.em?`<div class="${it.em.length>4?'blocks':'em'}">${it.em}</div>`:''}<div class="nm">${esc(it.nm||'')}</div>${it.en?`<div class="en">${esc(it.en)}</div>`:''}${it.sub?`<div class="en">${esc(it.sub)}</div>`:''}</div>`;
+ h+=`<div class="pager"><button class="ib" data-a="dprev">◀</button><span class="chip">${bn(d.i+1)} / ${bn(d.items.length)}</span><button class="ib" data-a="dnext">▶</button></div>`;
+ if(d.items.length>1&&d.items.length<=45&&d.items[0].sym)h+=`<div class="strip">${d.items.map((x,i)=>`<button class="${i==d.i?'on':''}" data-a="dgo" data-t="${i}">${esc((x.sym||x.nm||'').slice(0,3)||(i+1))}</button>`).join('')}</div>`;
+ if(DECK_Q[d.k])h+=`<button class="btn g" data-a="quiz" data-t="${DECK_Q[d.k]}">🎮 কুইজ খেলি</button>`;
+ if(d.k=='vowel'||d.k=='cons'||d.k=='num'||d.k=='abc')h+=`<button class="btn o" data-a="trace" data-t="${d.k}">✍️ লিখে শিখি</button>`;return h}
+function speakDeck(){const d=U.dk;TTS.seq(d.items[d.i].say)}
+/* ---------- QUIZ ---------- */
+function dailyTopics(k){if(k.band=='c'){let t=['add','sub','mul','div','money','bn','en','sci','bgw','isl','frac','time'];if(k.cls==4)t=t.concat(['mul4','div4','dec']);return t}return['letter','numhear','count','addp','fruit','animal','color','enA','arb','pisl','shape','body']}
+function startQuiz(topics,N,title,daily){const k=kid();U.qz={topics,N,n:0,right:0,title,daily,s0:k.stars,done:false};nextQ(true)}
+function nextQ(first){const z=U.qz,k=kid();const w=[];for(const t of z.topics){const s=statOf(k,t);const weak=s.a>=5&&s.c/s.a<.6;w.push(t);if(weak){w.push(t);w.push(t)}}
+ z.q=makeQ(pick(w),k);z.tries=0;z.lock=false;z.input='';if(first)nav('quiz');else render();speakQ()}
+async function speakQ(){const q=U.qz&&U.qz.q;if(!q)return;U.bub=q.type=='num'?'উত্তর লেখো':'সঠিক উত্তরটি বেছে নাও';const b=$('#bub');if(b)b.textContent=U.bub;
+ if(q.speakEn){TTS.stop();await TTS.say(q.speakEn,{lang:'en',queue:true});await TTS.say('এর বাংলা কী?',{queue:true})}else TTS.say(q.say,{lang:q.lang||'bn'})}
+function vQuiz(){const z=U.qz;if(z.done)return vQuizEnd();const q=z.q;let h=hdr(esc(z.title))+tutorHtml();
+ h+=`<div class="bar"><i style="width:${z.n/z.N*100}%"></i></div><div class="card"><div class="q">`;
+ if(q.big)h+=`<div class="big">${q.bigHtml?q.big:esc(q.big)}</div>`;
+ if(q.text)h+=`<div class="${q.cnt?'blocks':'txt'}" ${q.sm?'style="font-size:24px"':''}>${q.text}</div>`;
+ if(q.exp&&z.show)h+=`<div class="sub">${esc(q.exp)}</div>`;
+ h+='</div>';
+ if(q.type=='mc'){h+=`<div class="opts" id="opts">${q.opts.map((o,i)=>`<button class="opt ${q.sm?'sm':''} ${q.bigOpts?'bg':''}" ${q.bigOpts?'style="font-size:'+(q.arabOpts?54:q.cnt?30:42)+'px"':''} ${q.arabOpts?'dir="rtl"':''} data-a="pick" data-i="${i}">${o}</button>`).join('')}</div>`}
+ else{h+=`<div class="ans" id="ans">${z.input?bn(z.input):'&nbsp;'}</div><div class="kp">${[1,2,3,4,5,6,7,8,9].map(d=>`<button data-a="key" data-t="${d}">${bn(d)}</button>`).join('')}${q.dec?'<button data-a="key" data-t=".">.</button>':'<button disabled style="opacity:0">.</button>'}<button data-a="key" data-t="0">${bn(0)}</button><button class="del" data-a="key" data-t="del">⌫</button></div><button class="btn g" data-a="check">✔ ঠিক আছে</button>`}
+ return h+'</div>'}
+function judge(ok){const z=U.qz,k=kid(),q=z.q;
+ if(ok){const first=z.tries==0;const ev=record(k,q.topic,true,first);if(first)z.right++;z.lock=true;sfx.ok();popEmoji(first?'⭐':'👍');
+  tutor(nm(pick(PRAISE)));if(ev=='up')setTimeout(()=>toast('⬆️ লেভেল বেড়েছে!'),600);setTimeout(adv,1500,z)}
+ else{z.tries++;sfx.no();if(z.tries==1){record(k,q.topic,false,false);tutor(nm(pick(RETRY)))}
+  else{z.lock=true;const exp=q.exp?' '+q.exp:'';if(q.type=='mc'){document.querySelectorAll('#opts .opt')[q.ans].classList.add('ok')}else{const a=$('#ans');if(a){a.textContent=bn(q.ans);a.classList.add('ok')}}
+   tutor('সঠিক উত্তর হলো '+(q.type=='mc'?String(q.opts[q.ans]).replace(/<[^>]+>/g,' '):sayN(q.ans))+'।'+exp,{speak:true});setTimeout(adv,3200,z)}}}
+function adv(z){if(U.qz!==z||U.view!='quiz')return;z.n++;if(z.n>=z.N)finishQuiz();else nextQ()}
+function finishQuiz(){const z=U.qz,k=kid();z.done=true;let bonus=0;if(z.right>=Math.ceil(z.N*.8)){bonus=2;k.stars+=2}
+ if(z.daily){const d=k.days[todayS()]||(k.days[todayS()]={q:0,c:0});if(!d.daily){d.daily=1;k.stars+=3;bonus+=3}}save();z.bonus=bonus;sfx.win();render();
+ const acc=z.right/z.N;tutor(nm(acc>=.8?'শাবাশ {n}! তুমি দারুণ করেছ!':acc>=.5?'ভালো করেছ {n}! আরেকটু অনুশীলন করলে আরও ভালো হবে।':'কোনো সমস্যা নেই {n}, আমরা আবার চেষ্টা করব!'))}
+function vQuizEnd(){const z=U.qz,k=kid();return hdr('ফলাফল')+tutorHtml()+`<div class="card c"><div class="big" style="font-size:80px">${z.right>=Math.ceil(z.N*.8)?'🏆':'🌟'}</div><div class="txt" style="font-size:32px;font-weight:800;color:var(--navy)">${bn(z.right)} / ${bn(z.N)} সঠিক</div><p>এই রাউন্ডে তারা পেয়েছ: ⭐ ${bn(k.stars-z.s0)}${z.bonus?` (বোনাস ${bn(z.bonus)})`:''}</p></div><button class="btn g" data-a="again">🔁 আবার খেলি</button><button class="btn w" data-a="back">← ফিরে যাই</button>`}
+/* ---------- STORIES / READ ---------- */
+function vStl(){const m=U.stMode;return hdr(m=='read'?'আমার সাথে পড়ো':'গল্প শুনি')+tutorHtml()+`<div class="grid">${STORIES.map((s,i)=>`<button class="tile" style="--c:${COL[i]}" data-a="openStory" data-t="${i}"><i>${s.e}</i>${s.t}</button>`).join('')}</div>`}
+function vStory(){const s=U.st;let h=hdr(esc(s.t))+tutorHtml()+`<div id="lines">${s.s.map(l=>`<div class="line">${esc(l)}</div>`).join('')}</div><button class="btn o" data-a="storyPlay">🔊 শুনি</button>`;
+ if(s.ask){const q=s.q;h+=`<div class="card"><b>${esc(q.q)}</b><div class="opts" id="opts">${q.opts.map((o,i)=>`<button class="opt sm" data-a="stAns" data-i="${i}">${esc(o)}</button>`).join('')}</div></div>`}return h}
+async function readAloud(lines,rate){TTS.stop();const t=TTS.tok;const els=()=>document.querySelectorAll('#lines .line');
+ for(let i=0;i<lines.length;i++){if(t!==TTS.tok)return false;els().forEach((e,j)=>e.classList.toggle('on',j==i));await TTS.say(lines[i],{queue:true,rate});}
+ els().forEach(e=>e.classList.remove('on'));return t===TTS.tok}
+async function playStory(){const s=U.st;const ok=await readAloud(s.s);if(ok&&U.view=='story'&&!s.ask){s.ask=true;render();const q=s.q;TTS.say(q.q)}}
+function startRead(lines,title){U.rd={lines,i:0,title,ok:0,heard:'',done:false};nav('read')}
+function vRead(){const r=U.rd;if(r.done)return hdr('পড়া শেষ')+tutorHtml()+`<div class="card c"><div class="big" style="font-size:80px">🏆</div><div class="txt">${bn(r.ok)}টি বাক্য পড়েছ!</div></div><button class="btn g" data-a="back">← ফিরে যাই</button>`;
+ let h=hdr(esc(r.title))+tutorHtml()+`<div class="bar"><i style="width:${r.i/r.lines.length*100}%"></i></div><div id="lines">${r.lines.map((l,i)=>`<div class="line ${i==r.i?'on':i<r.i?'ok':''}">${esc(l)}</div>`).join('')}</div>`;
+ if(r.heard)h+=`<p class="note">শুনেছি: ${esc(r.heard)}</p>`;
+ h+=`<div class="row"><button class="btn o" data-a="rdHear">🔊 শুনি</button>${SR?'<button class="btn" data-a="rdMic">🎤 পড়ি</button>':''}</div><button class="btn g" data-a="rdOk">✅ আমি পড়েছি</button>`;return h}
+function rdNext(){const r=U.rd,k=kid();r.ok++;record(k,'read',true,true);sfx.ok();popEmoji('⭐');r.i++;r.heard='';if(r.i>=r.lines.length){r.done=true;sfx.win()}render();if(!r.done)tutor(nm('এবার পরের বাক্যটি পড়ো, {n}।'))}
+/* ---------- TALK ---------- */
+function vTalk(){const t=U.tk;if(t.done)return hdr('কথা')+tutorHtml()+`<div class="card c"><div class="big" style="font-size:80px">💬</div><div class="txt">অনেক সুন্দর কথা হলো!</div></div><button class="btn g" data-a="back">← ফিরে যাই</button>`;
+ const s=t.list[t.i];let h=hdr('টুনির সাথে কথা')+tutorHtml();
+ if(t.phase=='ask'){h+=`<div class="card"><b>বলো বা বেছে নাও:</b></div><div class="opts">${s.chips.map((c,i)=>`<button class="opt sm" data-a="tkChip" data-i="${i}">${esc(nm(c[0]))}</button>`).join('')}</div>`;if(SR)h+='<button class="btn" data-a="tkMic">🎤 বলে উত্তর দিই</button>';}
+ else h+='<button class="btn g" data-a="tkNext">পরের প্রশ্ন ➡️</button>';return h}
+function tkAsk(){const t=U.tk;render();tutor(nm(t.list[t.i].q))}
+function tkReply(txt){const t=U.tk;t.phase='reply';render();tutor(nm(txt))}
+/* ---------- CARDS (parent-added) ---------- */
+function vCards(){const list=DB.custom[U.kid]||[];if(!list.length)return hdr('আমার প্রশ্ন')+tutorHtml()+'<div class="card">এখনো কোনো প্রশ্ন যোগ করা হয়নি। অভিভাবক প্যানেল থেকে নিজের প্রশ্ন-উত্তর (যেমন ঠিকানা, ফোন নম্বর, বাড়ির পড়া) যোগ করতে পারেন।</div>';
+ const c=U.cd;if(!c)return'';if(c.i>=c.list.length)return hdr('আমার প্রশ্ন')+tutorHtml()+'<div class="card c"><div class="big" style="font-size:80px">🎉</div><div class="txt">সব শেষ!</div></div><button class="btn g" data-a="back">← ফিরে যাই</button>';
+ const it=c.list[c.i];return hdr('আমার প্রশ্ন')+tutorHtml()+`<div class="card c"><div class="txt">${esc(it.q)}</div>${c.show?`<hr><div class="txt" style="color:var(--teal)">${esc(it.a)}</div>`:''}</div>`+(c.show?'<div class="row"><button class="btn g" data-a="cdGot">✅ পেরেছি</button><button class="btn o" data-a="cdAgain">🔁 আবার</button></div>':'<button class="btn" data-a="cdShow">👀 উত্তর দেখি</button>')}
+/* ---------- STICKERS ---------- */
+function vStk(){const k=kid();return hdr('স্টিকার')+tutorHtml()+`<p class="note">প্রতি ১০টি তারায় একটি স্টিকার। তোমার তারা: ⭐ ${bn(stars(k))}</p><div class="stk">${STICKERS.map(s=>`<button class="${k.stickers.includes(s)?'':'lock'}" data-a="buy" data-t="${s}">${s}<small>${k.stickers.includes(s)?'আমার':'⭐১০'}</small></button>`).join('')}</div>`+(k.badges.length?`<h3>ব্যাজ</h3><div class="card">${BADGES.filter(b=>k.badges.includes(b[0])).map(b=>`<div>${b[1]} ${b[2]}</div>`).join('')}</div>`:'')}
+/* ---------- TRACE ---------- */
+function traceSet(k){return k=='vowel'?VOWELS.map(x=>x[0]):k=='cons'?CONS.slice(0,32).map(x=>x[0]):k=='num'?NUMW.slice(0,10).map(x=>x[0]):ABC.map(x=>x[0]+x[0].toLowerCase())}
+function vTrace(){const t=U.tr;return hdr('লিখে শিখি')+tutorHtml()+`<canvas id="tr" width="600" height="600"></canvas><div class="row"><button class="btn w" data-a="trPrev">◀</button><button class="btn o" data-a="trClear">🧽 মুছি</button><button class="btn w" data-a="trNext">▶</button></div><button class="btn g" data-a="trDone">✅ লেখা হয়েছে</button><p class="note">আঙুল দিয়ে হালকা অক্ষরের ওপর লেখো।</p>`}
+function initTrace(){const c=$('#tr');if(!c)return;const ctx=c.getContext('2d');const ch=U.tr.set[U.tr.i];const guide=()=>{ctx.clearRect(0,0,600,600);ctx.fillStyle='#fff';ctx.fillRect(0,0,600,600);ctx.fillStyle='#d6e3ef';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`bold ${ch.length>1?260:420}px "Noto Sans Bengali","Kalpurush","Nirmala UI",system-ui,sans-serif`;ctx.fillText(ch,300,320)};guide();c._g=guide;
+ let d=false,lx=0,ly=0;const P=e=>{const r=c.getBoundingClientRect();return[(e.clientX-r.left)*600/r.width,(e.clientY-r.top)*600/r.height]};
+ c.onpointerdown=e=>{d=true;[lx,ly]=P(e);try{c.setPointerCapture(e.pointerId)}catch(x){}};
+ c.onpointermove=e=>{if(!d)return;const[x,y]=P(e);ctx.strokeStyle='#ff7043';ctx.lineWidth=24;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(lx,ly);ctx.lineTo(x,y);ctx.stroke();lx=x;ly=y};
+ c.onpointerup=c.onpointercancel=()=>{d=false}}
+function trShow(){render();const ch=U.tr.set[U.tr.i];TTS.say(ch.length>1?ch[0]+' for '+ch[0]:ch,{lang:ch.length>1?'en':'bn'})}
+/* ---------- BABY ---------- */
+const BSEC=[['🐾','পশু','animal'],['🍎','ফল','fruit'],['🎨','রং','color'],['👀','শরীর','body'],['👨‍👩‍👧','পরিবার','family'],['🔢','গণনা','num'],['🎵','ছড়া','rhymes'],['🎈','বেলুন','balloons']];
+function vBaby(){const k=kid(),s=U.bb.sec;let h=`<div class="top">${s?'<button class="ib" data-a="bbBack">←</button>':'<button class="ib" data-a="bbLock">🔒</button>'}<h1>${esc(k.name)}</h1><span class="chip g">⭐ ${bn(stars(k))}</span></div>`+tutorHtml();
+ if(!s)return h+`<div class="baby">${BSEC.map(x=>`<button data-a="bbSec" data-t="${x[2]}">${x[0]}<small>${x[1]}</small></button>`).join('')}</div>`;
+ if(s=='num')return h+`<div class="baby">${Array.from({length:10},(_,i)=>`<button data-a="bbi" data-i="${i}"><span style="font-size:64px;font-weight:800;color:var(--navy)">${bn(i+1)}</span><small>${'⭐'.repeat(i+1)}</small></button>`).join('')}</div>`;
+ const d=DECKS[s];return h+`<div class="baby">${d.map((x,i)=>`<button data-a="bbi" data-i="${i}">${s=='color'?`<span class="dot" style="background:${x[0]};width:84px;height:84px"></span>`:x[0]}<small>${x[1]}</small></button>`).join('')}</div>`}
+/* ---------- RHYMES ---------- */
+function allRh(){return RHYMES.concat((DB.crh[U.kid]||[]).map(r=>({t:r.t,e:'🎶',l:r.l})))}
+function vRhymes(){return hdr('ছড়া')+tutorHtml()+'<div class="kids">'+allRh().map((r,i)=>`<button class="kid" data-a="rhOpen" data-t="${i}"><span class="av" style="background:${COL[i%8]}22">${r.e}</span><div><b>${esc(r.t)}</b><span>শুনি ও পড়ি</span></div></button>`).join('')+'</div>'}
+function vRhyme(){const r=U.rh;return hdr(esc(r.t))+tutorHtml()+`<div class="card c" style="padding:8px"><div class="big" style="font-size:72px">${r.e}</div></div><div id="lines">${r.l.map(l=>`<div class="line" style="text-align:center">${esc(l)}</div>`).join('')}</div><button class="btn o" data-a="rhPlay">▶ শুনি</button>`}
+/* ---------- time limit ---------- */
+function vRest(){return`<div class="rest"><div class="bird">🌙</div><h2>আজকের পড়ার সময় শেষ!</h2><p>এখন একটু বিশ্রাম, খেলা বা ঘুরে আসার সময়। কাল আবার দেখা হবে।</p><button class="btn w" data-a="extend">🔒 অভিভাবক: সময় বাড়ান</button><button class="btn" data-a="home">হোম</button></div>`}
+function tick(){const k=kid();if(!k||document.hidden||['home','parent','rest','rep'].includes(U.view))return;const d=todayS();if(k.today.d!==d)k.today={d,sec:0};k.today.sec+=5;if(Math.round(k.today.sec)%30==0)save();
+ if(k.limit>0&&k.today.sec>=k.limit*60){TTS.stop();U.hist=[];nav('rest',false);save()}}
+
+/* ===== ACTIONS, PARENT AREA, BOOT ===== */
+const A={
+ back(){TTS.stop();const v=U.hist.pop()||'home';if(v=='home'){U.kid=v=='home'?null:U.kid}U.view=v;render();window.scrollTo(0,0)},
+ home(){TTS.stop();U.hist=[];U.kid=null;U.view='home';render()},
+ replay(){if(U.view=='quiz'&&U.qz&&!U.qz.done)speakQ();else if(U.view=='deck')speakDeck();else TTS.say(U.last,{lang:U.lastLang})},
+ kid(d){closeModal();const k=kidById(d.id);U.kid=k.id;U.hist=['home'];const t=todayS();if(k.today.d!==t)k.today={d:t,sec:0};
+  if(k.limit>0&&k.today.sec>=k.limit*60){U.view='rest';render();return}
+  U.view=k.band=='baby'?'baby':'menu';U.bb.sec=null;render();tutor(greet(k),{rate:k.band=='baby'?.85:1})},
+ cls(d){kid().cls=+d.t;save();render()},
+ mtab(d){U.mtab=+d.t;render()},
+ sub(d){U.sub=d.t;nav('sub')},
+ math(){U.mtab=kid().cls==4?4:3;nav('math')},
+ daily(){const k=kid();startQuiz(dailyTopics(k),10,k.band=='c'?'আজকের চ্যালেঞ্জ':'আজকের অনুশীলন',true)},
+ quiz(d){startQuiz([d.t],10,TNAME[d.t]||'কুইজ',false)},
+ again(){const z=U.qz;startQuiz(z.topics,z.N,z.title,z.daily)},
+ pick(d){const z=U.qz;if(z.lock)return;const i=+d.i,q=z.q;const ok=i===q.ans;document.querySelectorAll('#opts .opt')[i].classList.add(ok?'ok':'no');
+  if(q.optLang=='en'&&!ok&&false)TTS.say(q.opts[i],{lang:'en'});judge(ok)},
+ key(d){const z=U.qz;if(z.lock)return;let s=z.input;if(d.t=='del')s=s.slice(0,-1);else if(d.t=='.'){if(!s.includes('.')&&s)s+='.'}else if(s.length<8)s+=d.t;z.input=s;const a=$('#ans');a.innerHTML=s?bn(s):'&nbsp;'},
+ check(){const z=U.qz;if(z.lock||!z.input)return;const ok=Math.abs(parseFloat(z.input)-z.q.ans)<1e-6;$('#ans').classList.add(ok?'ok':'no');judge(ok);if(!ok&&z.tries==1)setTimeout(()=>{const a=$('#ans');if(a&&!z.lock){a.classList.remove('no');z.input='';a.innerHTML='&nbsp;'}},500)},
+ deck(d){U.dk={k:d.t,i:0,...deckOf(d.t)};U.dk.k=d.t;nav('deck');speakDeck()},
+ dnext(){const d=U.dk;d.i=(d.i+1)%d.items.length;render();speakDeck()},
+ dprev(){const d=U.dk;d.i=(d.i-1+d.items.length)%d.items.length;render();speakDeck()},
+ dgo(d){U.dk.i=+d.t;render();speakDeck()},
+ harakat(){const m=modal('<h3>যবর - যের - পেশ</h3><div class="card c" dir="rtl" style="font-size:64px;font-family:\'Noto Naskh Arabic\',\'Amiri\',serif">بَ بِ بُ</div><p>যবর (ـَ) — আ-এর মতো; যের (ـِ) — ই-এর মতো; পেশ (ـُ) — উ-এর মতো। এখানে: বা, বি, বু (আনুমানিক)।</p><p class="note">শুদ্ধ উচ্চারণ ও তাজবিদ উস্তাদ বা শিক্ষকের কাছ থেকে শিখুন; অ্যাপ শুধু অনুশীলনে সাহায্য করে।</p><button class="btn" data-a="mclose">ঠিক আছে</button>');TTS.say('বা, বি, বু।')},
+ mclose(){closeModal()},
+ /* stories / reading */
+ stl(d){U.stMode=d.t;nav('stl');tutor(d.t=='read'?nm('{n}, কোন গল্প আমার সাথে পড়বে?'):nm('{n}, কোন গল্প শুনবে?'))},
+ openStory(d){const s=STORIES[+d.t];if(U.stMode=='read'){startRead(s.s,s.t);tutor(nm('আমি আগে পড়ব, তারপর তুমি। মনোযোগ দিয়ে শোনো, {n}।'))}else{const o=shuf(s.q.slice(1));U.st={...s,ask:false,q:{q:s.q[0],opts:o,ans:o.indexOf(s.q[1])}};nav('story');playStory()}},
+ storyPlay(){playStory()},
+ stAns(d){const s=U.st;const ok=+d.i===s.q.ans;document.querySelectorAll('#opts .opt')[+d.i].classList.add(ok?'ok':'no');if(ok){record(kid(),'story',true,true);sfx.ok();popEmoji('⭐');tutor(nm('ঠিক বলেছ {n}!'))}else{sfx.no();tutor('আবার ভাবো।')}},
+ read(d){if(d.t=='simple'){startRead(SIMPLE,'সহজ বাক্য');tutor(nm('আমি পড়ছি, তুমি শোনো, {n}।'))}else A.stl({t:'read'})},
+ rdHear(){const r=U.rd;TTS.say(r.lines[r.i],{rate:.85})},
+ rdOk(){rdNext()},
+ rdMic(){const r=U.rd;tutor('শুনছি... এবার পড়ো!',{speak:false});listen((txt,err)=>{if(U.view!='read')return;
+   if(txt){r.heard=txt;const sc=simil(txt,r.lines[r.i]);if(sc>=.6){rdNext()}else{render();tutor('প্রায় হয়েছে! আবার চেষ্টা করো, অথবা আমি শুনিয়ে দিই।')}}
+   else{const m=err=='not-allowed'?'মাইকের অনুমতি দাও।':err=='unsupported'?'এই ফোনে মাইক চলছে না।':'শুনতে পাইনি। আবার বলো বা ✅ চাপো।';tutor(m,{speak:false})}})},
+ /* talk */
+ talk(){U.tk={list:kid().band=='c'?TALK_C:TALK_PRE,i:0,phase:'ask',done:false};nav('talk');tutor(nm(U.tk.list[0].q))},
+ tkChip(d){const t=U.tk;tkReply(t.list[t.i].chips[+d.i][1])},
+ tkMic(){const t=U.tk,s=t.list[t.i];tutor('শুনছি...',{speak:false});listen((txt,err)=>{if(U.view!='talk')return;if(!txt){tutor(err=='not-allowed'?'মাইকের অনুমতি দাও, অথবা নিচ থেকে বেছে নাও।':'শুনতে পাইনি। নিচ থেকে বেছে নাও।',{speak:false});return}
+   const c=s.chips.find(c=>c[0].replace(/[^ঀ-৿a-zA-Z ]/g,'').trim().split(' ').some(w=>w.length>1&&txt.includes(w)));tkReply(c?c[1]:s.any)})},
+ tkNext(){const t=U.tk;t.i++;t.phase='ask';if(t.i>=t.list.length){t.done=true;record(kid(),'talk',true,true);sfx.win();render();tutor(nm('অনেক সুন্দর কথা হলো, {n}! কাল আবার গল্প করব।'))}else tkAsk()},
+ /* cards */
+ cards(){const l=DB.custom[U.kid]||[];U.cd={list:shuf(l),i:0,show:false};nav('cards');if(l.length)TTS.say(U.cd.list[0].q)},
+ cdShow(){const c=U.cd;c.show=true;render();TTS.say(c.list[c.i].a)},
+ cdGot(){const c=U.cd;record(kid(),'cards',true,true);sfx.ok();c.i++;c.show=false;render();if(c.i<c.list.length)TTS.say(c.list[c.i].q)},
+ cdAgain(){const c=U.cd;record(kid(),'cards',false,false);c.list.push(c.list[c.i]);c.i++;c.show=false;render();if(c.i<c.list.length)TTS.say(c.list[c.i].q)},
+ /* stickers */
+ stk(){nav('stk');tutor(nm('{n}, প্রতি ১০টি তারায় একটি স্টিকার পাবে!'))},
+ buy(d){const k=kid(),s=d.t;if(k.stickers.includes(s)){popEmoji(s);sfx.ok();return}if(stars(k)>=10){k.spent+=10;k.stickers.push(s);save();sfx.win();popEmoji(s);render();tutor(nm('অভিনন্দন {n}! নতুন স্টিকার পেলে।'))}else{toast('আরও '+bn(10-stars(k))+'টি তারা লাগবে')}},
+ /* trace */
+ trace(d){U.tr={set:traceSet(d.t),i:0};nav('trace');trShow()},
+ trClear(){const c=$('#tr');c._g()},
+ trNext(){const t=U.tr;t.i=(t.i+1)%t.set.length;trShow()},
+ trPrev(){const t=U.tr;t.i=(t.i-1+t.set.length)%t.set.length;trShow()},
+ trDone(){record(kid(),'trace',true,true);sfx.ok();popEmoji('⭐');tutor(nm('সুন্দর লিখেছ {n}!'));setTimeout(()=>{if(U.view=='trace')A.trNext()},900)},
+ /* rhymes & baby */
+ rhymes(){nav('rhymes');tutor(nm('{n}, কোন ছড়া শুনবে?'))},
+ rhOpen(d){U.rh=allRh()[+d.t];nav('rhyme');TTS.say(U.rh.t)},
+ rhPlay(){readAloud(U.rh.l,kid().band=='baby'?.75:.85)},
+ bbSec(d){if(d.t=='rhymes'){A.rhymes();return}if(d.t=='balloons'){A.balloons();return}U.bb.sec=d.t;render();tutor(d.t=='animal'?'কোনটা ধরবে? ছুঁয়ে দেখো!':'ছুঁয়ে দেখো!')},
+ bbBack(){TTS.stop();U.bb.sec=null;render()},
+ bbi(d){const s=U.bb.sec,i=+d.i;sfx.pop();if(s=='num'){TTS.say(nw(i+1));return}const x=DECKS[s][i];let t=x[1];if(s=='animal'&&x[3])t=`${x[1]}। ${x[1]} বলে ${x[3]}।`;TTS.say(t,{rate:.85});const b=document.querySelectorAll('.baby button')[i];if(b)b.animate([{transform:'scale(1)'},{transform:'scale(1.15) rotate(-4deg)'},{transform:'scale(1)'}],{duration:350})},
+ balloons(){const cs=COLORS.filter(c=>c[1]!='সাদা'&&c[1]!='কালো');for(let i=0;i<8;i++){const c=pick(cs),b=document.createElement('div');b.className='bal';b.dataset.a='popb';b.dataset.n=c[1];b.style.cssText=`left:${rnd(4,84)}%;bottom:-110px;width:62px;height:78px;border-radius:50% 50% 46% 46%;background:${c[0]};animation-delay:${i*.5}s;animation-duration:${rnd(5,8)}s;box-shadow:inset -8px -8px 0 #0002`;document.body.appendChild(b);setTimeout(()=>b.remove(),14000)}tutor('বেলুন ফাটাও!')},
+ popb(d,el){sfx.pop();TTS.say(d.n);popEmoji('✨');el.remove()},
+ bbLock(){gate(()=>{A.home()})},
+ /* misc */
+ install(){const p=U.ip;if(p){p.prompt();p.userChoice.finally(()=>{U.ip=null;render()})}},
+ extend(){gate(()=>{const k=kid();k.limit=Math.max(k.limit,0)+15;save();toast('সময় +১৫ মিনিট বাড়ানো হলো');U.view=k.band=='baby'?'baby':'menu';render()})},
+ parent(){gate(()=>{nav('parent')})},
+ pk(d){G.pk(d.t)}
+};
+document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(!t)return;const f=A[t.dataset.a]||PA[t.dataset.a];if(f)f(t.dataset,t)});
+/* ---------- parent gate ---------- */
+const G={buf:'',cb:null,pk(v){if(v=='del')this.buf=this.buf.slice(0,-1);else if(this.buf.length<4)this.buf+=v;this.draw();if(this.buf.length==4)this.check()},
+ draw(){const p=$('#pind');if(p)p.innerHTML=[0,1,2,3].map(i=>`<i class="${i<this.buf.length?'f':''}"></i>`).join('')},
+ async check(){const h=await hashPin(this.buf);if(h===DB.pin){const cb=this.cb;closeModal();cb()}else{this.buf='';sfx.no();const p=$('#pind');if(p)p.animate([{transform:'translateX(-8px)'},{transform:'translateX(8px)'},{transform:'none'}],{duration:250});this.draw()}}};
+async function hashPin(p){const s='pathshala:'+p;try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){let h=5381;for(const c of s)h=((h<<5)+h+c.charCodeAt(0))>>>0;return'f'+h}}
+function gate(cb){TTS.stop();G.cb=cb;G.buf='';
+ if(DB.pin){modal(`<h3>🔒 অভিভাবকের PIN</h3><div class="pin" id="pind"></div><div class="kp">${[1,2,3,4,5,6,7,8,9].map(d=>`<button data-a="pk" data-t="${d}">${bn(d)}</button>`).join('')}<button disabled style="opacity:0">.</button><button data-a="pk" data-t="0">${bn(0)}</button><button class="del" data-a="pk" data-t="del">⌫</button></div><button class="btn w" data-a="mclose">বাতিল</button>`);G.draw()}
+ else{const m=modal(`<h3>🔒 অভিভাবকের জন্য</h3><p>নিচের বোতামটি ২ সেকেন্ড চেপে ধরে রাখুন।</p><button class="btn" id="hold">চেপে ধরে রাখুন</button><p class="note">নিরাপদ রাখতে অভিভাবক প্যানেলে গিয়ে একটি ৪ সংখ্যার PIN সেট করুন।</p><button class="btn w" data-a="mclose">বাতিল</button>`);const b=m.querySelector('#hold');let t=null;
+  const st=()=>{b.textContent='ধরে রাখুন...';t=setTimeout(()=>{closeModal();cb()},1800)},en=()=>{clearTimeout(t);b.textContent='চেপে ধরে রাখুন'};b.addEventListener('pointerdown',st);['pointerup','pointerleave','pointercancel'].forEach(x=>b.addEventListener(x,en))}}
+/* ---------- parent panel ---------- */
+const mins=k=>Math.floor((k.today.d==todayS()?k.today.sec:0)/60);
+function vParent(){let h=hdr('অভিভাবক প্যানেল');
+ if(!DB.pin)h+='<div class="warn">⚠️ এখনো PIN সেট করা নেই — বাচ্চারা এই প্যানেলে ঢুকতে পারবে। নিচ থেকে PIN সেট করুন।</div>';
+ h+='<h3>সন্তানরা</h3>'+DB.kids.map((k,i)=>{const t=tot(k);return`<div class="card"><div class="row"><div style="flex:none;font-size:42px">${esc(k.av)}</div><div><b>${esc(k.name)}</b><div class="note">${ageTxt(k)}<br>আজ ${bn(mins(k))}/${bn(k.limit)} মিনিট • ⭐ ${bn(k.stars)} • 🔥 ${bn(k.streak)} দিন<br>সঠিক ${bn(t.c)}/${bn(t.a)}</div></div></div><button class="btn s" data-a="rep" data-t="${k.id}">📊 রিপোর্ট</button><button class="btn s w" data-a="editKid" data-t="${k.id}">✏️ সম্পাদনা</button><button class="btn s w" data-a="content" data-t="${k.id}">📝 নিজের প্রশ্ন/ছড়া</button></div>`}).join('')+'<button class="btn w" data-a="editKid" data-t="">＋ নতুন সন্তান যোগ</button>';
+ const S=DB.settings,bv=TTS.voices.filter(v=>TTS.norm(v).startsWith('bn'));
+ h+=`<h3>ভয়েস ও শব্দ</h3><div class="card"><label class="fld"><span>কথা বলার গতি: ${S.rate.toFixed(2)}</span><input type="range" min="0.5" max="1.2" step="0.05" value="${S.rate}" data-in="rate"></label><label class="fld"><span>গলার সুর: ${S.pitch.toFixed(2)}</span><input type="range" min="0.8" max="1.6" step="0.05" value="${S.pitch}" data-in="pitch"></label>${bv.length?`<label class="fld"><span>বাংলা ভয়েস</span><select data-in="voiceName"><option value="">স্বয়ংক্রিয়</option>${bv.map(v=>`<option ${v.name===S.voiceName?'selected':''}>${esc(v.name)}</option>`).join('')}</select></label>`:'<p class="note">বাংলা ভয়েস তালিকায় পাওয়া যায়নি। ফোনের সেটিংস → ভাষা → টেক্সট-টু-স্পিচ → Google → ভয়েস ডেটা → বাংলা ইনস্টল করুন।</p>'}<label class="fld"><span><input type="checkbox" style="width:auto" ${S.voice?'checked':''} data-in="voice"> টুনি কথা বলুক</span></label><label class="fld"><span><input type="checkbox" style="width:auto" ${S.sound?'checked':''} data-in="sound"> শব্দ/বিপ</span></label><button class="btn s" data-a="vtest">🔊 ভয়েস পরীক্ষা</button></div>`;
+ h+=remindCard();
+ h+=`<h3>নিরাপত্তা</h3><div class="card"><button class="btn s" data-a="setpin">🔑 PIN ${DB.pin?'বদলান':'সেট করুন'}</button>${DB.pin?'<button class="btn s r" data-a="rmpin">PIN সরান</button>':''}<p class="note">এই অ্যাপে কোনো বিজ্ঞাপন, লিংক বা চ্যাট নেই। কোনো তথ্য ইন্টারনেটে যায় না।</p></div>`;
+ h+=`<h3>ব্যাকআপ</h3><div class="card"><button class="btn s" data-a="backup">💾 ব্যাকআপ নামান</button><label class="btn s w" style="cursor:pointer">📂 ব্যাকআপ ফেরত আনুন<input type="file" accept=".json,application/json" data-in="restore" style="display:none"></label><p class="note">ব্রাউজারের ডেটা মুছলে অগ্রগতি হারাতে পারে — মাঝে মাঝে ব্যাকআপ নিন।</p></div>`;
+ h+='<div class="card"><b>সীমাবদ্ধতা (সৎভাবে)</b><p class="note">• টুনির কথা বলা ফোনের বাংলা ভয়েসের ওপর নির্ভর করে। • “বলে উত্তর” মাইক ফিচার ইন্টারনেট লাগে এবং সবসময় নিখুঁত নয় — তাই সবখানে বোতামও আছে। • টুনি নির্ধারিত প্রশ্নোত্তর করে, মুক্ত আলাপ (AI চ্যাট) নয়। • প্রশ্নগুলো পাঠ্যক্রম অনুসরণে লেখা, তবে বইয়ের হুবহু নয় — শিক্ষকের সাথে মিলিয়ে নিন। • কুরআনের আয়াত বা সুর দেওয়া নেই; তা উস্তাদের কাছে শেখানোই ভালো।</p></div>';return h}
+const PA={
+ vtest(){TTS.say('হ্যালো! আমি টুনি। আমি বাংলায় কথা বলতে পারি।')},
+ setpin(){modal('<h3>নতুন PIN (৪ সংখ্যা)</h3><input id="np" type="password" inputmode="numeric" maxlength="4" placeholder="••••"><button class="btn g" data-a="savepin">সেভ</button><button class="btn w" data-a="mclose">বাতিল</button>')},
+ async savepin(){const v=$('#np').value;if(!/^\d{4}$/.test(v)){toast('৪টি ইংরেজি সংখ্যা দিন (০-৯)');return}DB.pin=await hashPin(v);save();closeModal();toast('PIN সেট হয়েছে');render()},
+ rmpin(){if(confirm('PIN সরাবেন?')){DB.pin=null;save();render()}},
+ backup(){const b=new Blob([JSON.stringify(DB)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='pathshala-backup-'+todayS()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)},
+ editKid(d){const k=d.t?kidById(d.t):null;const o=k||{name:'',age:6,av:'🧒',band:'pre',cls:3,limit:30};
+  modal(`<h3>${k?'সম্পাদনা':'নতুন সন্তান'}</h3><label class="fld"><span>নাম (বাংলায়)</span><input id="ek_n" value="${esc(o.name)}"></label><label class="fld"><span>বয়স</span><input id="ek_a" type="number" min="0" max="15" value="${o.age}"></label><label class="fld"><span>ছবি</span><select id="ek_v">${['👧','👦','👶','🧒','🐯','🦁','🐼','🦄'].map(x=>`<option ${x==o.av?'selected':''}>${x}</option>`).join('')}</select></label><label class="fld"><span>স্তর</span><select id="ek_b"><option value="c" ${o.band=='c'?'selected':''}>প্রাথমিক (ক্লাস ৩–৪)</option><option value="pre" ${o.band=='pre'?'selected':''}>প্রাক-প্রাথমিক / মাদ্রাসা-স্কুল প্রস্তুতি</option><option value="baby" ${o.band=='baby'?'selected':''}>শিশু (০–৩ বছর)</option></select></label><label class="fld"><span>ক্লাস (প্রাথমিকের জন্য)</span><select id="ek_c"><option value="3" ${o.cls==3?'selected':''}>৩</option><option value="4" ${o.cls==4?'selected':''}>৪</option></select></label><label class="fld"><span>দৈনিক সময়সীমা (মিনিট, ০ = সীমা নেই)</span><input id="ek_l" type="number" min="0" max="240" value="${o.limit}"></label><button class="btn g" data-a="saveKid" data-t="${d.t}">সেভ</button>${k?`<button class="btn r" data-a="delKid" data-t="${d.t}">মুছুন</button>`:''}<button class="btn w" data-a="mclose">বাতিল</button>`)},
+ saveKid(d){const n=$('#ek_n').value.trim();if(!n){toast('নাম লিখুন');return}let k=d.t?kidById(d.t):null;if(!k){k=mkKid('k'+Date.now(),n,0,'🧒','pre',3,30);DB.kids.push(k)}
+  Object.assign(k,{name:n,age:+$('#ek_a').value||0,av:$('#ek_v').value,band:$('#ek_b').value,cls:+$('#ek_c').value,limit:+$('#ek_l').value||0});save();closeModal();render()},
+ delKid(d){if(confirm('এই সন্তানের সব অগ্রগতি মুছে যাবে। নিশ্চিত?')){DB.kids=DB.kids.filter(k=>k.id!==d.t);delete DB.custom[d.t];save();closeModal();render()}},
+ content(d){const id=d.t,k=kidById(id);const cs=DB.custom[id]||[],rs=DB.crh[id]||[];
+  modal(`<h3>${esc(k.name)} — নিজের কনটেন্ট</h3><b>প্রশ্ন-উত্তর কার্ড</b>${cs.map((c,i)=>`<div class="line" style="font-size:16px">${esc(c.q)} → ${esc(c.a)} <button class="btn s r" data-a="delCard" data-t="${id}" data-i="${i}">✕</button></div>`).join('')}<label class="fld"><span>প্রশ্ন</span><input id="cq"></label><label class="fld"><span>উত্তর</span><input id="ca"></label><button class="btn s g" data-a="addCard" data-t="${id}">＋ কার্ড যোগ</button><hr><b>নিজের ছড়া / লাইন</b>${rs.map((c,i)=>`<div class="line" style="font-size:16px">${esc(c.t)} <button class="btn s r" data-a="delRh" data-t="${id}" data-i="${i}">✕</button></div>`).join('')}<label class="fld"><span>শিরোনাম</span><input id="rt"></label><label class="fld"><span>লাইনগুলো (প্রতি লাইনে একটি)</span><textarea id="rl" rows="4"></textarea></label><button class="btn s g" data-a="addRh" data-t="${id}">＋ ছড়া যোগ</button><button class="btn w" data-a="mclose">বন্ধ করুন</button>`)},
+ addCard(d){const q=$('#cq').value.trim(),a=$('#ca').value.trim();if(!q||!a){toast('প্রশ্ন ও উত্তর দুটোই লিখুন');return}(DB.custom[d.t]=DB.custom[d.t]||[]).push({q,a});save();PA.content({t:d.t})},
+ delCard(d){DB.custom[d.t].splice(+d.i,1);save();PA.content({t:d.t})},
+ addRh(d){const t=$('#rt').value.trim(),l=$('#rl').value.split('\n').map(x=>x.trim()).filter(Boolean);if(!t||!l.length){toast('শিরোনাম ও লাইন লিখুন');return}(DB.crh[d.t]=DB.crh[d.t]||[]).push({t,l});save();PA.content({t:d.t})},
+ delRh(d){DB.crh[d.t].splice(+d.i,1);save();PA.content({t:d.t})},
+ rep(d){U.rep=d.t;nav('rep')},
+ shareRep(){const k=kidById(U.rep);const t=repText(k);if(navigator.share)navigator.share({text:t}).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(t).then(()=>toast('কপি হয়েছে'))}
+};
+document.addEventListener('input',e=>{const t=e.target.dataset&&e.target.dataset.in;if(!t)return;const S=DB.settings;
+ if(t=='rate'||t=='pitch'){S[t]=+e.target.value;e.target.previousElementSibling.textContent=(t=='rate'?'কথা বলার গতি: ':'গলার সুর: ')+S[t].toFixed(2)}
+ else if(t=='voiceName')S.voiceName=e.target.value;else if(t=='remOn'){S.remind.on=e.target.checked;if(S.remind.on){regPeriodic();if('Notification' in window&&Notification.permission=='default')toast('নিচে "নোটিফিকেশন চালু করুন" চাপুন')}saveMeta()}else if(t=='t0'||t=='t1'){S.remind.times[t=='t0'?0:1]=e.target.value;S.remind.done={}}else if(t=='voice'||t=='sound')S[t]=e.target.checked;
+ else if(t=='restore'){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.kids||!Array.isArray(d.kids))throw 0;if(!confirm('বর্তমান তথ্য বদলে যাবে। ব্যাকআপ ফেরত আনবেন?'))return;DB=Object.assign(blank(),d);save();toast('ফেরত আনা হয়েছে');render()}catch(x){toast('ফাইলটি ঠিক নয়')}};r.readAsText(f)}
+ save()});
+function repText(k){const t=tot(k);const rows=Object.entries(k.stats).filter(([,s])=>s.a).sort((a,b)=>b[1].a-a[1].a).map(([id,s])=>`${TNAME[id]||id}: ${bn(Math.round(s.c/s.a*100))}% (${bn(s.c)}/${bn(s.a)}), লেভেল ${bn(s.lvl)}`);
+ return `${k.name} — অগ্রগতি রিপোর্ট (${todayS()})\nসঠিক: ${bn(t.c)}/${bn(t.a)} • তারা: ${bn(k.stars)} • টানা দিন: ${bn(k.streak)}\n`+rows.join('\n')}
+function vRep(){const k=kidById(U.rep);const t=tot(k);const ent=Object.entries(k.stats).filter(([,s])=>s.a).sort((a,b)=>b[1].a-a[1].a);
+ const days=[];for(let i=13;i>=0;i--){const d=new Date(Date.now()-i*86400000-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);days.push((k.days[d]||{q:0}).q)}const mx=Math.max(1,...days);
+ const weak=ent.filter(([,s])=>s.a>=5&&s.c/s.a<.6);
+ let h=hdr(esc(k.name)+' — রিপোর্ট')+`<div class="card"><b>মোট:</b> সঠিক ${bn(t.c)} / ${bn(t.a)} ${t.a?`(${bn(Math.round(t.c/t.a*100))}%)`:''}<br>⭐ ${bn(k.stars)} • 🔥 ${bn(k.streak)} দিন • আজ ${bn(mins(k))} মিনিট</div><div class="card"><b>গত ১৪ দিনে প্রশ্ন</b><div class="days">${days.map(v=>`<i style="height:${Math.max(3,v/mx*100)}%" title="${v}"></i>`).join('')}</div></div>`;
+ if(weak.length)h+=`<div class="warn"><b>আরও অনুশীলন দরকার:</b> ${weak.map(([id])=>TNAME[id]||id).join('، ')}। এগুলো টুনি বেশি করে জিজ্ঞেস করবে।</div>`;
+ h+=`<div class="card"><table class="tbl"><tr><th>বিষয়</th><th>সঠিক</th><th></th></tr>${ent.length?ent.map(([id,s])=>{const p=Math.round(s.c/s.a*100);return`<tr><td>${TNAME[id]||id}</td><td>${bn(p)}% <small>(${bn(s.a)})</small></td><td><div class="pb ${p<60?'lo':p<80?'mid':''}"><i style="width:${p}%"></i></div></td></tr>`}).join(''):'<tr><td colspan="3">এখনো কোনো তথ্য নেই</td></tr>'}</table></div><button class="btn" data-a="shareRep">📤 রিপোর্ট শেয়ার/কপি</button>`;return h}
+
+/* ===== পাঠ্যবই: official links + offline PDF reader (pdf.js bundled in /lib) ===== */
+const BK={db:null,
+ open(){return this.db?Promise.resolve(this.db):new Promise((res,rej)=>{const r=indexedDB.open('pathshalaBooks',1);r.onupgradeneeded=()=>r.result.createObjectStore('b',{keyPath:'id'});r.onsuccess=()=>{this.db=r.result;res(r.result)};r.onerror=()=>rej(r.error)})},
+ async tx(mode,fn){const d=await this.open();return new Promise((res,rej)=>{const t=d.transaction('b',mode);const q=fn(t.objectStore('b'));t.oncomplete=()=>res(q&&q.result);t.onerror=()=>rej(t.error)})},
+ all(){return this.tx('readonly',s=>s.getAll())},get(id){return this.tx('readonly',s=>s.get(id))},put(o){return this.tx('readwrite',s=>s.put(o))},del(id){return this.tx('readwrite',s=>s.delete(id))}};
+let pdfLib=null;
+async function pdfjs(){if(!pdfLib){pdfLib=await import('./lib/pdf.min.mjs');pdfLib.GlobalWorkerOptions.workerSrc='./lib/pdf.worker.min.mjs'}return pdfLib}
+const bkPos=()=>{try{return JSON.parse(localStorage.getItem('pathshalaBookPos')||'{}')}catch(e){return{}}};
+function vBooks(){const bs=(U.books||[]).filter(b=>b.kid===U.kid);
+ return hdr('পাঠ্যবই')+tutorHtml()+`<h3>📥 অফিসিয়াল বই ডাউনলোড (ফ্রি)</h3><div class="card"><p class="note" style="margin-top:0">নিচের সরকারি সাইট থেকে ক্লাস অনুযায়ী (প্রাক-প্রাথমিক, ক্লাস ৩, ক্লাস ৪, ইবতেদায়ি/মাদ্রাসা) বইয়ের পিডিএফ নামান। তারপর নিচে "পিডিএফ বই যোগ করুন" চেপে ফাইলটি বেছে নিন — এরপর ইন্টারনেট ছাড়াই পড়া যাবে।</p><a class="btn s" href="https://nctb.gov.bd/" target="_blank" rel="noopener">📘 NCTB</a><a class="btn s w" href="https://ebook.gov.bd/" target="_blank" rel="noopener">📗 জাতীয় ই-বুক</a><a class="btn s w" href="https://www.teachers.gov.bd/blog/details/833807" target="_blank" rel="noopener">📙 শিক্ষক বাতায়ন</a></div><h3>📖 ${esc(kid().name)}-এর বই</h3>${bs.length?bs.map(b=>`<div class="card row"><button class="btn" data-a="openBook" data-t="${b.id}" style="margin:0;text-align:left">📖 ${esc(b.name)}<small style="display:block;font-weight:400;opacity:.8">${bn(Math.round(b.size/1048576*10)/10)} MB${bkPos()[b.id]?' • পাতা '+bn(bkPos()[b.id]):''}</small></button><button class="ib" style="flex:none" data-a="delBook" data-t="${b.id}" aria-label="মুছুন">🗑️</button></div>`).join(''):'<div class="card note">এখনো কোনো বই যোগ করা হয়নি।</div>'}<label class="btn o" style="cursor:pointer">＋ পিডিএফ বই যোগ করুন<input type="file" accept="application/pdf,.pdf" multiple data-in="bookfile" style="display:none"></label><p class="note">বইগুলো শুধু এই ফোনের ব্রাউজারে থাকে; অভিভাবক প্যানেলের ব্যাকআপে বই যায় না।</p>`}
+function vReader(){const k=U.bk;return hdr(esc(k.name.slice(0,24)))+`<div class="row" style="margin:6px 0"><button class="ib" data-a="bkPrev" style="flex:none">◀</button><span class="chip" id="bkpg" style="text-align:center">${bn(k.page)} / ${k.total?bn(k.total):'…'}</span><button class="ib" data-a="bkNext" style="flex:none">▶</button><button class="ib" data-a="bkZoom" data-t="-1" style="flex:none">➖</button><button class="ib" data-a="bkZoom" data-t="1" style="flex:none">➕</button></div><div id="bkwrap" style="overflow:auto;border-radius:12px;background:#fff;box-shadow:0 2px 8px #0003;max-height:calc(100vh - 190px)"><canvas id="bkc" style="display:block"></canvas></div><div class="row" style="margin-top:8px"><input type="number" id="bkgo" min="1" placeholder="পাতা নম্বর (ইংরেজি সংখ্যায়)"><button class="btn s" data-a="bkGo" style="flex:none">যাও</button></div>`}
+async function drawPage(){const k=U.bk;if(!k||!k.doc)return;const tok=++k.tok;
+ try{const p=await k.doc.getPage(k.page);if(tok!==k.tok)return;const wrap=$('#bkwrap'),c=$('#bkc');if(!c)return;
+  const v0=p.getViewport({scale:1});const sc=((wrap.clientWidth||360)/v0.width)*k.zoom;const dpr=Math.min(2,window.devicePixelRatio||1);const vp=p.getViewport({scale:sc*dpr});
+  c.width=Math.floor(vp.width);c.height=Math.floor(vp.height);c.style.width=Math.floor(v0.width*sc)+'px';c.style.height=Math.floor(v0.height*sc)+'px';
+  await p.render({canvas:c,viewport:vp}).promise;if(tok!==k.tok)return;
+  const pg=$('#bkpg');if(pg)pg.textContent=bn(k.page)+' / '+bn(k.total);
+  const m=bkPos();m[k.id]=k.page;try{localStorage.setItem('pathshalaBookPos',JSON.stringify(m))}catch(e){}
+  if(!wrap._sw){wrap._sw=1;let x=0,y=0;wrap.addEventListener('touchstart',e=>{x=e.touches[0].clientX;y=e.touches[0].clientY},{passive:true});wrap.addEventListener('touchend',e=>{if(U.bk.zoom>1)return;const dx=e.changedTouches[0].clientX-x,dy=e.changedTouches[0].clientY-y;if(Math.abs(dx)>70&&Math.abs(dy)<45)A[dx<0?'bkNext':'bkPrev']()})}
+ }catch(e){console.error(e);toast('পাতাটি দেখানো যায়নি')}}
+function bkMove(n){const k=U.bk;n=Math.max(1,Math.min(k.total,n));if(n===k.page)return;k.page=n;k.zoom=Math.max(1,k.zoom);drawPage();const w=$('#bkwrap');if(w)w.scrollTop=0}
+Object.assign(A,{
+ async books(){try{U.books=await BK.all()||[]}catch(e){U.books=[];toast('এই ব্রাউজারে বই সংরক্ষণ চালু নেই')}nav('books');tutor(nm('{n}, তোমার বই খুলে পড়ি?'),{speak:false})},
+ async openBook(d){try{toast('বই খোলা হচ্ছে…');const b=await BK.get(d.t);const lib=await pdfjs();const doc=await lib.getDocument({data:await b.blob.arrayBuffer()}).promise;U.bk={id:b.id,name:b.name,doc,total:doc.numPages,page:Math.min(doc.numPages,bkPos()[b.id]||1),zoom:1,tok:0};nav('reader')}catch(e){console.error(e);toast('বইটি খোলা যায়নি — ফাইলটি ঠিক পিডিএফ কি না দেখুন')}},
+ async delBook(d){if(!confirm('এই বইটি মুছে ফেলবেন? (ফাইলটি আবার যোগ করা যাবে)'))return;await BK.del(d.t);U.books=await BK.all();render()},
+ bkNext(){bkMove(U.bk.page+1)},bkPrev(){bkMove(U.bk.page-1)},
+ bkZoom(d){const k=U.bk;k.zoom=Math.max(1,Math.min(3,k.zoom+(+d.t)*.5));drawPage()},
+ bkGo(){const v=parseInt($('#bkgo').value);if(v)bkMove(v)}});
+document.addEventListener('change',async e=>{const t=e.target;if(!t.dataset||t.dataset.in!=='bookfile')return;let n=0;
+ for(const f of t.files){if(f.size>300*1024*1024){toast('ফাইল অনেক বড় (৩০০ MB-এর বেশি)');continue}
+  try{await BK.put({id:'b'+Date.now()+Math.random().toString(36).slice(2,6),kid:U.kid,name:f.name.replace(/\.pdf$/i,''),blob:f,size:f.size,added:Date.now()});n++}catch(x){toast('সংরক্ষণ করা যায়নি — ফোনের জায়গা কম?')}}
+ U.books=await BK.all();render();if(n)toast(bn(n)+'টি বই যোগ হয়েছে')});
+
+/* ===== টুনির ডাক: reminders, idle nudges, notifications ===== */
+function pendingKids(){const d=todayS();return DB.kids.filter(k=>{const x=k.days[d];return !(x&&(x.daily||x.q>=10))})}
+function callMsg(k){const m=k.band=='c'?[`হে ${k.name}! টুনি ডাকছে। আজকের চ্যালেঞ্জ করবে?`,`${k.name}, চলো একসাথে পড়ি। আজ কোন বিষয় ভালো লাগছে?`]:k.band=='baby'?[`${k.name} সোনা! টুনি ডাকছে। এসো, ছড়া শুনি।`]:[`হ্যালো ${k.name}! চলো আজ একসাথে অনুশীলন করি।`,`${k.name}, তোমার জন্য নতুন খেলা অপেক্ষা করছে!`];return pick(m)}
+function addMin(t,m){const[h,mi]=t.split(':').map(Number);const x=h*60+mi+m;return String(Math.floor(x/60)%24).padStart(2,'0')+':'+String(x%60).padStart(2,'0')}
+let _mt=null;function saveMeta(){clearTimeout(_mt);_mt=setTimeout(()=>{try{caches.open('pa-meta').then(c=>c.put('meta.json',new Response(JSON.stringify({kids:DB.kids.map(k=>({n:k.name,b:k.band})),on:DB.settings.remind.on}))).catch(()=>{}))}catch(e){}},1500)}
+async function notify(title,body){try{if(!('Notification' in window)||Notification.permission!=='granted')return false;const r=await navigator.serviceWorker.ready;await r.showNotification(title,{body,icon:'icons/logo-192.png',badge:'icons/favicon-32.png',tag:'tuni',renotify:true,vibrate:[120,60,120]});return true}catch(e){return false}}
+function regPeriodic(){try{navigator.serviceWorker.ready.then(async r=>{if('periodicSync' in r){try{await r.periodicSync.register('tuni-call',{minInterval:6*3600*1000})}catch(e){}}})}catch(e){}}
+function showCall(){const ks=pendingKids();if(!ks.length)return;
+ modal(`<div class="rest" style="padding:20px 0"><div class="bird">🐥</div><h2>টুনি ডাকছে!</h2><p>${esc(ks.map(k=>k.name).join(', '))} — চলো পড়ি!</p>${ks.map(k=>`<button class="btn" data-a="kid" data-id="${k.id}">${esc(k.av)} ${esc(k.name)}</button>`).join('')}<button class="btn w" data-a="mclose">পরে</button></div>`);
+ sfx.win();TTS.seq(ks.map(k=>({t:callMsg(k)})))}
+function callCheck(){const R=DB.settings.remind;if(!R||!R.on||document.hidden)return;const n=new Date(),hm=String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0'),d=todayS();R.done=R.done||{};
+ for(const t of R.times){if(t&&hm>=t&&hm<addMin(t,30)&&R.done[t]!==d){R.done[t]=d;save();const ks=pendingKids();if(!ks.length)return;if(!$('#mod')&&U.view!='quiz')showCall();notify('টুনি ডাকছে 🐥',ks.map(k=>k.name).join(', ')+' — চলো পড়ি!');return}}}
+/* idle nudge: if nobody touches the phone for a while, Tuni calls out by name */
+function nudgeCheck(){if(document.hidden||!DB.settings.voice||$('#mod'))return;const now=Date.now();if(now-(U.lastTouch||now)<75000||now-(U.lastNudge||0)<150000)return;
+ if(U.view=='menu'&&kid()){const k=kid();U.lastNudge=now;tutor(pick(k.band=='c'?[`${k.name}, আমি এখানেই আছি! চলো আজকের চ্যালেঞ্জ করি।`,`${k.name}, একটা প্রশ্নের উত্তর দিলেই তারা পাবে!`]:[`${k.name}, চলো একটা মজার খেলা খেলি!`,`${k.name}, আমার সাথে গুনবে?`]))}
+ else if(U.view=='home'){const ks=pendingKids();if(!ks.length)return;U.lastNudge=now;const k=pick(ks);toast('🐥 '+callMsg(k));TTS.say(callMsg(k))}}
+document.addEventListener('pointerdown',()=>{U.lastTouch=Date.now()},true);
+function remindCard(){const R=DB.settings.remind,perm='Notification' in window?Notification.permission:'unsupported';
+ return `<h3>🔔 টুনির ডাক</h3><div class="card"><label class="fld"><span><input type="checkbox" style="width:auto" ${R.on?'checked':''} data-in="remOn"> নির্দিষ্ট সময়ে টুনি সবাইকে নাম ধরে ডাকবে</span></label><div class="row"><label class="fld"><span>প্রথম ডাক</span><input type="time" value="${R.times[0]||''}" data-in="t0"></label><label class="fld"><span>দ্বিতীয় ডাক</span><input type="time" value="${R.times[1]||''}" data-in="t1"></label></div><button class="btn s" data-a="enableNotif">🔔 নোটিফিকেশন চালু করুন</button><button class="btn s w" data-a="callTest">▶ ডাক পরীক্ষা</button><p class="note">নোটিফিকেশন: ${perm=='granted'?'চালু ✅':perm=='denied'?'বন্ধ (ফোনের সেটিংসে অনুমতি দিন)':perm=='unsupported'?'এই ব্রাউজারে নেই':'এখনো চালু হয়নি'}<br>অ্যাপ খোলা থাকলে ঠিক সময়ে টুনি কথা বলে ডাকে। অ্যাপ বন্ধ থাকলে ফোনে Chrome-এ ইনস্টল করা অ্যাপ হিসেবে মাঝে মাঝে (কয়েক ঘণ্টা পরপর, ফোনের ইচ্ছামতো) নোটিফিকেশন আসতে পারে — সঠিক সময়ের গ্যারান্টি দেওয়া যায় না। নিশ্চিত সময়ের জন্য ফোনের নিজস্ব অ্যালার্মও দিন।</p></div>`}
+Object.assign(PA,{
+ enableNotif(){if(!('Notification' in window)){toast('এই ব্রাউজারে নোটিফিকেশন নেই');return}Notification.requestPermission().then(p=>{toast(p=='granted'?'নোটিফিকেশন চালু হয়েছে':'অনুমতি দেওয়া হয়নি');if(p=='granted'){regPeriodic();saveMeta()}render()})},
+ callTest(){const ks=DB.kids;modal(`<div class="rest" style="padding:20px 0"><div class="bird">🐥</div><h2>টুনি ডাকছে!</h2><p>${esc(ks.map(k=>k.name).join(', '))}</p><button class="btn w" data-a="mclose">ঠিক আছে</button></div>`);TTS.seq(ks.map(k=>({t:callMsg(k)})));notify('টুনি ডাকছে 🐥',ks.map(k=>k.name).join(', ')+' — চলো পড়ি!')}
+});
+setInterval(()=>{callCheck();nudgeCheck()},20000);
+saveMeta();if(DB.settings.remind.on)regPeriodic();
+/* ===== install helper ===== */
+const isStandalone=()=>{try{return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}};
+Object.assign(PA,{async installHelp(){
+ const ok=(b)=>b?'✅':'❌';const rows=[];const ua=navigator.userAgent;
+ const https=location.protocol=='https:'||location.hostname=='localhost';
+ const inapp=/FBAN|FBAV|Instagram|Messenger|WhatsApp|Line\/|; wv\)|MiuiBrowser|UCBrowser|SamsungBrowser\/[0-9.]+ .*CrossApp/i.test(ua);
+ const segs=location.pathname.split('/').filter(x=>x&&!x.includes('.'));const nested=segs.length>1&&new Set(segs).size<segs.length;
+ let man=false,icons=false,sw=false;
+ try{const r=await fetch('manifest.webmanifest',{cache:'no-store'});man=r.ok;if(man){const j=await r.json();const i=await fetch(j.icons[1].src,{cache:'no-store'});icons=i.ok}}catch(e){}
+ try{sw=!!(await navigator.serviceWorker.getRegistration())}catch(e){}
+ rows.push([https,'নিরাপদ লিংক (https)'],[!inapp,'Chrome ব্রাউজারে খোলা (WhatsApp/Facebook-এর ভেতরে নয়)'],[man,'ম্যানিফেস্ট ফাইল পাওয়া যাচ্ছে'],[icons,'আইকন ফাইল পাওয়া যাচ্ছে'],[sw,'অফলাইন সার্ভিস (sw.js) চালু'],[!nested,'ফোল্ডারের ভেতরে ফোল্ডার হয়নি']);
+ const done=isStandalone();
+ modal(`<h3>📲 ইনস্টল সহায়তা</h3>${done?'<div class="warn">✅ আপনি ইতিমধ্যে ইনস্টল করা অ্যাপ থেকেই চালাচ্ছেন।</div>':''}<div class="card">${rows.map(r=>`<div>${ok(r[0])} ${r[1]}</div>`).join('')}<div>${ok(!!U.ip)} ব্রাউজার "ইনস্টল" অনুমতি দিয়েছে</div></div>
+ ${!man||!icons||nested?'<div class="warn">ফাইল ঠিকভাবে আপলোড হয়নি। GitHub repo-র <b>একদম ভেতরে</b> (সরাসরি root-এ) index.html, manifest.webmanifest, sw.js ও icons ফোল্ডার থাকতে হবে — জিপের বাইরের ফোল্ডারটি নয়, তার ভেতরের ফাইলগুলো আপলোড করুন।</div>':''}
+ ${inapp?'<div class="warn">লিংকটি কপি করে <b>Chrome</b>-এ খুলুন।</div>':''}
+ <b>নিজে ইনস্টল করার ধাপ</b><ol style="padding-left:20px"><li>Chrome-এ এই পেজ খুলুন (একবার পুরো লোড হতে দিন)।</li><li>ডানে উপরে ⋮ মেনু চাপুন।</li><li><b>"Install app"</b> বা <b>"Add to Home screen"</b> চাপুন। (দুটো থাকলে "Install app")</li></ol>
+ <b>"already installed" বা কোনো অপশন না এলে</b><ul style="padding-left:20px"><li>Chrome-এর ঠিকানা বারে <code>chrome://webapks</code> লিখে পুরোনো অ্যাপ থাকলে সেটি আনইনস্টল করুন।</li><li>প্রতিটি অ্যাপের জন্য আলাদা repo ব্যবহার করুন।</li><li>৩০ সেকেন্ড অ্যাপটি ব্যবহার করে আবার ⋮ খুলুন — Chrome অনেক সময় একটু পরে অপশন দেখায়।</li><li>তবুও না হলে "Add to Home screen → Create shortcut" দিলে আইকন হোমে আসবে, ঠিক অ্যাপের মতোই চলবে।</li></ul>
+ ${U.ip?'<button class="btn g" data-a="install">📲 এখনই ইনস্টল করুন</button>':''}<button class="btn w" data-a="mclose">বন্ধ করুন</button>`)}});
+
+const APP_VER='2026-11-15-d';
+Object.assign(PA,{async refreshApp(){try{const rs=await navigator.serviceWorker.getRegistrations();for(const r of rs)await r.unregister()}catch(e){}try{for(const k of await caches.keys())if(k!=='pa-meta')await caches.delete(k)}catch(e){}location.href=location.pathname+'?u='+Date.now()}});
+
+/* ---------- boot ---------- */
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();U.ip=e;if(U.view=='home')render()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){TTS.stop();save()}});
+TTS.init();render();setInterval(tick,5000);
+setTimeout(()=>{if(U.view=='home')render()},1500);
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
+if('serviceWorker' in navigator&&/^https?:/.test(location.protocol)){navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});let rl=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(rl||!navigator.serviceWorker.controller)return;if(sessionStorage.getItem('rl'))return;rl=true;try{sessionStorage.setItem('rl','1')}catch(e){}location.reload()})}
+
+</script></body></html>
