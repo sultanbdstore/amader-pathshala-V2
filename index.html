@@ -517,6 +517,7 @@ const PG={
 };
 /* ---- unified question maker ---- */
 function makeQ(topic,kid){
+  if(topic=='know')return knowQ(kid.band=='c');if(topic=='dua')return duaQ();
   const st=statOf(kid,topic);const l=st.lvl||1;const cls=kid.cls||3;
   if(MG[topic])return MG[topic](l);
   const m4=MATH4.find(x=>x[0]==topic);if(m4)return Object.assign(MG[m4[3]](m4[4]==1?st.lvl||1:m4[4]==2?Math.min(3,2+(st.lvl>1?1:0)):3),{topic});
@@ -610,7 +611,7 @@ function modal(h){closeModal();const m=document.createElement('div');m.className
 function closeModal(){const m=$('#mod');if(m)m.remove()}
 const ageTxt=k=>k.band=='c'?`ক্লাস ${bn(k.cls)} · ${bn(k.age)} বছর`:k.band=='baby'?`${bn(k.age)} বছর · ছড়া ও খেলা`:`${bn(k.age)} বছর · স্কুল/মাদ্রাসার প্রস্তুতি`;
 /* ---------- render ---------- */
-function render(){const V={home:vHome,menu:vMenu,sub:vSub,math:vMath,deck:vDeck,quiz:vQuiz,stl:vStl,story:vStory,read:vRead,talk:vTalk,cards:vCards,stk:vStk,trace:vTrace,baby:vBaby,rhymes:vRhymes,rhyme:vRhyme,parent:vParent,rep:vRep,rest:vRest,books:vBooks,reader:vReader};let h;
+function render(){const V={home:vHome,menu:vMenu,sub:vSub,math:vMath,deck:vDeck,quiz:vQuiz,stl:vStl,story:vStory,read:vRead,talk:vTalk,cards:vCards,stk:vStk,trace:vTrace,baby:vBaby,rhymes:vRhymes,rhyme:vRhyme,parent:vParent,rep:vRep,rest:vRest,books:vBooks,reader:vReader};Object.assign(V,VX);let h;
  try{h=(V[U.view]||vHome)()}catch(e){console.error(e);h=`<div class="card">কিছু একটা সমস্যা হয়েছে। <button class="btn" data-a="home">হোমে যাও</button><small>${esc(e.message)}</small></div>`}
  if(U.view!='baby')document.querySelectorAll('.bal').forEach(b=>b.remove());$('#app').innerHTML=h;if(U.view=='reader')drawPage();if(U.view=='trace')initTrace()}
 /* ---------- HOME ---------- */
@@ -645,9 +646,9 @@ function deckOf(k){
  if(k.startsWith('tab')){const n=+k.slice(3);return{title:`${bn(n)} এর নামতা`,items:Array.from({length:10},(_,i)=>({sym:`${bn(n)} × ${bn(i+1)} = ${bn(n*(i+1))}`,t:1,nm:'',say:[{t:`${nw(n)} গুণ ${nw(i+1)} সমান ${nw(n*(i+1))}`}]}))}}
  return{title:'',items:[]}}
 function vDeck(){const d=U.dk,it=d.items[d.i];let h=hdr(esc(d.title))+tutorHtml();
- h+=`<div class="card deck">${it.col?`<span class="dot" style="background:${it.col}"></span>`:''}${it.sym?`<div class="sym ${it.t||it.sym.length>3?'t':''}" ${it.arab?'dir="rtl" style="font-family:\'Noto Naskh Arabic\',\'Amiri\',serif"':''}>${esc(it.sym)}</div>`:''}${it.em?`<div class="${it.em.length>4?'blocks':'em'}">${it.em}</div>`:''}<div class="nm">${esc(it.nm||'')}</div>${it.en?`<div class="en">${esc(it.en)}</div>`:''}${it.sub?`<div class="en">${esc(it.sub)}</div>`:''}</div>`;
+ h+=`<div class="card deck">${it.h?`<div class="chip g" style="display:inline-block;margin-bottom:8px">${esc(it.h)}</div>`:''}${it.col?`<span class="dot" style="background:${it.col}"></span>`:''}${it.sym?`<div class="sym ${it.t||it.sym.length>3?'t':''}" ${it.arab?'dir="rtl" style="font-family:\'Noto Naskh Arabic\',\'Amiri\',serif'+(it.fs?';font-size:'+it.fs+'px;line-height:1.7':'')+'"':''}>${esc(it.sym)}</div>`:''}${it.em?`<div class="${it.em.length>4?'blocks':'em'}">${it.em}</div>`:''}<div class="nm">${esc(it.nm||'')}</div>${it.en?`<div class="en">${esc(it.en)}</div>`:''}${it.sub?`<div class="en">${esc(it.sub)}</div>`:''}</div>`;
  h+=`<div class="pager"><button class="ib" data-a="dprev">◀</button><span class="chip">${bn(d.i+1)} / ${bn(d.items.length)}</span><button class="ib" data-a="dnext">▶</button></div>`;
- if(d.items.length>1&&d.items.length<=45&&d.items[0].sym)h+=`<div class="strip">${d.items.map((x,i)=>`<button class="${i==d.i?'on':''}" data-a="dgo" data-t="${i}">${esc((x.sym||x.nm||'').slice(0,3)||(i+1))}</button>`).join('')}</div>`;
+ if(d.items.length>1&&d.items.length<=45&&d.items[0].sym&&!d.items[0].nostrip)h+=`<div class="strip">${d.items.map((x,i)=>`<button class="${i==d.i?'on':''}" data-a="dgo" data-t="${i}">${esc((x.sym||x.nm||'').slice(0,3)||(i+1))}</button>`).join('')}</div>`;
  if(DECK_Q[d.k])h+=`<button class="btn g" data-a="quiz" data-t="${DECK_Q[d.k]}">🎮 কুইজ খেলি</button>`;
  if(d.k=='vowel'||d.k=='cons'||d.k=='num'||d.k=='abc')h+=`<button class="btn o" data-a="trace" data-t="${d.k}">✍️ লিখে শিখি</button>`;return h}
 function speakDeck(){const d=U.dk;TTS.seq(d.items[d.i].say)}
@@ -789,7 +790,7 @@ const A={
  rhymes(){nav('rhymes');tutor(nm('{n}, কোন ছড়া শুনবে?'))},
  rhOpen(d){U.rh=allRh()[+d.t];nav('rhyme');TTS.say(U.rh.t)},
  rhPlay(){readAloud(U.rh.l,kid().band=='baby'?.75:.85)},
- bbSec(d){if(d.t=='rhymes'){A.rhymes();return}if(d.t=='balloons'){A.balloons();return}U.bb.sec=d.t;render();tutor(d.t=='animal'?'কোনটা ধরবে? ছুঁয়ে দেখো!':'ছুঁয়ে দেখো!')},
+ bbSec(d){if(d.t=='peek'){A.gpeek();return}if(d.t=='pads'){A.gpads();return}if(d.t=='rhymes'){A.rhymes();return}if(d.t=='balloons'){A.balloons();return}U.bb.sec=d.t;render();tutor(d.t=='animal'?'কোনটা ধরবে? ছুঁয়ে দেখো!':'ছুঁয়ে দেখো!')},
  bbBack(){TTS.stop();U.bb.sec=null;render()},
  bbi(d){const s=U.bb.sec,i=+d.i;sfx.pop();if(s=='num'){TTS.say(nw(i+1));return}const x=DECKS[s][i];let t=x[1];if(s=='animal'&&x[3])t=`${x[1]}। ${x[1]} বলে ${x[3]}।`;TTS.say(t,{rate:.85});const b=document.querySelectorAll('.baby button')[i];if(b)b.animate([{transform:'scale(1)'},{transform:'scale(1.15) rotate(-4deg)'},{transform:'scale(1)'}],{duration:350})},
  balloons(){const cs=COLORS.filter(c=>c[1]!='সাদা'&&c[1]!='কালো');for(let i=0;i<8;i++){const c=pick(cs),b=document.createElement('div');b.className='bal';b.dataset.a='popb';b.dataset.n=c[1];b.style.cssText=`left:${rnd(4,84)}%;bottom:-110px;width:62px;height:78px;border-radius:50% 50% 46% 46%;background:${c[0]};animation-delay:${i*.5}s;animation-duration:${rnd(5,8)}s;box-shadow:inset -8px -8px 0 #0002`;document.body.appendChild(b);setTimeout(()=>b.remove(),14000)}tutor('বেলুন ফাটাও!')},
@@ -855,6 +856,105 @@ function vRep(){const k=kidById(U.rep);const t=tot(k);const ent=Object.entries(k
  let h=hdr(esc(k.name)+' — রিপোর্ট')+`<div class="card"><b>মোট:</b> সঠিক ${bn(t.c)} / ${bn(t.a)} ${t.a?`(${bn(Math.round(t.c/t.a*100))}%)`:''}<br>⭐ ${bn(k.stars)} • 🔥 ${bn(k.streak)} দিন • আজ ${bn(mins(k))} মিনিট</div><div class="card"><b>গত ১৪ দিনে প্রশ্ন</b><div class="days">${days.map(v=>`<i style="height:${Math.max(3,v/mx*100)}%" title="${v}"></i>`).join('')}</div></div>`;
  if(weak.length)h+=`<div class="warn"><b>আরও অনুশীলন দরকার:</b> ${weak.map(([id])=>TNAME[id]||id).join('، ')}। এগুলো টুনি বেশি করে জিজ্ঞেস করবে।</div>`;
  h+=`<div class="card"><table class="tbl"><tr><th>বিষয়</th><th>সঠিক</th><th></th></tr>${ent.length?ent.map(([id,s])=>{const p=Math.round(s.c/s.a*100);return`<tr><td>${TNAME[id]||id}</td><td>${bn(p)}% <small>(${bn(s.a)})</small></td><td><div class="pb ${p<60?'lo':p<80?'mid':''}"><i style="width:${p}%"></i></div></td></tr>`}).join(''):'<tr><td colspan="3">এখনো কোনো তথ্য নেই</td></tr>'}</table></div><button class="btn" data-a="shareRep">📤 রিপোর্ট শেয়ার/কপি</button>`;return h}
+
+/* ===== MORE: duas, surah intro, fables, learn cards, know-quiz, games (all original/public-domain wording) ===== */
+const DUAS=[
+{h:'সালাম',ar:'السلام عليكم ورحمة الله',bn:'আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ',mean:'আপনার ওপর শান্তি ও আল্লাহর রহমত বর্ষিত হোক। উত্তর: ওয়া আলাইকুমুস সালাম ওয়া রাহমাতুল্লাহ।',fs:40},
+{h:'খাওয়ার আগে',ar:'بسم الله',bn:'বিসমিল্লাহ',mean:'আল্লাহর নামে শুরু করছি। শুরুতে ভুলে গেলে মনে পড়লে বলো: বিসমিল্লাহি আওয়ালাহু ওয়া আখিরাহু।',fs:60},
+{h:'খাওয়ার পরে',ar:'الحمد لله الذي أطعمنا وسقانا وجعلنا مسلمين',bn:'আলহামদু লিল্লাহিল্লাযী আত‘আমানা ওয়া সাকানা ওয়া জা‘আলানা মুসলিমীন',mean:'সব প্রশংসা আল্লাহর, যিনি আমাদের খাওয়ালেন, পান করালেন এবং মুসলিম বানালেন।',fs:34},
+{h:'ঘুমানোর আগে',ar:'اللهم باسمك أموت وأحيا',bn:'আল্লাহুম্মা বিসমিকা আমূতু ওয়া আহইয়া',mean:'হে আল্লাহ, তোমার নামেই আমি মরি (ঘুমাই) এবং বাঁচি (জাগি)।',fs:40},
+{h:'ঘুম থেকে উঠে',ar:'الحمد لله الذي أحيانا بعد ما أماتنا وإليه النشور',bn:'আলহামদু লিল্লাহিল্লাযী আহইয়ানা বা‘দা মা আমাতানা ওয়া ইলাইহিন নুশূর',mean:'সব প্রশংসা আল্লাহর, যিনি ঘুমের পর আমাদের জাগালেন; তাঁর কাছেই ফিরে যেতে হবে।',fs:34},
+{h:'বাড়ি থেকে বের হওয়ার সময়',ar:'بسم الله توكلت على الله ولا حول ولا قوة إلا بالله',bn:'বিসমিল্লাহি তাওয়াক্কালতু ‘আলাল্লাহি ওয়া লা হাওলা ওয়া লা কুওয়াতা ইল্লা বিল্লাহ',mean:'আল্লাহর নামে (বের হচ্ছি), আল্লাহর ওপর ভরসা করলাম; আল্লাহর সাহায্য ছাড়া কোনো শক্তি বা ক্ষমতা নেই।',fs:34},
+{h:'হাঁচি দিলে',ar:'الحمد لله ، يرحمك الله ، يهديكم الله ويصلح بالكم',bn:'হাঁচিদাতা: আলহামদুলিল্লাহ। শ্রোতা: ইয়ারহামুকাল্লাহ। হাঁচিদাতা: ইয়াহদীকুমুল্লাহু ওয়া ইউসলিহু বালাকুম।',mean:'সব প্রশংসা আল্লাহর। — আল্লাহ তোমাকে দয়া করুন। — আল্লাহ তোমাদের হিদায়াত দিন ও অবস্থা ভালো করুন।',fs:34},
+{h:'কালিমা তাইয়্যেবা',ar:'لا إله إلا الله محمد رسول الله',bn:'লা ইলাহা ইল্লাল্লাহু মুহাম্মাদুর রাসূলুল্লাহ',mean:'আল্লাহ ছাড়া কোনো উপাস্য নেই, মুহাম্মদ (সা.) আল্লাহর রাসূল।',fs:42}];
+const duaDeck=()=>DUAS.map(d=>({h:d.h,sym:d.ar,arab:1,fs:d.fs,nostrip:1,nm:d.bn,sub:'অর্থ: '+d.mean,say:[{t:d.h},{t:d.bn},{t:'অর্থ: '+d.mean}]}));
+const SURAHS=[
+{h:'কুরআন শেখার আগে',e:'📖',n:'আয়াত শেখা উস্তাদের কাছে',s:'সূরার আরবি পাঠ ও তাজবিদ উস্তাদ বা মুসহাফ (কুরআন শরিফ) থেকে শিখতে হয় — তাই এখানে আয়াত লেখা হয়নি, শুধু পরিচিতি। অভিভাবক চাইলে "নিজের কনটেন্ট"-এ নিজে যোগ করতে পারেন।'},
+{h:'সূরা আল-ফীল',e:'🐘',n:'আল-ফীল (হাতি)',s:'মক্কায় নাজিল • ৫ আয়াত • কাবা ধ্বংস করতে আসা হাতিবাহিনীকে আল্লাহ থামিয়ে দিয়েছিলেন, সেই ঘটনার কথা।'},
+{h:'সূরা কুরাইশ',e:'🕋',n:'কুরাইশ (একটি গোত্র)',s:'মক্কায় নাজিল • ৪ আয়াত • কুরাইশদের নিরাপত্তা ও রিজিকের নিয়ামত মনে করিয়ে এই ঘরের রবের ইবাদত করতে বলা হয়েছে।'},
+{h:'সূরা আন-নাসর',e:'🤝',n:'আন-নাসর (সাহায্য)',s:'মদিনায় নাজিল • ৩ আয়াত • আল্লাহর সাহায্য ও বিজয় এলে তাঁর প্রশংসা ও ক্ষমা চাওয়ার নির্দেশ।'},
+{h:'সূরা আল-কাফিরূন',e:'☝️',n:'আল-কাফিরূন (অবিশ্বাসীগণ)',s:'মক্কায় নাজিল • ৬ আয়াত • নিজের ঈমানে অটল থাকা ও ইবাদতে আপস না করার স্পষ্ট ঘোষণা।'}];
+const surahDeck=()=>SURAHS.map(x=>({h:x.h,em:x.e,nm:x.n,sub:x.s,nostrip:1,say:[{t:x.h},{t:x.s}]}));
+/* ---- fables retold in own words (public-domain themes) ---- */
+STORIES.push(
+{t:'সিংহ আর ইঁদুর',e:'🦁',s:['বনে একটি সিংহ ঘুমিয়ে ছিল।','একটি ছোট্ট ইঁদুর ভুল করে তার গায়ে উঠে পড়ল।','সিংহ জেগে ইঁদুরটিকে ধরে ফেলল।','ইঁদুর কাঁপতে কাঁপতে বলল, আমাকে ছেড়ে দিন, একদিন আপনার উপকার করব।','সিংহ হেসে তাকে ছেড়ে দিল।','কিছুদিন পর সিংহ শিকারির জালে আটকে গেল।','ইঁদুর এসে দাঁত দিয়ে জাল কেটে দিল, সিংহ মুক্ত হলো।'],q:['এই গল্পের শিক্ষা কী?','ছোট বলে কাউকে ছোট ভাবতে নেই','শুধু বড়রাই শক্তিশালী','দিনে ঘুমানো ভালো','জাল কাটা খারাপ']},
+{t:'শেয়াল আর আঙুর',e:'🍇',s:['একটি ক্ষুধার্ত শেয়াল আঙুর বাগানে গেল।','উঁচু লতায় পাকা আঙুরের থোকা ঝুলছিল।','শেয়াল লাফ দিল, কিন্তু নাগাল পেল না।','সে বারবার চেষ্টা করেও পারল না।','শেষে মুখ ঘুরিয়ে বলল, আঙুরগুলো নিশ্চয়ই টক।','নিজের ব্যর্থতার দোষ অন্যকে দেওয়া ঠিক নয়।'],q:['এই গল্প থেকে আমরা কী শিখি?','ব্যর্থতার দোষ অন্যকে দিতে নেই','আঙুর কখনো মিষ্টি হয় না','লাফানো ভালো','শেয়াল খুব চালাক']},
+{t:'রাখাল ছেলে আর নেকড়ে',e:'🐑',s:['এক রাখাল ছেলে গ্রামের বাইরে ভেড়া চরাত।','একদিন মজা করে সে চেঁচাল, নেকড়ে এসেছে, বাঁচাও!','লোকেরা লাঠি নিয়ে দৌড়ে এল, কিন্তু কিছুই দেখল না।','ছেলেটি হেসে উঠল, আর আবার একই মজা করল।','পরে সত্যিই নেকড়ে এল। ছেলেটি চিৎকার করল, কিন্তু কেউ বিশ্বাস করল না।','অনেক ভেড়া হারিয়ে গেল।'],q:['রাখাল ছেলের ভুল কী ছিল?','মিথ্যা বলে মজা করা','ভেড়া চরানো','লাঠি রাখা','দৌড়ানো']},
+{t:'সোনার ডিমের হাঁস',e:'🦆',s:['এক গরিব কৃষকের একটি অদ্ভুত হাঁস ছিল।','হাঁসটি রোজ একটি করে সোনার ডিম পাড়ত।','সোনা বেচে কৃষক ধীরে ধীরে ধনী হতে লাগল।','কিন্তু তার লোভ বেড়ে গেল। সে ভাবল, সব ডিম একসাথে নিয়ে নেব।','সে হাঁসটিকে কেটে ফেলল, কিন্তু ভেতরে কিছুই পেল না।','লোভের ফলে সে রোজকার ডিমও হারাল।'],q:['কৃষকের কোন দোষটি তার ক্ষতি করল?','লোভ','সাহস','সততা','ধৈর্য']},
+{t:'বানর আর কুমির',e:'🐒',s:['নদীর ধারে জাম গাছে একটি বানর থাকত।','একটি কুমির রোজ আসত, বানর তাকে জাম খেতে দিত। দুজনে বন্ধু হলো।','একদিন কুমির লোভে পড়ে বানরকে নদীর ওপারে নিতে চাইল।','নদীর মাঝে গিয়ে সে তার খারাপ ইচ্ছার কথা বলে ফেলল।','বানর বুদ্ধি করে বলল, আমার সবচেয়ে মিষ্টি জামগুলো তো গাছেই রেখে এসেছি, চলো ফিরে গিয়ে আনি।','তীরে পৌঁছেই বানর লাফিয়ে গাছে উঠে গেল।'],q:['বানর কীভাবে বাঁচল?','বুদ্ধি খাটিয়ে','মারামারি করে','সাঁতার কেটে','কুমিরকে ভয় দেখিয়ে']},
+{t:'পিঁপড়া আর ঘুঘু',e:'🐜',s:['একটি পিঁপড়া পিপাসায় নদীর ধারে গেল।','হঠাৎ ঢেউয়ে সে পানিতে পড়ে গেল।','গাছের ডালে বসা ঘুঘু পাখি তা দেখতে পেল।','ঘুঘু একটি পাতা ছিঁড়ে পানিতে ফেলে দিল।','পিঁপড়া পাতায় উঠে ডাঙায় এল।','পরে এক শিকারি ঘুঘুকে ধরতে এলে পিঁপড়া তার পায়ে কামড় দিল।','শিকারি চমকে উঠল, আর ঘুঘু উড়ে বাঁচল।'],q:['এই গল্পের শিক্ষা কী?','উপকারের প্রতিদান দিতে হয়','পিঁপড়া কামড়ায়','নদীতে নামা ভালো','পাতা ছেঁড়া ভালো']});
+/* ---- learn cards ---- */
+const LEARN=[
+{id:'sym',t:'জাতীয় প্রতীক',e:'🇧🇩',pre:1,items:[['জাতীয় ফুল','শাপলা — পানিতে ফোটে','🌸'],['জাতীয় ফল','কাঁঠাল — বড় ও সুগন্ধি ফল','🍈'],['জাতীয় পাখি','দোয়েল — সুন্দর গান গায়','🐦'],['জাতীয় পশু','রয়েল বেঙ্গল টাইগার — সুন্দরবনের বাঘ','🐯'],['জাতীয় মাছ','ইলিশ — রুপালি মাছ','🐟'],['জাতীয় পতাকা','সবুজ জমির মাঝে লাল বৃত্ত','🇧🇩'],['রাজধানী','ঢাকা','🏙️'],['মুদ্রা','টাকা','💰'],['জাতীয় সংগীত','আমার সোনার বাংলা','🎵']]},
+{id:'days',t:'বিশেষ দিন',e:'🎉',pre:1,items:[['২১ ফেব্রুয়ারি','শহিদ দিবস ও আন্তর্জাতিক মাতৃভাষা দিবস — ভাষার জন্য ত্যাগের স্মরণ','📖'],['২৬ মার্চ','স্বাধীনতা দিবস','🇧🇩'],['১৬ ডিসেম্বর','বিজয় দিবস','🎉'],['১ বৈশাখ','বাংলা নববর্ষ — নতুন বছরের উৎসব','🎊'],['ঈদুল ফিতর','রমজানের রোজার পর আনন্দের ঈদ','🌙'],['ঈদুল আযহা','ত্যাগের ঈদ — কোরবানি','🐄']]},
+{id:'season',t:'ছয় ঋতু',e:'🌦️',pre:1,items:[['গ্রীষ্ম','বৈশাখ-জ্যৈষ্ঠ — গরম, আম-কাঁঠাল পাকে','☀️'],['বর্ষা','আষাঢ়-শ্রাবণ — অনেক বৃষ্টি','🌧️'],['শরৎ','ভাদ্র-আশ্বিন — নীল আকাশ, সাদা কাশফুল','🌾'],['হেমন্ত','কার্তিক-অগ্রহায়ণ — নতুন ধান, হালকা কুয়াশা','🍂'],['শীত','পৌষ-মাঘ — ঠান্ডা, খেজুরের রস, পিঠা','🧣'],['বসন্ত','ফাল্গুন-চৈত্র — ফুল ফোটে, কোকিল ডাকে','🌺']]},
+{id:'month',t:'বাংলা মাস',e:'🗓️',pre:0,items:[['বৈশাখ','প্রথম মাস • গ্রীষ্ম','🗓️'],['জ্যৈষ্ঠ','দ্বিতীয় মাস • গ্রীষ্ম','🥭'],['আষাঢ়','তৃতীয় মাস • বর্ষা','🌧️'],['শ্রাবণ','চতুর্থ মাস • বর্ষা','☔'],['ভাদ্র','পঞ্চম মাস • শরৎ','🌾'],['আশ্বিন','ষষ্ঠ মাস • শরৎ','☁️'],['কার্তিক','সপ্তম মাস • হেমন্ত','🍂'],['অগ্রহায়ণ','অষ্টম মাস • হেমন্ত','🌾'],['পৌষ','নবম মাস • শীত','🧣'],['মাঘ','দশম মাস • শীত','❄️'],['ফাল্গুন','একাদশ মাস • বসন্ত','🌺'],['চৈত্র','দ্বাদশ (শেষ) মাস • বসন্ত','🌸']]},
+{id:'week',t:'সপ্তাহের ৭ দিন',e:'📅',pre:1,items:[['শনিবার','সপ্তাহের প্রথম দিন','1️⃣'],['রবিবার','দ্বিতীয় দিন','2️⃣'],['সোমবার','তৃতীয় দিন','3️⃣'],['মঙ্গলবার','চতুর্থ দিন','4️⃣'],['বুধবার','পঞ্চম দিন','5️⃣'],['বৃহস্পতিবার','ষষ্ঠ দিন','6️⃣'],['শুক্রবার','জুমার দিন — সাপ্তাহিক ছুটি','7️⃣']]},
+{id:'pillar',t:'ইসলামের ৫ স্তম্ভ',e:'🕌',pre:1,items:[['ঈমান','আল্লাহ এক ও মুহাম্মদ (সা.) তাঁর রাসূল — এই বিশ্বাস','☝️'],['নামাজ','দিনে পাঁচ ওয়াক্ত','🕌'],['রোজা','রমজান মাসে সুবহে সাদিক থেকে সূর্যাস্ত পর্যন্ত উপবাস','🌙'],['যাকাত','সামর্থ্যবানরা গরিবকে দান করে','🤲'],['হজ','সামর্থ্য থাকলে জীবনে একবার মক্কায় গিয়ে','🕋']]},
+{id:'prov',t:'প্রবাদ',e:'💡',pre:0,items:[['সবুরে মেওয়া ফলে','ধৈর্য ধরলে ভালো ফল পাওয়া যায়','🍎'],['যেমন কর্ম তেমন ফল','যে যেমন কাজ করে সে তেমন ফল পায়','⚖️'],['দশের লাঠি একের বোঝা','সবাই মিলে করলে কঠিন কাজও সহজ','🤝'],['অতি লোভে তাঁতি নষ্ট','বেশি লোভ করলে সবকিছু হারাতে হয়','🧵'],['এক হাতে তালি বাজে না','একা কাজ হয় না, সবার সহযোগিতা দরকার','👏'],['নানা মুনির নানা মত','সবার মত এক হয় না','🗣️']]}];
+const learnDeck=c=>({title:c.t,items:c.items.map(x=>({h:c.t,em:x[2],nm:x[0],sub:x[1],nostrip:0,say:[{t:x[0]},{t:x[1]}]}))});
+/* ---- know quiz ---- */
+const KNOWQ=[['জাতীয় ফুল কোনটি?','শাপলা','গোলাপ','জবা','বেলি',1],['জাতীয় পাখি কোনটি?','দোয়েল','ময়না','টিয়া','কাক',1],['জাতীয় ফল কোনটি?','কাঁঠাল','আম','লিচু','কলা',1],['বছরে ঋতু কয়টি?','৬টি','৪টি','৫টি','৮টি',1],['সপ্তাহে দিন কয়টি?','৭টি','৫টি','৬টি','১০টি',1],['বাংলা বছরের প্রথম মাস কোনটি?','বৈশাখ','জ্যৈষ্ঠ','চৈত্র','আশ্বিন',0],['বাংলা বছরের শেষ মাস কোনটি?','চৈত্র','ফাল্গুন','বৈশাখ','মাঘ',0],['আষাঢ় ও শ্রাবণ কোন ঋতুর মাস?','বর্ষা','শীত','বসন্ত','গ্রীষ্ম',0],['পৌষ ও মাঘ কোন ঋতুর মাস?','শীত','বর্ষা','শরৎ','গ্রীষ্ম',0],['ইসলামের স্তম্ভ কয়টি?','৫টি','৩টি','৪টি','৭টি',1],['ইসলামের স্তম্ভগুলোর প্রথমটি কী?','ঈমান','হজ','যাকাত','রোজা',0],['২১ ফেব্রুয়ারি কোন দিবস?','মাতৃভাষা দিবস','বিজয় দিবস','স্বাধীনতা দিবস','নববর্ষ',1],['বিজয় দিবস কবে?','১৬ ডিসেম্বর','২৬ মার্চ','২১ ফেব্রুয়ারি','১ বৈশাখ',0],['রমজান মাসে আমরা কী রাখি?','রোজা','হজ','মেলা','পূজা',1],['সালামের উত্তরে কী বলি?','ওয়া আলাইকুমুস সালাম','টাটা','হ্যালো','কেমন আছ',1],['হাঁচি দিলে কী বলি?','আলহামদুলিল্লাহ','বিসমিল্লাহ','সুবহানাল্লাহ','আলহামদু ছাড়া কিছুই না',1],['কালিমা তাইয়্যেবা কোনটি?','লা ইলাহা ইল্লাল্লাহু মুহাম্মাদুর রাসূলুল্লাহ','আসসালামু আলাইকুম','বিসমিল্লাহির রাহমানির রাহিম','আল্লাহু আকবার',0],['শুক্রবার কোন দিন হিসেবে বিশেষ?','জুমার দিন','নববর্ষ','বিজয়ের দিন','কোনোটিই নয়',0]];
+function knowQ(adv){const p=KNOWQ.filter(x=>adv||x[5]);const x=pick(p);return mc('know',esc(x[0]),x[0],x[1],[x[2],x[3],x[4]],{sm:true})}
+function duaQ(){const d=pick(DUAS);return mc('dua',`“${esc(d.bn.split('।')[0].slice(0,70))}”<br>কোন সময়ের দোয়া?`,`${d.bn.split('।')[0]}. এটি কখন পড়ি?`,d.h,shuf(DUAS.filter(x=>x!==d)).slice(0,3).map(x=>x.h),{html:true,sm:true})}
+PG.odd=function(){const cats=[FRUITS,ANIMALS,VEHICLES,BODY,FAMILY];const A_=pick(cats);let B_=pick(cats);while(B_===A_)B_=pick(cats);const a=shuf(A_).slice(0,3).map(x=>x[0]),b=pick(B_)[0];return mc('odd','কোনটি আলাদা?','কোনটি আলাদা? বাকিগুলো থেকে ভিন্ন কোনটি?',b,a,{bigOpts:true})};
+Object.assign(TNAME,{know:'জানার কুইজ',dua:'দোয়া',odd:'কোনটি আলাদা',game_match:'জোড়া মেলাও',game_word:'শব্দ গড়ি',game_sprint:'দ্রুত হিসাব'});
+DECK_Q.dua='dua';
+/* ---- games ---- */
+const WORDS=[['পাখি',['পা','খি'],'🐦'],['মাছ',['মা','ছ'],'🐟'],['হাতি',['হা','তি'],'🐘'],['নৌকা',['নৌ','কা'],'⛵'],['আকাশ',['আ','কা','শ'],'☁️'],['কলম',['ক','ল','ম'],'🖊️'],['বাগান',['বা','গা','ন'],'🌳'],['পুকুর',['পু','কু','র'],'🏞️'],['শাপলা',['শা','প','লা'],'🌸'],['কাঁঠাল',['কাঁ','ঠা','ল'],'🍈'],['তরমুজ',['ত','র','মু','জ'],'🍉'],['আনারস',['আ','না','র','স'],'🍍'],['বাংলাদেশ',['বাং','লা','দে','শ'],'🇧🇩'],['সবুজ',['স','বু','জ'],'🟢']];
+const GAMES={c:[['🧠','জোড়া মেলাও','gmatch'],['🔤','শব্দ গড়ি','gword'],['⚡','দ্রুত হিসাব','gsprint'],['🧩','কোনটি আলাদা?','quiz','odd']],pre:[['🧠','জোড়া মেলাও','gmatch'],['🔤','শব্দ গড়ি','gword'],['⚡','দ্রুত গুনি','gsprint'],['🧩','কোনটি আলাদা?','quiz','odd']]};
+const GCSS='.card.c .big{font-size:84px;line-height:1.1}.mc{aspect-ratio:1;font-size:34px;border-radius:14px;background:#fff;box-shadow:0 2px 6px #0003;display:grid;place-items:center}.mc.up{background:#fff3c4}.mc.ok{background:#d9f7e4}.pad{height:110px;border-radius:22px;box-shadow:inset 0 -8px 0 #0003,0 3px 8px #0003}.slot{min-width:56px;height:60px;border-radius:14px;background:#fff;border:3px dashed #9db3c8;font-size:30px;font-weight:800;display:grid;place-items:center;color:var(--navy);padding:0 6px}';
+{const s=document.createElement('style');s.textContent=GCSS;document.head.appendChild(s)}
+function startMatch(){const k=kid();const n=k.band=='c'?8:k.band=='pre'?6:4;const pool=shuf([...FRUITS.map(x=>x[0]),...ANIMALS.map(x=>x[0])]).slice(0,n);U.gm={cards:shuf([...pool,...pool]).map(e=>({e,s:0})),a:-1,lock:false,moves:0,left:n};nav('gmatch');tutor(nm('{n}, একই ছবির জোড়া খুঁজে বের করো!'))}
+function vMatch(){const g=U.gm;return hdr('জোড়া মেলাও')+tutorHtml()+`<div class="chip" style="display:inline-block;margin-bottom:8px">চাল: ${bn(g.moves)}</div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">${g.cards.map((c,i)=>`<button class="mc ${c.s==2?'ok':c.s?'up':''}" data-a="gmflip" data-i="${i}">${c.s?c.e:'❓'}</button>`).join('')}</div>`+(g.left==0?`<div class="card c"><div class="big" style="font-size:70px">🏆</div><b>${bn(g.moves)} চালে জিতেছ!</b></div><button class="btn g" data-a="gmatch">🔁 আবার খেলি</button>`:'')}
+function startWord(){const k=kid();U.gw={round:0,score:0,done:false};nextWord();nav('gword')}
+function nextWord(){const k=kid(),g=U.gw;const pool=WORDS.filter(w=>k.band=='c'?w[1].length>=3:w[1].length<=3);const w=pick(pool);g.w=w;g.order=shuf(w[1].map((_,i)=>i));g.pick=[];g.lock=false}
+function vWord(){const g=U.gw;if(g.done)return hdr('শব্দ গড়ি')+tutorHtml()+`<div class="card c"><div class="big" style="font-size:70px">🏆</div><b>${bn(g.score)}/৫ ঠিক!</b></div><button class="btn g" data-a="gword">🔁 আবার খেলি</button>`;
+ return hdr('শব্দ গড়ি')+tutorHtml()+`<div class="bar"><i style="width:${g.round/5*100}%"></i></div><div class="card c"><div class="big">${g.w[2]}</div><div class="row" style="justify-content:center;gap:6px;flex-wrap:wrap">${g.w[1].map((_,i)=>`<div class="slot">${g.pick[i]!==undefined?esc(g.w[1][g.pick[i]]):''}</div>`).join('')}</div></div><div class="strip">${g.order.map(i=>`<button style="min-width:64px;height:56px;font-size:26px" ${g.pick.includes(i)?'disabled style="opacity:.3"':''} data-a="gwpick" data-i="${i}">${esc(g.w[1][i])}</button>`).join('')}</div><button class="btn w" data-a="gwclear">🧽 মুছি</button>`}
+function sprintQ(k){const q=makeQ(pick(k.band=='c'?['add','sub','mul']:['count','addp','subp']),k);if(q.type=='num'){const o=shuf([q.ans,...nearNums(q.ans,q.dec)]);return Object.assign({},q,{type:'mc',opts:o.map(x=>bn(x)),ans:o.indexOf(q.ans)})}return q}
+function vSprint(){const g=U.gs;const k=kid();if(g.over)return hdr('দ্রুত হিসাব')+tutorHtml()+`<div class="card c"><div class="big" style="font-size:70px">⚡</div><div class="txt">${bn(g.score)}টি সঠিক!</div><p>সেরা স্কোর: ${bn((k.hi||{}).sprint||0)} • তারা: ⭐ ${bn(g.stars)}</p></div><button class="btn g" data-a="gsprint">🔁 আবার</button>`;
+ const q=g.q;return hdr('দ্রুত হিসাব')+`<div class="row"><span class="chip g" id="gscore" style="text-align:center">স্কোর ${bn(g.score)}</span><span class="chip" id="gtime" style="text-align:center">${bn(Math.ceil(g.left/1000))}</span></div><div class="bar"><i id="gbar" style="width:${g.left/g.dur*100}%"></i></div><div class="card"><div class="q">${q.big?`<div class="big">${q.bigHtml?q.big:esc(q.big)}</div>`:''}<div class="${q.cnt?'blocks':'txt'}">${q.text}</div></div><div class="opts">${q.opts.map((o,i)=>`<button class="opt ${q.sm?'sm':''}" ${q.bigOpts?'style="font-size:40px"':''} data-a="gspick" data-i="${i}">${o}</button>`).join('')}</div></div>`}
+function sprintStart(){const k=kid();clearInterval(U.gsT);U.gs={dur:45000,left:45000,t0:Date.now(),score:0,over:false,q:sprintQ(k),stars:0};nav('gsprint');tutor('৪৫ সেকেন্ডে যত পারো!',{speak:true});
+ U.gsT=setInterval(()=>{const g=U.gs;if(U.view!='gsprint'||g.over){clearInterval(U.gsT);return}g.left=Math.max(0,g.dur-(Date.now()-g.t0));const t=$('#gtime'),b=$('#gbar');if(t)t.textContent=bn(Math.ceil(g.left/1000));if(b)b.style.width=g.left/g.dur*100+'%';
+  if(g.left<=0){g.over=true;clearInterval(U.gsT);const k=kid();k.hi=k.hi||{};if(g.score>(k.hi.sprint||0))k.hi.sprint=g.score;g.stars=Math.min(5,Math.floor(g.score/3));k.stars+=g.stars;record(k,'game_sprint',g.score>0,false);sfx.win();render();tutor(nm('শাবাশ {n}! সময় শেষ।'))}},250)}
+const PADC=[['#e53935','লাল',262],['#fb8c00','কমলা',294],['#fdd835','হলুদ',330],['#43a047','সবুজ',349],['#1e88e5','নীল',392],['#8e24aa','বেগুনি',440]];
+const VX={
+ gmenu:()=>hdr('খেলা')+tutorHtml()+tiles(GAMES[kid().band]||GAMES.c),
+ learn:()=>{const b=kid().band;const l=LEARN.filter(c=>b=='c'||c.pre);return hdr('জানি ও শিখি')+tutorHtml()+`<div class="grid">${l.map((c,i)=>`<button class="tile" style="--c:${COL[i%8]}" data-a="lcat" data-t="${c.id}"><i>${c.e}</i>${c.t}</button>`).join('')}</div><button class="btn g" data-a="know">🧠 জানার কুইজ খেলি</button>`},
+ gmatch:vMatch,gword:vWord,gsprint:vSprint,
+ gpeek:()=>{const g=U.gp;return hdr('লুকোচুরি')+tutorHtml()+`<div class="baby">${[0,1,2].map(i=>`<button data-a="gppick" data-i="${i}">${g.open==i?(i==g.ans?g.an[0]:'💨'):['🌳','🏠','🪨'][i]}</button>`).join('')}</div>`+(g.found?'<button class="btn g" data-a="gpeek">🔁 আবার খেলি</button>':'')},
+ gpads:()=>hdr('বাজাও')+tutorHtml()+`<div class="grid">${PADC.map((c,i)=>`<button class="pad" style="background:${c[0]}" data-a="padhit" data-i="${i}" aria-label="${c[1]}"></button>`).join('')}</div>`};
+Object.assign(A,{
+ duas(){U.dk={k:'dua',i:0,title:'দোয়া ও কালিমা',items:duaDeck()};nav('deck');speakDeck()},
+ surahs(){U.dk={k:'surah',i:0,title:'সূরা পরিচিতি',items:surahDeck()};nav('deck');speakDeck()},
+ learn(){nav('learn');tutor(nm('{n}, কোনটি জানতে চাও?'))},
+ lcat(d){const c=LEARN.find(x=>x.id==d.t);U.dk=Object.assign({k:'learn',i:0},learnDeck(c));nav('deck');speakDeck()},
+ know(){startQuiz(['know'],5,'জানার কুইজ',false)},
+ games(){nav('gmenu');tutor(nm('{n}, কোন খেলা খেলবে?'))},
+ gmatch(){startMatch()},
+ gmflip(d){const g=U.gm,i=+d.i,c=g.cards[i];if(g.lock||c.s)return;c.s=1;sfx.pop();if(g.a<0){g.a=i;render();return}
+  g.moves++;const o=g.cards[g.a];if(o.e===c.e){o.s=c.s=2;g.left--;g.a=-1;sfx.ok();render();if(g.left==0){record(kid(),'game_match',true,true);sfx.win();tutor(nm('শাবাশ {n}! সব জোড়া মিলিয়েছ!'))}}
+  else{g.lock=true;render();const a=g.a;setTimeout(()=>{o.s=0;c.s=0;g.a=-1;g.lock=false;if(U.view=='gmatch'&&U.gm===g)render()},800)}},
+ gword(){startWord();tutor(nm('{n}, ছবি দেখে শব্দটি গড়ো!'))},
+ gwpick(d){const g=U.gw;if(g.lock)return;g.pick.push(+d.i);render();if(g.pick.length==g.w[1].length){g.lock=true;const w=g.pick.map(i=>g.w[1][i]).join('');
+  if(w===g.w[0]){sfx.ok();popEmoji('⭐');record(kid(),'game_word',true,true);g.score++;tutor(g.w[0]+'! '+nm(pick(PRAISE)));setTimeout(()=>{g.round++;if(g.round>=5){g.done=true;sfx.win()}else nextWord();if(U.view=='gword')render()},1300)}
+  else{sfx.no;record(kid(),'game_word',false,false);tutor('আবার চেষ্টা করো।');setTimeout(()=>{g.pick=[];g.lock=false;if(U.view=='gword')render()},700)}}},
+ gwclear(){const g=U.gw;g.pick=[];g.lock=false;render()},
+ gsprint(){sprintStart()},
+ gspick(d){const g=U.gs;if(g.over)return;const ok=+d.i===g.q.ans;if(ok){g.score++;sfx.ok()}else sfx.no();g.q=sprintQ(kid());render()},
+ gpeek(){const a=pick(ANIMALS);U.gp={ans:rnd(0,2),open:-1,an:a,found:false};nav('gpeek');tutor(nm('{n}, কে লুকিয়েছে? খুঁজে বের করো!'),{rate:.9})},
+ gppick(d){const g=U.gp;if(g.found)return;g.open=+d.i;if(g.open==g.ans){g.found=true;sfx.win();render();tutor(`ওই তো ${g.an[1]}! ${g.an[1]} বলে ${g.an[3]}।`,{rate:.85})}else{sfx.pop();render();tutor('এখানে নেই! অন্যটা খোঁজো।',{rate:.9})}},
+ gpads(){nav('gpads');tutor('ছুঁয়ে বাজাও!')},
+ padhit(d,el){const c=PADC[+d.i];tone(c[2],.4,'triangle');TTS.say(c[1],{rate:.9});el.animate([{transform:'scale(1)'},{transform:'scale(.92)'},{transform:'scale(1)'}],{duration:200})}});
+/* hook menus per child */
+MENU_C.length=0;MENU_C.push(['🎯','আজকের চ্যালেঞ্জ','daily'],['🔢','গণিত','math'],['📖','বাংলা ব্যাকরণ','quiz','bn'],['🔤','ইংরেজি','quiz','en'],['🔬','বিজ্ঞান','quiz','sci'],['🇧🇩','বাংলাদেশ ও বিশ্বপরিচয়','quiz','bgw'],['🕌','ইসলাম শিক্ষা','quiz','isl'],['🤲','দোয়া ও কালিমা','duas'],['🌙','সূরা পরিচিতি','surahs'],['🌍','জানি ও শিখি','learn'],['🧠','জানার কুইজ','know'],['🦊','মজার গল্প','stl','listen'],['🗣️','আমার সাথে পড়ো','stl','read'],['💬','টুনির সাথে কথা','talk'],['🎵','ছড়া','rhymes'],['🎮','খেলা','games'],['📖','পাঠ্যবই','books'],['📝','আমার প্রশ্ন','cards'],['🎁','স্টিকার','stk']);
+MENU_P.length=0;MENU_P.push(['🎯','আজকের অনুশীলন','daily'],['🅰️','বাংলা বর্ণ','sub','bnl'],['🔢','সংখ্যা ও গণনা','sub','numb'],['➕','যোগ-বিয়োগ','sub','arith'],['🔤','English ABC','sub','abcm'],['🕌','আরবি হরফ','sub','arbm'],['🍎','চিনি ও শিখি','sub','things'],['✍️','লিখে শিখি','sub','trs'],['🤲','ভালো অভ্যাস','quiz','pisl'],['🤲','দোয়া ও কালিমা','duas'],['🌙','সূরা পরিচিতি','surahs'],['🌍','জানি ও শিখি','learn'],['🧠','জানার কুইজ','know'],['🦊','মজার গল্প','stl','listen'],['🎵','ছড়া','rhymes'],['💬','কথা বলি','talk'],['🗣️','আমার সাথে পড়ো','read','simple'],['🎮','খেলা','games'],['📖','পাঠ্যবই','books'],['📝','আমার প্রশ্ন','cards'],['🎁','স্টিকার','stk']);
+BSEC.push(['🙈','লুকোচুরি','peek'],['🥁','বাজাও','pads']);
+RHYMES.push(
+{t:'চাঁদমামা',e:'🌙',l:['রাত নামে চাঁদমামা ওঠে আকাশে,','রুপালি আলো ছড়ায় হেসে হেসে।','তারার দল ঝিকিমিকি চোখ মেলে,','খোকা-খুকু ঘুমায় মায়ের কোলে।']},
+{t:'ঘুমের ছড়া',e:'😴',l:['রাত গভীর, ঘুম এসেছে,','জোনাকিরা আলো দিয়েছে।','চোখ বুজে সব স্বপ্ন দেখে,','ভোর হলে ফের উঠবে জেগে।']},
+{t:'ফলের ছড়া',e:'🍎',l:['আম-জাম-কাঁঠাল-লিচু,','গাছে গাছে ফল কত কিছু।','কলা, পেয়ারা, আপেল, আনারস,','খেলে শরীর সতেজ, সরস।']},
+{t:'নদীর ছড়া',e:'🌊',l:['নদী বয়ে যায় কুলকুল,','দুই তীরে ফোটে কাশফুল।','নৌকা ভাসে পাল তুলে,','মাঝি গায় সব দুঃখ ভুলে।']});
 
 /* ===== পাঠ্যবই: official links + offline PDF reader (pdf.js bundled in /lib) ===== */
 const BK={db:null,
@@ -933,7 +1033,7 @@ Object.assign(PA,{async installHelp(){
  <b>"already installed" বা কোনো অপশন না এলে</b><ul style="padding-left:20px"><li>Chrome-এর ঠিকানা বারে <code>chrome://webapks</code> লিখে পুরোনো অ্যাপ থাকলে সেটি আনইনস্টল করুন।</li><li>প্রতিটি অ্যাপের জন্য আলাদা repo ব্যবহার করুন।</li><li>৩০ সেকেন্ড অ্যাপটি ব্যবহার করে আবার ⋮ খুলুন — Chrome অনেক সময় একটু পরে অপশন দেখায়।</li><li>তবুও না হলে "Add to Home screen → Create shortcut" দিলে আইকন হোমে আসবে, ঠিক অ্যাপের মতোই চলবে।</li></ul>
  ${U.ip?'<button class="btn g" data-a="install">📲 এখনই ইনস্টল করুন</button>':''}<button class="btn w" data-a="mclose">বন্ধ করুন</button>`)}});
 
-const APP_VER='2026-11-15-e';
+const APP_VER='2026-11-15-f';
 Object.assign(PA,{async refreshApp(){try{const rs=await navigator.serviceWorker.getRegistrations();for(const r of rs)await r.unregister()}catch(e){}try{for(const k of await caches.keys())if(k!=='pa-meta')await caches.delete(k)}catch(e){}location.href=location.pathname+'?u='+Date.now()}});
 
 /* ---------- boot ---------- */
